@@ -1,0 +1,13 @@
+{
+  // Controls what naming strategy to use when a giving a new name to a duplicated explorer item on paste.
+  //  - simple: Appends the word "copy" at the end of the duplicated name potentially followed by a number
+  //  - smart: Adds a number at the end of the duplicated name. If some number is already part of the name, tries to increase that number
+  "explorer.incrementalNaming": "smart",
+  // Controls the property-based sorting of files and folders in the explorer.
+  //  - default: Files and folders are sorted by their names. Folders are displayed before files.
+  //  - mixed: Files and folders are sorted by their names. Files are interwoven with folders.
+  //  - filesFirst: Files and folders are sorted by their names. Files are displayed before folders.
+  //  - type: Files and folders are grouped by extension type then sorted by their names. Folders are displayed before files.
+  //  - modified: Files and folders are sorted by last modified date in descending order. Folders are displayed before files.
+  "explorer.sortOrder": "type"
+}

@@ -1,0 +1,25 @@
+{
+  // Specifies the color theme used in the workbench.
+  "workbench.colorTheme": "Default Dark+",
+  // Controls whether opened editors show as preview. Preview editors do not keep open and are reused until explicitly set to be kept open (e.g. via double click or editing) and show up with an italic font style.
+  "workbench.editor.enablePreview": false,
+  // Controls whether a top border is drawn on modified (dirty) editor tabs or not. This value is ignored when `workbench.editor.showTabs` is disabled.
+  "workbench.editor.highlightModifiedTabs": true,
+  // Controls whether keyboard navigation in lists and trees is automatically triggered simply by typing. If set to `false`, keyboard navigation is only triggered when executing the `list.toggleKeyboardNavigation` command, for which you can assign a keyboard shortcut.
+  "workbench.list.automaticKeyboardNavigation": false,
+  // Controls the keyboard navigation style for lists and trees in the workbench. Can be simple, highlight and filter.
+  //  - simple: Simple keyboard navigation focuses elements which match the keyboard input. Matching is done only on prefixes.
+  //  - highlight: Highlight keyboard navigation highlights elements which match the keyboard input. Further up and down navigation will traverse only the highlighted elements.
+  //  - filter: Filter keyboard navigation will filter out and hide all the elements which do not match the keyboard input.
+  "workbench.list.keyboardNavigation": "filter",
+  // Controls whether lists and trees have smooth scrolling.
+  "workbench.list.smoothScrolling": true,
+  //
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.editor.pinnedTabSizing": "shrink",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.untitled.labelFormat": "name",
+  "workbench.startupEditor": "none",
+  "workbench.panel.opensMaximized": "never",
+}

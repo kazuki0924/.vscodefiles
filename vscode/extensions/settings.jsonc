@@ -1,0 +1,6 @@
+{
+  // When enabled, editors with extension details will be automatically closed upon navigating away from the Extensions View.
+  "extensions.closeExtensionDetailsOnViewChange": false,
+  // When enabled, the notifications for extension recommendations will not be shown.
+  "extensions.ignoreRecommendations": true
+}

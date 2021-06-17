@@ -1,0 +1,12 @@
+{
+  // Customizes which terminal application to run on macOS.
+  "terminal.external.osxExec": "Alacritty.app",
+  // Controls whether the terminal cursor blinks.
+  "terminal.integrated.cursorBlinking": true,
+  // Controls the font family of the terminal, this defaults to `editor.fontFamily`'s value.
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  // Customizes what kind of terminal to launch.
+  //  - integrated: Use VS Code's integrated terminal.
+  //  - external: Use the configured external terminal.
+  "terminal.explorerKind": "external"
+}

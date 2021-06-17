@@ -1,0 +1,18 @@
+{
+  // When enabled, the searchService process will be kept alive instead of being shut down after an hour of inactivity. This will keep the file search cache in memory.
+  "search.maintainFileSearchCache": false,
+  // Controls sorting order of editor history in quick open when filtering.
+  //  - default: History entries are sorted by relevance based on the filter value used. More relevant entries appear first.
+  //  - recency: History entries are sorted by recency. More recently opened entries appear first.
+  "search.quickOpen.history.filterSortOrder": "recency",
+  // When enabled, new Search Editors will reuse the includes, excludes, and flags of the previously opened Search Editor.
+  "search.searchEditor.reusePriorSearchConfiguration": true,
+  // Controls sorting order of search results.
+  //  - default: Results are sorted by folder and file names, in alphabetical order.
+  //  - fileNames: Results are sorted by file names ignoring folder order, in alphabetical order.
+  //  - type: Results are sorted by file extensions, in alphabetical order.
+  //  - modified: Results are sorted by file last modified date, in descending order.
+  //  - countDescending: Results are sorted by count per file, in descending order.
+  //  - countAscending: Results are sorted by count per file, in ascending order.
+  "search.sortOrder": "type"
+}

@@ -1,0 +1,61 @@
+{
+  // Controls whether the smooth caret animation should be enabled.
+  "editor.cursorSmoothCaretAnimation": true,
+  // Controls the cursor style.
+  "editor.cursorStyle": "line",
+  // Controls the font family.
+  "editor.fontFamily": "Cascadia Code PL",
+  // Configures font ligatures or font features. Can be either a boolean to enable/disable ligatures or a string for the value of the CSS 'font-feature-settings' property.
+  "editor.fontLigatures": true,
+  // Controls the font size in pixels.
+  "editor.fontSize": 14,
+  // Format a file on save. A formatter must be available, the file must not be saved after delay, and the editor must not be shutting down.
+  "editor.formatOnSave": true,
+  // Controls font family of inlay hints in the editor.
+  "editor.inlayHints.fontFamily": "Cascadia Code PL",
+  // Controls the display of line numbers.
+  //  - off: Line numbers are not rendered.
+  //  - on: Line numbers are rendered as absolute number.
+  //  - relative: Line numbers are rendered as distance in lines to cursor position.
+  //  - interval: Line numbers are rendered every 10 lines.
+  "editor.lineNumbers": "relative",
+  // Controls whether the minimap is shown.
+  "editor.minimap.enabled": false,
+  // The modifier to be used to add multiple cursors with the mouse. The Go To Definition and Open Link mouse gestures will adapt such that they do not conflict with the multicursor modifier. [Read more](https://code.visualstudio.com/docs/editor/codebasics#_multicursor-modifier).
+  //  - ctrlCmd: Maps to `Control` on Windows and Linux and to `Command` on macOS.
+  //  - alt: Maps to `Alt` on Windows and Linux and to `Option` on macOS.
+  "editor.multiCursorModifier": "ctrlCmd",
+  // Controls how the editor should render whitespace characters.
+  //  - none
+  //  - boundary: Render whitespace characters except for single spaces between words.
+  //  - selection: Render whitespace characters only on selected text.
+  //  - trailing: Render only trailing whitespace characters.
+  //  - all
+  "editor.renderWhitespace": "all",
+  // Controls whether the editor will scroll using an animation.
+  "editor.smoothScrolling": true,
+  // Controls whether snippets are shown with other suggestions and how they are sorted.
+  //  - top: Show snippet suggestions on top of other suggestions.
+  //  - bottom: Show snippet suggestions below other suggestions.
+  //  - inline: Show snippets suggestions with other suggestions.
+  //  - none: Do not show snippet suggestions.
+  "editor.snippetSuggestions": "top",
+  // Controls how suggestions are pre-selected when showing the suggest list.
+  //  - first: Always select the first suggestion.
+  //  - recentlyUsed: Select recent suggestions unless further typing selects one, e.g. `console.| -> console.log` because `log` has been completed recently.
+  //  - recentlyUsedByPrefix: Select suggestions based on previous prefixes that have completed those suggestions, e.g. `co -> console` and `con -> const`.
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  // The number of spaces a tab is equal to. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
+  "editor.tabSize": 2,
+  // Controls from which documents word based completions are computed.
+  //  - currentDocument: Only suggest words from the active document.
+  //  - matchingDocuments: Suggest words from all open documents of the same language.
+  //  - allDocuments: Suggest words from all open documents.
+  "editor.wordBasedSuggestionsMode": "allDocuments",
+  // Controls how lines should wrap.
+  //  - off: Lines will never wrap.
+  //  - on: Lines will wrap at the viewport width.
+  //  - wordWrapColumn: Lines will wrap at `editor.wordWrapColumn`.
+  //  - bounded: Lines will wrap at the minimum of viewport and `editor.wordWrapColumn`.
+  "editor.wordWrap": "bounded"
+}
