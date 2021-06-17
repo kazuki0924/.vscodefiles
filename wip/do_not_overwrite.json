@@ -1,6 +1,3 @@
-// taken / reserved / do not overide
-// Cursor Column Select
-// cmd+k hjkl
 [
   {
     "key": "shift+alt+cmd+down",
@@ -22,8 +19,6 @@
     "command": "cursorColumnSelectUp",
     "when": "textInputFocus"
   },
-  // focus editor group cmd+k awsd
-  // misc
   {
     "key": "ctrl+o",
     "command": "lineBreakInsert",
@@ -237,5 +232,5 @@
     "key": "ctrl+shift+left",
     "command": "editor.action.smartSelect.shrink",
     "when": "editorTextFocus"
-  },
+  }
 ]

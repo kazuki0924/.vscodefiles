@@ -153,5 +153,5 @@
     "key": "cmd+k shift+l",
     "command": "lastCompressedFolder",
     "when": "explorerViewletCompressedFocus && explorerViewletVisible && filesExplorerFocus && !explorerViewletCompressedLastFocus && !inputFocus"
-  },
+  }
 ]
