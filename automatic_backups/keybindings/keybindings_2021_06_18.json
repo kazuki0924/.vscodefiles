@@ -1,157 +1,157 @@
 [
   {
-    "command": "list.collapse",
     "key": "h",
+    "command": "list.collapse",
     "when": "listFocus && !inputFocus"
   },
   {
-    "command": "list.collapseAll",
     "key": "shift+h",
+    "command": "list.collapseAll",
     "when": "listFocus && !inputFocus"
   },
   {
-    "command": "list.focusDown",
     "key": "j",
+    "command": "list.focusDown",
     "when": "listFocus && !inputFocus"
   },
   {
-    "command": "list.expandSelectionDown",
     "key": "shift+j",
+    "command": "list.expandSelectionDown",
     "when": "listFocus && listSupportsMultiselect && !inputFocus"
   },
   {
-    "command": "list.focusUp",
     "key": "k",
+    "command": "list.focusUp",
     "when": "listFocus && !inputFocus"
   },
   {
-    "command": "list.expandSelectionUp",
     "key": "shift+k",
+    "command": "list.expandSelectionUp",
     "when": "listFocus && listSupportsMultiselect && !inputFocus"
   },
   {
-    "command": "list.select",
     "key": "l",
+    "command": "list.select",
     "when": "listFocus && !inputFocus"
   },
   {
-    "command": "workbench.action.focusActiveEditorGroup",
     "key": "shift+l",
+    "command": "workbench.action.focusActiveEditorGroup",
     "when": "sideBarFocus && !inputFocus"
   },
   {
-    "command": "explorer.openToSide",
     "key": "cmd+k l",
+    "command": "explorer.openToSide",
     "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
   },
   {
-    "command": "list.focusFirst",
     "key": "g g",
+    "command": "list.focusFirst",
     "when": "listFocus && !inputFocus"
   },
   {
-    "command": "list.focusLast",
     "key": "shift+g",
+    "command": "list.focusLast",
     "when": "listFocus && !inputFocus"
   },
   {
-    "command": "list.focusPageDown",
     "key": "ctrl+d",
+    "command": "list.focusPageDown",
     "when": "listFocus && !inputFocus"
   },
   {
-    "command": "list.focusPageUp",
     "key": "ctrl+u",
+    "command": "list.focusPageUp",
     "when": "listFocus && !inputFocus"
   },
   {
-    "command": "list.selectAndPreserveFocus",
     "key": "enter",
+    "command": "list.selectAndPreserveFocus",
     "when": "listFocus && !inputFocus"
   },
   {
-    "command": "list.toggleSelection",
     "key": "space",
+    "command": "list.toggleSelection",
     "when": "listFocus && !inputFocus"
   },
   {
-    "command": "-list.toggleSelection",
     "key": "shift+cmd+enter",
+    "command": "-list.toggleSelection",
     "when": "listFocus && !inputFocus"
   },
   {
-    "command": "list.toggleKeyboardNavigation",
     "key": "/",
+    "command": "list.toggleKeyboardNavigation",
     "when": "listFocus && !inputFocus && listSupportsKeyboardNavigation"
   },
   {
-    "command": "renameFile",
     "key": "r",
+    "command": "renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "command": "-renameFile",
     "key": "enter",
+    "command": "-renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "command": "explorer.openAndPassFocus",
     "key": "e",
+    "command": "explorer.openAndPassFocus",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
   {
-    "command": "list.toggleExpand",
     "key": "o",
+    "command": "list.toggleExpand",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
   {
-    "command": "-list.toggleExpand",
     "key": "space",
+    "command": "-list.toggleExpand",
     "when": "listFocus && !inputFocus"
   },
   {
-    "command": "explorer.newFile",
     "key": "a",
+    "command": "explorer.newFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
   {
-    "command": "explorer.newFolder",
     "key": "shift+a",
+    "command": "explorer.newFolder",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
   {
-    "command": "moveFileToTrash",
     "key": "d",
+    "command": "moveFileToTrash",
     "when": "explorerResourceMoveableToTrash && explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "command": "filesExplorer.cancelCut",
     "key": "escape",
+    "command": "filesExplorer.cancelCut",
     "when": "explorerResourceCut && explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
   {
-    "command": "filesExplorer.copy",
     "key": "c",
+    "command": "filesExplorer.copy",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
   },
   {
-    "command": "filesExplorer.cut",
     "key": "x",
+    "command": "filesExplorer.cut",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "command": "filesExplorer.paste",
     "key": "v",
+    "command": "filesExplorer.paste",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "command": "firstCompressedFolder",
     "key": "cmd+k shift+h",
+    "command": "firstCompressedFolder",
     "when": "explorerViewletCompressedFocus && explorerViewletVisible && filesExplorerFocus && !explorerViewletCompressedFirstFocus && !inputFocus"
   },
   {
-    "command": "lastCompressedFolder",
     "key": "cmd+k shift+l",
+    "command": "lastCompressedFolder",
     "when": "explorerViewletCompressedFocus && explorerViewletVisible && filesExplorerFocus && !explorerViewletCompressedLastFocus && !inputFocus"
   }
 ]
