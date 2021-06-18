@@ -1,0 +1,4 @@
+{
+  // Enable running npm scripts contained in a folder from the Explorer context menu.
+  "npm.enableRunFromFolder": true
+}

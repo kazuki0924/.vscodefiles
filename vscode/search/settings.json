@@ -1,6 +1,6 @@
 {
   // When enabled, the searchService process will be kept alive instead of being shut down after an hour of inactivity. This will keep the file search cache in memory.
-  "search.maintainFileSearchCache": false,
+  "search.maintainFileSearchCache": true,
   // Controls sorting order of editor history in quick open when filtering.
   //  - default: History entries are sorted by relevance based on the filter value used. More relevant entries appear first.
   //  - recency: History entries are sorted by recency. More recently opened entries appear first.

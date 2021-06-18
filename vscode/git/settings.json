@@ -1,8 +1,12 @@
 {
+  // Controls whether force push (with or without lease) is enabled.
+  "git.allowForcePush": true,
   // When set to true, commits will automatically be fetched from the default remote of the current Git repository. Setting to `all` will fetch from all remotes.
   "git.autofetch": true,
   // When enabled, fetch all branches when pulling. Otherwise, fetch just the current one.
   "git.fetchOnPull": true,
+  // Controls whether to show a notification when a push is successful.
+  "git.showPushSuccessNotification": true,
   // Whether to automatically navigate to the next merge conflict after resolving a merge conflict.
   "merge-conflict.autoNavigateNextConflict.enabled": true
 }

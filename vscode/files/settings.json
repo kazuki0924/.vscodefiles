@@ -1,4 +1,6 @@
 {
+  // When enabled, the editor will attempt to guess the character set encoding when opening files. This setting can also be configured per language. Note, this setting is not respected by text search. Only `files.encoding` is respected.
+  "files.autoGuessEncoding": true,
   // The default language mode that is assigned to new files. If configured to `${activeEditorLanguage}`, will use the language mode of the currently active text editor if any.
   "files.defaultLanguage": "${activeEditorLanguage}",
   // Configure glob patterns for excluding files and folders. For example, the file Explorer decides which files and folders to show or hide based on this setting. Refer to the `search.exclude` setting to define search specific excludes. Read more about glob patterns [here](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options).
@@ -10,6 +12,8 @@
     "**/.DS_Store": true,
     "**/node_modules": true
   },
+  // When enabled, insert a final new line at the end of the file when saving it.
+  "files.insertFinalNewline": true,
   // Enables the simple file dialog. The simple file dialog replaces the system file dialog when enabled.
   "files.simpleDialog.enable": true
 }

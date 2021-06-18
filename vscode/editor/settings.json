@@ -2,7 +2,7 @@
   // Controls whether the smooth caret animation should be enabled.
   "editor.cursorSmoothCaretAnimation": true,
   // Controls the cursor style.
-  "editor.cursorStyle": "line",
+  "editor.cursorStyle": "block-outline",
   // Controls the font family.
   "editor.fontFamily": "Cascadia Code PL",
   // Configures font ligatures or font features. Can be either a boolean to enable/disable ligatures or a string for the value of the CSS 'font-feature-settings' property.

@@ -5,15 +5,6 @@
   "workbench.editor.enablePreview": false,
   // Controls whether a top border is drawn on modified (dirty) editor tabs or not. This value is ignored when `workbench.editor.showTabs` is disabled.
   "workbench.editor.highlightModifiedTabs": true,
-  // Controls whether keyboard navigation in lists and trees is automatically triggered simply by typing. If set to `false`, keyboard navigation is only triggered when executing the `list.toggleKeyboardNavigation` command, for which you can assign a keyboard shortcut.
-  "workbench.list.automaticKeyboardNavigation": false,
-  // Controls the keyboard navigation style for lists and trees in the workbench. Can be simple, highlight and filter.
-  //  - simple: Simple keyboard navigation focuses elements which match the keyboard input. Matching is done only on prefixes.
-  //  - highlight: Highlight keyboard navigation highlights elements which match the keyboard input. Further up and down navigation will traverse only the highlighted elements.
-  //  - filter: Filter keyboard navigation will filter out and hide all the elements which do not match the keyboard input.
-  "workbench.list.keyboardNavigation": "filter",
-  // Controls whether lists and trees have smooth scrolling.
-  "workbench.list.smoothScrolling": true,
   // Controls if the number of opened editors should be limited or not. When enabled, less recently used editors that are not dirty will close to make space for newly opening editors.
   "workbench.editor.limit.enabled": true,
   // Controls if the limit of maximum opened editors should apply per editor group or across all editor groups.
@@ -26,5 +17,14 @@
   // Controls the sizing of editor tabs. This value is ignored when `workbench.editor.showTabs` is disabled.
   //  - fit: Always keep tabs large enough to show the full editor label.
   //  - shrink: Allow tabs to get smaller when the available space is not enough to show all tabs at once.
-  "workbench.editor.tabSizing": "shrink"
+  "workbench.editor.tabSizing": "shrink",
+  // Controls whether keyboard navigation in lists and trees is automatically triggered simply by typing. If set to `false`, keyboard navigation is only triggered when executing the `list.toggleKeyboardNavigation` command, for which you can assign a keyboard shortcut.
+  "workbench.list.automaticKeyboardNavigation": false,
+  // Controls the keyboard navigation style for lists and trees in the workbench. Can be simple, highlight and filter.
+  //  - simple: Simple keyboard navigation focuses elements which match the keyboard input. Matching is done only on prefixes.
+  //  - highlight: Highlight keyboard navigation highlights elements which match the keyboard input. Further up and down navigation will traverse only the highlighted elements.
+  //  - filter: Filter keyboard navigation will filter out and hide all the elements which do not match the keyboard input.
+  "workbench.list.keyboardNavigation": "filter",
+  // Controls whether lists and trees have smooth scrolling.
+  "workbench.list.smoothScrolling": true
 }

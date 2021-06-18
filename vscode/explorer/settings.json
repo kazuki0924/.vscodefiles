@@ -9,5 +9,11 @@
   //  - filesFirst: Files and folders are sorted by their names. Files are displayed before folders.
   //  - type: Files and folders are grouped by extension type then sorted by their names. Folders are displayed before files.
   //  - modified: Files and folders are sorted by last modified date in descending order. Folders are displayed before files.
-  "explorer.sortOrder": "type"
+  "explorer.sortOrder": "type",
+  // Controls the lexicographic sorting of file and folder names in the explorer.
+  //  - default: Uppercase and lowercase names are mixed together.
+  //  - upper: Uppercase names are grouped together before lowercase names.
+  //  - lower: Lowercase names are grouped together before uppercase names.
+  //  - unicode: Names are sorted in unicode order.
+  "explorer.sortOrderLexicographicOptions": "lower"
 }

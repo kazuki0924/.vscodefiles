@@ -1,6 +1,6 @@
 {
   "editor.cursorSmoothCaretAnimation": true,
-  "editor.cursorStyle": "line",
+  "editor.cursorStyle": "block-outline",
   "editor.fontFamily": "Cascadia Code PL",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
@@ -18,8 +18,10 @@
   "editor.wordWrap": "bounded",
   "explorer.incrementalNaming": "smart",
   "explorer.sortOrder": "type",
+  "explorer.sortOrderLexicographicOptions": "lower",
   "extensions.closeExtensionDetailsOnViewChange": false,
   "extensions.ignoreRecommendations": true,
+  "files.autoGuessEncoding": true,
   "files.defaultLanguage": "${activeEditorLanguage}",
   "files.exclude": {
     "**/.git": true,
@@ -30,10 +32,13 @@
     "**/node_modules": true
   },
   "files.simpleDialog.enable": true,
+  "git.allowForcePush": true,
   "git.autofetch": true,
   "git.fetchOnPull": true,
+  "git.showPushSuccessNotification": true,
   "merge-conflict.autoNavigateNextConflict.enabled": true,
-  "search.maintainFileSearchCache": false,
+  "npm.enableRunFromFolder": true,
+  "search.maintainFileSearchCache": true,
   "search.quickOpen.history.filterSortOrder": "recency",
   "search.searchEditor.reusePriorSearchConfiguration": true,
   "search.sortOrder": "type",

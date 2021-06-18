@@ -3,21 +3,29 @@ set -Eeuo pipefail
 IFS=$'\n\t'
 shopt -s globstar
 
-# TODO: requirements, backup original and copy files, extensions, extensions install etc
+DOTDIR="${1-$HOME/.vscodefiles}"
 
-DIR="$HOME/.vscodefiles"
-mapfile -t FILES < <(fd settings.json "${1-$DIR}")
+JSON_FILES=(
+  settings
+  keybindings
+)
+
+for JSON in "${JSON_FILES[@]}"; do
+  DOT_FILE="$DOTDIR/$JSON.json"
+  [[ -f $DOT_FILE ]] && trash-put -v $DOT_FILE
+done
+
+mapfile -t FILES < <(fd "(settings.json|keybindings.json)" "$DOTDIR")
 
 for FILE in "${FILES[@]}"; do
   strip-json-comments "$FILE" > "$FILE.output"
 done
 
-jq -rs 'reduce .[] as $item ({}; . * $item)' **/*.output > settings.json
+jq -rsS 'reduce .[] as $item ({}; . * $item)' **/settings.json.output > settings.json
+jq -rsS flatten **/keybindings.json.output > keybindings.json
 
-mapfile -t OUTPUTS < <(fd .output "${1-$DIR}")
+mapfile -t OUTPUTS < <(fd .output "$DOTDIR")
 
 for OUTPUT in "${OUTPUTS[@]}"; do
   trash-put -v $OUTPUT
 done
-
-jq -rs flatten **/keybindings.json > keybindings.json
