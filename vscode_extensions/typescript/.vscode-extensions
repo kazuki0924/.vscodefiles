@@ -5,3 +5,67 @@ https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodei
 # TypeScript Importer
 # https://github.com/pmneo/ts-importer
 https://marketplace.visualstudio.com/items?itemName=pmneo.tsimporter
+
+# TypeScript Import
+# https://github.com/starkevin/VSCode-TypeScript-Importer
+# https://marketplace.visualstudio.com/items?itemName=kevinmcgowan.TypeScriptImport
+
+# Auto Import
+# https://github.com/soates/Auto-Import
+# https://marketplace.visualstudio.com/items?itemName=steoates.autoimport
+
+# TypeScript Import Sorter
+# https://github.com/SoominHan/import-sorter
+https://marketplace.visualstudio.com/items?itemName=mike-co.import-sorter
+
+# Import Cost
+# https://github.com/wix/import-cost
+https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost
+
+# ESLint
+# https://github.com/Microsoft/vscode-eslint
+https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint#:~:text=Microsoft/vscode-eslint
+
+# Jest
+# https://github.com/jest-community/vscode-jest
+https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest
+
+# Jest Runner
+# https://github.com/firsttris/vscode-jest-runner
+https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner
+
+# Jest Test Explorer
+# https://github.com/kavod-io/vscode-jest-test-adapter
+https://marketplace.visualstudio.com/items?itemName=kavod-io.vscode-jest-test-adapter
+
+# Quokka.js
+# https://github.com/wallabyjs/quokka
+https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode
+
+# Wallaby.js
+# https://wallabyjs.com/
+https://marketplace.visualstudio.com/items?itemName=WallabyJs.wallaby-vscode
+
+# npm
+# https://github.com/Microsoft/vscode-npm-scripts
+https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script
+
+# npm Intellisense
+# https://github.com/ChristianKohler/NpmIntellisense
+https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense
+
+# Node.js Modules Intellisense
+# https://github.com/leizongmin/vscode-node-module-intellisense
+https://marketplace.visualstudio.com/items?itemName=leizongmin.node-module-intellisense
+
+# Typescript Destructure
+# https://github.com/tusaeff/vscode-typescript-destructure-plugin
+https://marketplace.visualstudio.com/items?itemName=tusaeff.vscode-typescript-destructure-plugin
+
+# TS/JS postfix completion
+# https://github.com/ipatalas/vscode-postfix-ts
+https://marketplace.visualstudio.com/items?itemName=ipatalas.vscode-postfix-ts
+
+# Interface generator
+# https://github.com/dotupNET/dotup-vscode-interface-generator
+https://marketplace.visualstudio.com/items?itemName=dotup.dotup-vscode-interface-generator
