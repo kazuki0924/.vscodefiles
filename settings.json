@@ -15,7 +15,7 @@
   "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.tabSize": 2,
   "editor.wordBasedSuggestionsMode": "allDocuments",
-  "editor.wordWrap": "bounded",
+  "editor.wordWrap": "on",
   "explorer.incrementalNaming": "smart",
   "explorer.sortOrder": "type",
   "explorer.sortOrderLexicographicOptions": "lower",
@@ -57,5 +57,8 @@
   "workbench.editor.tabSizing": "shrink",
   "workbench.list.automaticKeyboardNavigation": false,
   "workbench.list.keyboardNavigation": "filter",
-  "workbench.list.smoothScrolling": true
+  "workbench.list.smoothScrolling": true,
+  "files.associations": {
+    ".vscode-extensions": "shellscript"
+  }
 }

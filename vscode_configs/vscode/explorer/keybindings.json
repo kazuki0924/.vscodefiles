@@ -120,7 +120,7 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
   {
-    "key": "d",
+    "key": "x",
     "command": "moveFileToTrash",
     "when": "explorerResourceMoveableToTrash && explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
@@ -130,17 +130,17 @@
     "when": "explorerResourceCut && explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
   {
-    "key": "c",
+    "key": "y",
     "command": "filesExplorer.copy",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
   },
   {
-    "key": "x",
+    "key": "d",
     "command": "filesExplorer.cut",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "key": "v",
+    "key": "p",
     "command": "filesExplorer.paste",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
