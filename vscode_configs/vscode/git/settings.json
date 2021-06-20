@@ -8,5 +8,9 @@
   // Controls whether to show a notification when a push is successful.
   "git.showPushSuccessNotification": true,
   // Whether to automatically navigate to the next merge conflict after resolving a merge conflict.
-  "merge-conflict.autoNavigateNextConflict.enabled": true
+  "merge-conflict.autoNavigateNextConflict.enabled": true,
+  // Controls the default Source Control repository view mode.
+  //  - tree: Show the repository changes as a tree.
+  //  - list: Show the repository changes as a list.
+  "scm.defaultViewMode": "tree"
 }

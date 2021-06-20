@@ -1,0 +1,191 @@
+[
+  {
+    "key": "cmd+j",
+    "command": "-workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+cmd+j",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.switchWindow"
+  },
+  {
+    "key": "cmd+j -",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "cmd+j =",
+    "command": "workbench.action.navigateForward"
+  },
+  {
+    "key": "cmd+j \\",
+    "command": "workbench.action.navigateToLastEditLocation"
+  },
+  {
+    "key": "cmd+j r",
+    "command": "workbench.action.reloadWindow"
+  },
+  {
+    "key": "cmd+j s",
+    "command": "saveAll"
+  },
+  {
+    "key": "cmd+j cmd+s",
+    "command": "workbench.action.files.saveWithoutFormatting"
+  },
+  {
+    "key": "cmd+j n",
+    "command": "workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "cmd+j shift+n",
+    "command": "workbench.action.newWindow"
+  },
+  {
+    "key": "cmd+j o",
+    "command": "workbench.action.files.showOpenedFileInNewWindow",
+    "when": "emptyWorkspaceSupport"
+  },
+  {
+    "key": "cmd+j d",
+    "command": "workbench.action.duplicateWorkspaceInNewWindow",
+    "when": "emptyWorkspaceSupport"
+  },
+  {
+    "key": "cmd+j e",
+    "command": "workbench.action.switchWindow"
+  },
+  {
+    "key": "cmd+j p",
+    "command": "workbench.action.pinEditor",
+    "when": "!activeEditorIsPinned"
+  },
+  {
+    "key": "cmd+j p",
+    "command": "workbench.action.unpinEditor",
+    "when": "activeEditorIsPinned"
+  },
+  {
+    "key": "cmd+j tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "cmd+j shift+tab",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "cmd+j w",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "cmd+j w",
+    "command": "workbench.action.closeGroup",
+    "when": "activeEditorGroupEmpty && multipleEditorGroups"
+  },
+  {
+    "key": "cmd+j shift+w",
+    "command": "workbench.action.closeEditorsInGroup"
+  },
+  {
+    "key": "cmd+j t",
+    "command": "workbench.action.closeOtherEditors"
+  },
+  {
+    "key": "cmd+j u",
+    "command": "workbench.action.closeUnmodifiedEditors"
+  },
+  {
+    "key": "cmd+j q",
+    "command": "workbench.action.closeAllEditors"
+  },
+  {
+    "key": "cmd+j a",
+    "command": "workbench.action.closeAllGroups"
+  },
+  {
+    "key": "cmd+j m",
+    "command": "workbench.action.mergeAllWindowTabs"
+  },
+  {
+    "key": "cmd+j v",
+    "command": "workbench.action.splitEditor"
+  },
+  {
+    "key": "cmd+j shift+v",
+    "command": "workbench.action.splitEditorOrthogonal"
+  },
+  {
+    "key": "cmd+j h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "cmd+j j",
+    "command": "workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "cmd+j k",
+    "command": "workbench.action.focusAboveGroup"
+  },
+  {
+    "key": "cmd+j l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "cmd+j shift+h",
+    "command": "workbench.action.moveEditorToLeftGroup"
+  },
+  {
+    "key": "cmd+j shift+j",
+    "command": "workbench.action.moveEditorToBelowGroup"
+  },
+  {
+    "key": "cmd+j shift+k",
+    "command": "workbench.action.moveEditorToAboveGroup"
+  },
+  {
+    "key": "cmd+j shift+l",
+    "command": "workbench.action.moveEditorToRightGroup"
+  },
+  {
+    "key": "cmd+j cmd+h",
+    "command": "workbench.action.splitEditorLeft"
+  },
+  {
+    "key": "cmd+j cmd+j",
+    "command": "workbench.action.splitEditorDown"
+  },
+  {
+    "key": "cmd+j cmd+k",
+    "command": "workbench.action.splitEditorUp"
+  },
+  {
+    "key": "cmd+j cmd+l",
+    "command": "workbench.action.splitEditorRight"
+  },
+  {
+    "key": "cmd+j ctrl+h",
+    "command": "workbench.action.moveActiveEditorGroupLeft"
+  },
+  {
+    "key": "cmd+j ctrl+j",
+    "command": "workbench.action.moveActiveEditorGroupDown"
+  },
+  {
+    "key": "cmd+j ctrl+k",
+    "command": "workbench.action.moveActiveEditorGroupUp"
+  },
+  {
+    "key": "cmd+j ctrl+l",
+    "command": "workbench.action.moveActiveEditorGroupRight"
+  },
+  {
+    "key": "cmd+j ctrl+p",
+    "command": "workbench.action.moveEditorLeftInGroup"
+  },
+  {
+    "key": "cmd+j ctrl+n",
+    "command": "workbench.action.moveEditorRightInGroup"
+  }
+]

@@ -1,6 +1,0 @@
-{
-  // Controls the default Source Control repository view mode.
-  //  - tree: Show the repository changes as a tree.
-  //  - list: Show the repository changes as a list.
-  "scm.defaultViewMode": "tree"
-}

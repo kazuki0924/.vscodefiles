@@ -1,0 +1,100 @@
+[
+  {
+    "key": "cmd+g",
+    "command": "-editor.action.nextMatchFindAction",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "-editor.action.previousMatchFindAction",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+g",
+    "command": "-workbench.action.terminal.findNext",
+    "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "-workbench.action.terminal.findPrevious",
+    "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+g g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "cmd+g c",
+    "command": "git.commitStaged",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "cmd+g u",
+    "command": "git.undoCommit",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "cmd+g j",
+    "command": "git.pull",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "cmd+g k",
+    "command": "git.push",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "cmd+g a",
+    "command": "git.stageAll",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "cmd+g z",
+    "command": "git.unstageAll",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "cmd+g x",
+    "command": "git.stashIncludeUntracked",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "cmd+g v",
+    "command": "git.stashApplyLatest",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "cmd+g s",
+    "command": "git.stageSelectedRanges",
+    "when": "isInDiffEditor"
+  },
+  {
+    "key": "cmd+g d",
+    "command": "git.unstageSelectedRanges",
+    "when": "isInDiffEditor"
+  },
+  {
+    "key": "cmd+g r",
+    "command": "git.revertSelectedRanges",
+    "when": "isInDiffEditor"
+  },
+  {
+    "key": "cmd+g o",
+    "command": "git.git.openFile",
+    "when": "isInDiffEditor"
+  },
+  {
+    "key": "cmd+g t",
+    "command": "toggle.diff.renderSideBySide",
+    "when": "isInDiffEditor"
+  },
+  {
+    "key": "cmd+g n",
+    "command": "merge-conflict.next"
+  },
+  {
+    "key": "cmd+g p",
+    "command": "merge-conflict.previous"
+  }
+]
