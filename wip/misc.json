@@ -1,0 +1,26 @@
+// - editor.action.fixAll
+// - editor.action.openLink
+// - editor.action.insertSnippet
+// - editor.action.showSnippets
+// - notifications.clearAll
+{
+  "key": "ctrl+g",
+  "command": "workbench.action.gotoLine"
+},
+{
+  "key": "shift+cmd+o",
+  "command": "workbench.action.gotoSymbol"
+},
+{
+  "key": "shift+cmd+f",
+  "command": "workbench.action.findInFiles"
+},
+{
+  "key": "shift+cmd+h",
+  "command": "workbench.action.replaceInFiles"
+},
+{
+  "key": "shift+cmd+f",
+  "command": "workbench.view.search",
+  "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
+},

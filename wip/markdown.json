@@ -1,0 +1,12 @@
+[
+  {
+    "key": "shift+cmd+v",
+    "command": "-markdown.showPreview",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "key": "shift+cmd+m",
+    "command": "markdown.showPreview",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  }
+]

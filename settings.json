@@ -48,6 +48,7 @@
   "terminal.external.osxExec": "Alacritty.app",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontFamily": "MesloLGS NF",
+  "workbench.colorTheme": "Default Dark+",
   "workbench.editor.enablePreview": false,
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.limit.enabled": true,
@@ -56,8 +57,5 @@
   "workbench.editor.tabSizing": "shrink",
   "workbench.list.automaticKeyboardNavigation": false,
   "workbench.list.keyboardNavigation": "filter",
-  "workbench.list.smoothScrolling": true,
-  "files.associations": {
-    ".vscode-extensions": "shellscript"
-  }
+  "workbench.list.smoothScrolling": true
 }
