@@ -39,11 +39,11 @@ for FILE in "${FILES[@]}"; do
 done
 
 cd $EXTENSIONSDIR
-# jq -rsS 'reduce .[] as $item ({}; . * $item)' **/settings.json.output > settings.json
+jq -rsS 'reduce .[] as $item ({}; . * $item)' **/settings.json.output > settings.json
 jq -rsS flatten **/keybindings.json.output > keybindings.json
 
 mapfile -t OUTPUTS < <(fd .output "$DOTDIR")
 
 for OUTPUT in "${OUTPUTS[@]}"; do
-  trash-put -v $OUTPUT
+  trash-put $OUTPUT
 done

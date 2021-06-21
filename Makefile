@@ -10,7 +10,7 @@ ifeq ($(origin .RECIPEPREFIX), undefined)
 endif
 .RECIPEPREFIX = >
 
-all: gitpull symlink setup
+all: setup
 
 gitpull:
 > @ echo git pull .vscodefiles:
@@ -23,6 +23,8 @@ symlink:
 
 setup: gitpull symlink
 > @ ./scripts/vscode_setup.sh
-# > @ ./"$HOME"/.dotscripts/tasks/chmod_dotscripts.sh "$HOME"/.vscodefiles
+
+chmod:
+> @ bash ~/.dotscripts/tasks/chmod_dotscripts.sh ~/.vscodefiles
 
 .PHONY: gitpull symlink setup
