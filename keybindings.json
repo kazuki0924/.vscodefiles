@@ -656,7 +656,7 @@
   },
   {
     "command": "workbench.action.splitEditorDown",
-    "key": "cmd+e cmd+e"
+    "key": "cmd+e cmd+j"
   },
   {
     "command": "workbench.action.splitEditorUp",

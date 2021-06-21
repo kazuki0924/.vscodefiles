@@ -141,7 +141,7 @@
     "command": "workbench.action.splitEditorLeft"
   },
   {
-    "key": "cmd+e cmd+e",
+    "key": "cmd+e cmd+j",
     "command": "workbench.action.splitEditorDown"
   },
   {
