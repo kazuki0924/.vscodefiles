@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 IFS=$'\n\t'
+shopt -s globstar
 
 # VS Code / VS Code Insiders: bundle all json files
 
@@ -37,9 +38,8 @@ for FILE in "${FILES[@]}"; do
   strip-json-comments "$FILE" > "$FILE.output"
 done
 
-shopt -s globstar
-jq -rsS 'reduce .[] as $item ({}; . * $item)' "$EXTENSIONSDIR/**/settings.json.output" > settings.json
-shopt -s globstar
+cd $EXTENSIONSDIR
+# jq -rsS 'reduce .[] as $item ({}; . * $item)' **/settings.json.output > settings.json
 jq -rsS flatten **/keybindings.json.output > keybindings.json
 
 mapfile -t OUTPUTS < <(fd .output "$DOTDIR")
