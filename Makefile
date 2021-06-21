@@ -10,20 +10,19 @@ ifeq ($(origin .RECIPEPREFIX), undefined)
 endif
 .RECIPEPREFIX = >
 
-all: gitpull symlink
+all: gitpull symlink setup
 
 gitpull:
-> @ echo git pull .dotfiles, .nvimfiles, .zshfiles, and .dotscripts:
-> @ cd ~/.dotfiles && git pull
-> @ [[ ! -d ~/.nvimfiles ]] && git clone https://github.com/kazuki0924/.nvimfiles ~/.nvimfiles
-> @ cd ~/.nvimfiles && git pull
-> @ [[ ! -d ~/.zshfiles ]] && git clone https://github.com/kazuki0924/.zshfiles ~/.zshfiles
-> @ cd ~/.zshfiles && git pull
-> @ [[ ! -d ~/.dotscripts ]] && git clone https://github.com/kazuki0924/.dotscripts ~/.dotscripts
-> @ cd ~/.dotscripts && git pull
-> @ cd
+> @ echo git pull .vscodefiles:
+> @ [[ ! -d ~/.vscodefiles ]] && git clone https://github.com/kazuki0924/.vscodefiles ~/.vscodefiles
+> @ cd ~/.vscodefiles && git pull
 
 symlink:
-> @ cd ~/.dotscripts && make symlink
+> @ ./scripts/vscode_bundle_config_json.sh
+> @ ./scripts/vscode_symlink_config_json.sh
 
-.PHONY: gitpull symlink
+setup: gitpull symlink
+> @ ./scripts/vscode_setup.sh
+# > @ ./"$HOME"/.dotscripts/tasks/chmod_dotscripts.sh "$HOME"/.vscodefiles
+
+.PHONY: gitpull symlink setup
