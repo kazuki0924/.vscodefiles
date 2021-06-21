@@ -40,7 +40,7 @@
     "when": "sideBarFocus && !inputFocus"
   },
   {
-    "key": "cmd+k l",
+    "key": "cmd+l",
     "command": "explorer.openToSide",
     "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
   },
@@ -75,11 +75,6 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "shift+cmd+enter",
-    "command": "-list.toggleSelection",
-    "when": "listFocus && !inputFocus"
-  },
-  {
     "key": "/",
     "command": "list.toggleKeyboardNavigation",
     "when": "listFocus && !inputFocus && listSupportsKeyboardNavigation"
@@ -87,11 +82,6 @@
   {
     "key": "r",
     "command": "renameFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "enter",
-    "command": "-renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
@@ -103,11 +93,6 @@
     "key": "o",
     "command": "list.toggleExpand",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "space",
-    "command": "-list.toggleExpand",
-    "when": "listFocus && !inputFocus"
   },
   {
     "key": "a",
@@ -145,12 +130,12 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "key": "cmd+k shift+h",
+    "key": "cmd+shift+h",
     "command": "firstCompressedFolder",
     "when": "explorerViewletCompressedFocus && explorerViewletVisible && filesExplorerFocus && !explorerViewletCompressedFirstFocus && !inputFocus"
   },
   {
-    "key": "cmd+k shift+l",
+    "key": "cmd+shift+l",
     "command": "lastCompressedFolder",
     "when": "explorerViewletCompressedFocus && explorerViewletVisible && filesExplorerFocus && !explorerViewletCompressedLastFocus && !inputFocus"
   }

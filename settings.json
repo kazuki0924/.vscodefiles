@@ -48,7 +48,7 @@
   "terminal.external.osxExec": "Alacritty.app",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontFamily": "MesloLGS NF",
-  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorTheme": "gruvboxConcoctis dark hard",
   "workbench.editor.enablePreview": false,
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.limit.enabled": true,

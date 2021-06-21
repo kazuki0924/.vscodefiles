@@ -1,0 +1,20 @@
+[
+  {
+    "key": "shift+;",
+    "command": "insertPrevSuggestion",
+    "when": "hasOtherSuggestions && textInputFocus && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
+  },
+  {
+    "key": "ctrl+cmd+j",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+cmd+e",
+    "command": "actions.findWithSelection"
+  },
+  {
+    "command": "editor.action.joinLines",
+    "key": "ctrl+shift+j",
+    "when": "editorTextFocus && !editorReadonly"
+  }
+]

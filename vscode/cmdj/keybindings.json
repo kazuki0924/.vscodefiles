@@ -1,0 +1,53 @@
+[
+  {
+    "key": "cmd+j e",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "cmd+j g",
+    "command": "workbench.action.gotoLine"
+  },
+  {
+    "key": "cmd+j s",
+    "command": "workbench.action.gotoSymbol"
+  },
+  {
+    "key": "cmd+j f",
+    "command": "workbench.action.findInFiles"
+  },
+  {
+    "key": "cmd+j r",
+    "command": "workbench.action.replaceInFiles"
+  },
+  {
+    "key": "cmd+j s",
+    "command": "workbench.view.search",
+    "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
+  },
+  {
+    "key": "cmd+j m",
+    "command": "workbench.action.editor.changeLanguageMode",
+    "when": "!notebookEditorFocused"
+  },
+  {
+    "key": "cmd+j n",
+    "command": "notifications.clearAll"
+  },
+  {
+    "key": "cmd+j a",
+    "command": "editor.action.fixAll"
+  },
+  {
+    "key": "cmd+j o",
+    "command": "editor.action.openLink"
+  },
+  {
+    "key": "cmd+j j",
+    "command": "editor.action.showSnippets"
+  },
+  {
+    "key": "cmd+j k",
+    "command": "editor.action.insertSnippet"
+  }
+]

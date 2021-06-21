@@ -1,0 +1,47 @@
+[
+  {
+    "key": "cmd+i i",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+i h",
+    "command": "editor.action.referenceSearch.trigger",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+i j",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+i k",
+    "command": "editor.action.triggerParameterHints",
+    "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  },
+  {
+    "key": "cmd+i l",
+    "command": "editor.action.inlineSuggest.trigger",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+i o",
+    "command": "editor.action.showDefinitionPreviewHover",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+i d",
+    "command": "toggleSuggestionDetails",
+    "when": "suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "cmd+i f",
+    "command": "toggleSuggestionFocus",
+    "when": "suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "cmd+i cmd+i",
+    "command": "editor.debug.action.showDebugHover",
+    "when": "editorTextFocus && inDebugMode"
+  }
+]

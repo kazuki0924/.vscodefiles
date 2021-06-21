@@ -3,7 +3,22 @@ set -Eeuo pipefail
 IFS=$'\n\t'
 shopt -s globstar
 
-DOTDIR="${1-$HOME/.vscodefiles}"
+# VS Code / VS Code Insiders: bundle all json files
+
+REQUIREMENTS=(
+  jq
+  fd
+  node
+)
+
+for REQUIREMENT in "${REQUIREMENTS[@]}"; do
+  which "$REQUIREMENT" &>/dev/null || brew install "$REQUIREMENT"
+done
+
+# https://github.com/sindresorhus/strip-json-comments-cli
+which strip-json-comments &>/dev/null || npm i -g strip-json-comments-cli
+
+DOTDIR="$HOME/.vscodefiles"
 
 JSON_FILES=(
   settings
@@ -15,7 +30,9 @@ for JSON in "${JSON_FILES[@]}"; do
   [[ -f $DOT_FILE ]] && trash-put -v $DOT_FILE
 done
 
-mapfile -t FILES < <(fd "(settings.json|keybindings.json)" "$DOTDIR")
+EXTENSIONSDIR="${1-$HOME/.vscodefiles}"
+
+mapfile -t FILES < <(fd "(settings.json|keybindings.json)" "$EXTENSIONSDIR")
 
 for FILE in "${FILES[@]}"; do
   strip-json-comments "$FILE" > "$FILE.output"

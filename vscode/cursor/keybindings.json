@@ -1,47 +1,12 @@
 [
   {
-    "key": "ctrl+n",
-    "command": "-cursorDown",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "ctrl+b",
-    "command": "-cursorLeft",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "ctrl+f",
-    "command": "-cursorRight",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "-cursorUp",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "ctrl+h",
-    "command": "-deleteLeft",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "-deleteAllRight",
-    "when": "textInputFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+d",
-    "command": "-deleteRight",
-    "when": "textInputFocus"
-  },
-  {
     "key": "ctrl+h",
     "command": "cursorLeft",
     "when": "textInputFocus"
   },
   {
     "key": "ctrl+j",
-    "command": "-cursorDown",
+    "command": "cursorDown",
     "when": "textInputFocus"
   },
   {
@@ -55,12 +20,27 @@
     "when": "textInputFocus"
   },
   {
-    "key": "cmd+l",
-    "command": "-expandLineSelection",
-    "when": "textInputFocus"
+    "key": "alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "cmd+l v",
+    "key": "alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+l j",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+l k",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+l l",
     "command": "expandLineSelection",
     "when": "textInputFocus"
   },
@@ -95,32 +75,12 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "cmd+l j",
-    "command": "editor.action.insertCursorBelow",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "cmd+l k",
-    "command": "editor.action.insertCursorAbove",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+j",
-    "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+k",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "cmd+l h",
+    "key": "cmd+l left",
     "command": "editor.action.smartSelect.shrink",
     "when": "editorTextFocus"
   },
   {
-    "key": "cmd+l l",
+    "key": "cmd+l right",
     "command": "editor.action.smartSelect.expand",
     "when": "editorTextFocus"
   },
