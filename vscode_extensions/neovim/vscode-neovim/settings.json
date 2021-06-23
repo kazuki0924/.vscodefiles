@@ -1,0 +1,142 @@
+{
+  // Define colors for various VIM highlight groups. Values may be 'vim' to use colors from vim or text decoration properties object
+  "vscode-neovim.highlightGroups.highlights": {
+    "Directory": "vim",
+    "IncSearch": {
+      "backgroundColor": "theme.editor.findMatchBackground",
+      "borderColor": "theme.editor.findMatchBorder"
+    },
+    "Search": {
+      "backgroundColor": "theme.editor.findMatchHighlightBackground",
+      "borderColor": "theme.editor.findMatchHighlightBorder"
+    },
+    "Visual": {
+      "backgroundColor": "theme.editor.selectionBackground"
+    },
+    "Conceal": "vim",
+    "Substitute": "vim"
+  },
+  // List of vim highlights groups to ignore
+  "vscode-neovim.highlightGroups.ignoreHighlights": [
+    "SpecialKey",
+    "EndOfBuffer",
+    "TermCursor",
+    "TermCursorNC",
+    "NonText",
+    "ErrorMsg",
+    "MoreMsg",
+    "ModeMsg",
+    "LineNr",
+    "CursorLineNr",
+    "Question",
+    "StatusLine",
+    "StatusLineNC",
+    "VertSplit",
+    "Title",
+    "VisualNC",
+    "WarningMsg",
+    "WildMenu",
+    "^Diff",
+    "Sign",
+    "SignColumn",
+    "^Spell",
+    "^Pmenu",
+    "^Tab",
+    "^Cursor",
+    "ColorColumn",
+    "QuickFixLine",
+    "Whitespace",
+    "NormalNC",
+    "Normal",
+    "NormalFloat",
+    "MsgSeparator",
+    "MsgArea",
+    "^RedrawDebug",
+    "Cursor",
+    "lCursor",
+    "MatchParen",
+    "^Nvim",
+    "Operator",
+    "Delimiter",
+    "Identifier",
+    "SpecialChar",
+    "Number",
+    "Type",
+    "String",
+    "Error",
+    "Comment",
+    "Constant",
+    "Special",
+    "Statement",
+    "PreProc",
+    "Underlined",
+    "Ignore",
+    "Todo",
+    "Character",
+    "Boolean",
+    "Float",
+    "Function",
+    "Conditional",
+    "Repeat",
+    "Label",
+    "Keyword",
+    "Exception",
+    "Include",
+    "Define",
+    "Macro",
+    "PreCondit",
+    "StorageClass",
+    "Structure",
+    "Typedef",
+    "Tag",
+    "SpecialComment",
+    "Debug",
+    "Folded",
+    "FoldColumn"
+  ],
+  // Highlight Configuration for non defined group. Can accept 'vim' to use colors coming from vim or text decoration properties object
+  "vscode-neovim.highlightGroups.unknownHighlight": "vim",
+  // Log Level
+  "vscode-neovim.logLevel": "error",
+  // When on, print log messages to vscode developer console (not output channel!)
+  "vscode-neovim.logOutputToConsole": false,
+  // Log file path
+  "vscode-neovim.logPath": "",
+  // Mouse selection starts visual mode
+  "vscode-neovim.mouseSelectionStartVisualMode": false,
+  // Full path to Neovim executable that should be used by the extension if running VS Code on OSX.
+  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  // Full path to Neovim executable that should be used by the extension if running VS Code on Linux or WSL. If `useWSL` setting is checked, vscode-neovim will look for this path in WSL  
+  // Example:  
+  // /usr/bin/nvim
+  "vscode-neovim.neovimExecutablePaths.linux": "",
+  // Full path to Neovim executable that should be used by the extension if running VS Code on Windows.  
+  // Example:  
+  // C:\tools\neovim\Neovim\bin\nvim.exe (if you installed using Chocolatey)  
+  // If you want to use Windows Subsystem for Linux, enable the `useWSL` setting and set `neovimExecutablePaths.linux` instead
+  "vscode-neovim.neovimExecutablePaths.win32": "",
+  // This setting is deprecated. Use neovimInitVimPaths.win32/linux/darwin instead. If you continue to use this setting, keep in mind this setting takes precedence over neovimInitVimPaths.win32/linux/darwin and those settings won't work. If you want them to work, just remove this setting from your settings.json or make its input box in User Settings empty
+  // Full path to custom neovim init file, equals to startup option -u. If checked useWSL flag specify a Linux path. You can also use exists('g:vscode') in your init.vim to check if neovim is being run in vscode and share init file between neovim/vscode
+  "vscode-neovim.neovimInitPath": "",
+  // Full path to custom neovim init.vim file on OSX, equals to startup option `-u`. You can also use `exists('g:vscode')` in your init.vim to check if neovim is being run in vscode and share init file between neovim/vscode
+  "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.vscodefiles/vscode-neovim.vim",
+  // Full path to custom neovim init.vim file on Linux/WSL, equals to startup option `-u`. If the `useWSL` setting is checked, this path will be used to find `init.vim` in Windows Subsystem for Linux. You can also use `exists('g:vscode')` in your init.vim to check if neovim is being run in vscode and share init file between neovim/vscode
+  "vscode-neovim.neovimInitVimPaths.linux": "",
+  // Full path to custom neovim init.vim file on Windows, equals to startup option `-u`. If the `useWSL` setting is checked, the value of the `neovimInitVimPaths.linux` setting will be used to find the init.vim file instead. You can also use `exists('g:vscode')` in your init.vim to check if neovim is being run in vscode and share init file between neovim/vscode
+  "vscode-neovim.neovimInitVimPaths.win32": "",
+  // This setting is deprecated. Remove this setting and use neovimExecutablePaths.win32/linux/darwin instead. If you continue to use this setting, keep in mind this setting takes precedence over neovimExecutablePaths.windows/linux/darwin and those settings won't work. If you want them to work, just remove this setting from your settings.json or make its input box in User Settings empty
+  // *Windows, OSX, Linux in Neovim path settings won`t work if this setting is set* Full path to Neovim executable. If you have enabled `useWSL` setting, specify the Linux path to nvim executable instead.
+  "vscode-neovim.neovimPath": "",
+  // Neovim viewport width. Increase if you're working with long lines and have horizontal scroll problems. Larger values will affect neovim performance
+  "vscode-neovim.neovimWidth": 1000,
+  // If 'true' reveals the cursor when scrolling by line and if it is outside view port
+  "vscode-neovim.revealCursorScrollLine": false,
+  // If turned on, text decorations will appear on top of the associated text instead of behind it. Consider turning this on with the EasyMotion plugin.
+  "vscode-neovim.textDecorationsAtTop": false,
+  // Use Ctrl keys in insert mode
+  "vscode-neovim.useCtrlKeysForInsertMode": true,
+  // Use Ctrl keys in normal/visual/etc...(except insert) modes
+  "vscode-neovim.useCtrlKeysForNormalMode": true,
+  // Use neovim installed in WSL. If you enable this setting, specify the path to the neovim executable installed in WSL `neovimExecutablePaths.linux` setting
+  "vscode-neovim.useWSL": false
+}
