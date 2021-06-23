@@ -1,0 +1,10 @@
+{
+  // The selection color used in editor.
+  "gruvboxConcoctis.selectionColor": "neutral",
+  // Use bold font.
+  "gruvboxConcoctis.useBoldFont": false,
+  // Use italic font.
+  "gruvboxConcoctis.useItalicFont": true,
+  // The color palette used in all variants.
+  "gruvboxConcoctis.usePalette": "material"
+}
