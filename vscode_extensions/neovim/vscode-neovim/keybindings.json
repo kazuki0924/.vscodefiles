@@ -1,22 +1,10 @@
 [
-  {
-    "key": "ctrl+shift+p",
-    "command": "vscode-neovim.send",
-    "when": "editorTextFocus && neovim.mode == 'visual'",
-    "args": "<C-P>"
-  },
-  {
-    "key": "shift+cmd+p",
-    "command": "vscode-neovim.send",
-    "when": "editorTextFocus && neovim.mode == 'visual'",
-    "args": "<C-P>"
-  },
-  {
-    "key": "f1",
-    "command": "vscode-neovim.send",
-    "when": "editorTextFocus && neovim.mode == 'visual'",
-    "args": "<C-P>"
-  },
+  // - vscode-neovim.commit-cmdline
+  // - vscode-neovim.compositeEscape1
+  // - vscode-neovim.compositeEscape2
+  // - vscode-neovim.shift-l
+  // - vscode-neovim.shift-m
+  // - vscode-neovim:shift-}
   {
     "key": "ctrl+shift+p",
     "command": "vscode-neovim.send",
