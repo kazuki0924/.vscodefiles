@@ -1,0 +1,37 @@
+{
+  // Select an icon pack that enables specific icons.
+  //  - angular: Icons for Angular.
+  //  - angular_ngrx: Icons for Angular and ngrx.
+  //  - react: Icons for React.
+  //  - react_redux: Icons for React and Redux.
+  //  - vue: Icons for Vue.
+  //  - vue_vuex: Icons for Vue and Vuex.
+  //  - nest: Icons for NestJS.
+  //  - none: No icon pack enabled.
+  "material-icon-theme.activeIconPack": "nest",
+  // Set custom file icon associations.
+  "material-icon-theme.files.associations": {},
+  // Set custom folder icon associations.
+  "material-icon-theme.folders.associations": {},
+  // Change the color of the folder icons.
+  "material-icon-theme.folders.color": "#90a4ae",
+  // Set the type for the folder icons.
+  //  - specific: Select specific folder icons.
+  //  - classic: Select classic folder icons.
+  //  - none: No folder icons.
+  "material-icon-theme.folders.theme": "specific",
+  // Hide explorer arrows before folder.
+  "material-icon-theme.hidesExplorerArrows": false,
+  // Set custom language icon associations.
+  "material-icon-theme.languages.associations": {},
+  // Change the opacity of the icons.
+  "material-icon-theme.opacity": 1,
+  // Change the saturation of the icons.
+  "material-icon-theme.saturation": 1,
+  // Show restart notification.
+  "material-icon-theme.showReloadMessage": false,
+  // Show the update message after each update.
+  "material-icon-theme.showUpdateMessage": false,
+  // Show the welcome message after first installation.
+  "material-icon-theme.showWelcomeMessage": false
+}
