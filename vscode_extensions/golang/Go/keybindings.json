@@ -1,0 +1,59 @@
+[
+  // - go.add.package.workspace
+  // - go.add.tags
+  // - go.apply.coverprofile
+  // - go.benchmark.cursor
+  // - go.benchmark.file
+  // - go.benchmark.package
+  // - go.browse.packages
+  // - go.build.package
+  // - go.build.workspace
+  // - go.debug.cursor
+  // - go.debug.previous
+  // - go.environment.choose
+  // - go.extractServerChannel
+  // - go.fill.struct
+  // - go.get.package
+  // - go.global.resetState
+  // - go.godoctor.extract
+  // - go.godoctor.var
+  // - go.gopath
+  // - go.impl.cursor
+  // - go.import.add
+  // - go.install.package
+  // - go.languageserver.restart
+  // - go.lint.package
+  // - go.lint.workspace
+  // - go.locate.tools
+  // - go.playground
+  // - go.remove.tags
+  // - go.run.modinit
+  // - go.show.commands
+  // - go.subtest.cursor
+  // - go.survey.resetConfig
+  // - go.survey.showConfig
+  // - go.test.cancel
+  // - go.test.coverage
+  // - go.test.cursor
+  // - go.test.cursorOrPrevious
+  // - go.test.file
+  // - go.test.generate.file
+  // - go.test.generate.function
+  // - go.test.generate.package
+  // - go.test.package
+  // - go.test.previous
+  // - go.test.workspace
+  // - go.toggle.gc_details
+  // - go.toggle.test.file
+  // - go.tools.install
+  // - go.vet.package
+  // - go.vet.workspace
+  // - go.welcome
+  // - go.workspace.isTrusted.toggle
+  // - go.workspace.resetState
+  {
+    "key": "cmd+k cmd+t",
+    "command": "go.toggle.test.file",
+    "when": "editorLangId == go"
+  }
+]
