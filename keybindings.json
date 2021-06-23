@@ -846,6 +846,10 @@
     "when": "explorerViewletCompressedFocus && explorerViewletVisible && filesExplorerFocus && !explorerViewletCompressedLastFocus && !inputFocus"
   },
   {
+    "command": "workbench.action.openRecent",
+    "key": "cmd+r"
+  },
+  {
     "command": "workbench.view.scm",
     "key": "cmd+g g",
     "when": "workbench.scm.active"
@@ -1197,5 +1201,19 @@
     "command": "-toggleSuggestionFocus",
     "key": "ctrl+alt+space",
     "when": "suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "command": "-workbench.action.openRecent",
+    "key": "ctrl+r"
+  },
+  {
+    "command": "-workbench.action.reloadWindow",
+    "key": "cmd+r",
+    "when": "isDevelopment"
+  },
+  {
+    "command": "go.toggle.test.file",
+    "key": "cmd+k cmd+t",
+    "when": "editorLangId == go"
   }
 ]
