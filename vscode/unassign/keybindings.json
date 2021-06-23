@@ -155,5 +155,14 @@
     "key": "ctrl+alt+space",
     "command": "-toggleSuggestionFocus",
     "when": "suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent"
+  },
+  {
+    "key": "cmd+r",
+    "command": "-workbench.action.reloadWindow",
+    "when": "isDevelopment"
   }
 ]
