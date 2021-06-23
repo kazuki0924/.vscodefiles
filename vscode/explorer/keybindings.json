@@ -40,7 +40,17 @@
     "when": "sideBarFocus && !inputFocus"
   },
   {
-    "key": "cmd+l",
+    "key": "ctrl+n",
+    "command": "list.focusDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "list.focusUp",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "s",
     "command": "explorer.openToSide",
     "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
   },
@@ -80,6 +90,11 @@
     "when": "listFocus && !inputFocus && listSupportsKeyboardNavigation"
   },
   {
+    "key": "escape",
+    "command": "list.toggleKeyboardNavigation",
+    "when": "inputFocus && listFocus && listSupportsKeyboardNavigation"
+  },
+  {
     "key": "r",
     "command": "renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
@@ -92,7 +107,7 @@
   {
     "key": "o",
     "command": "list.toggleExpand",
-    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    "when": "listFocus && !inputFocus"
   },
   {
     "key": "a",
