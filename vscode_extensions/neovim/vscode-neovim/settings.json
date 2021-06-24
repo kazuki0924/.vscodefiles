@@ -119,7 +119,7 @@
   // Full path to custom neovim init file, equals to startup option -u. If checked useWSL flag specify a Linux path. You can also use exists('g:vscode') in your init.vim to check if neovim is being run in vscode and share init file between neovim/vscode
   "vscode-neovim.neovimInitPath": "",
   // Full path to custom neovim init.vim file on OSX, equals to startup option `-u`. You can also use `exists('g:vscode')` in your init.vim to check if neovim is being run in vscode and share init file between neovim/vscode
-  "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.vscodefiles/vscode-neovim.vim",
+  "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.nvimfiles/init.vim",
   // Full path to custom neovim init.vim file on Linux/WSL, equals to startup option `-u`. If the `useWSL` setting is checked, this path will be used to find `init.vim` in Windows Subsystem for Linux. You can also use `exists('g:vscode')` in your init.vim to check if neovim is being run in vscode and share init file between neovim/vscode
   "vscode-neovim.neovimInitVimPaths.linux": "",
   // Full path to custom neovim init.vim file on Windows, equals to startup option `-u`. If the `useWSL` setting is checked, the value of the `neovimInitVimPaths.linux` setting will be used to find the init.vim file instead. You can also use `exists('g:vscode')` in your init.vim to check if neovim is being run in vscode and share init file between neovim/vscode

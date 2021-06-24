@@ -288,7 +288,7 @@
   "vscode-neovim.neovimExecutablePaths.linux": "",
   "vscode-neovim.neovimExecutablePaths.win32": "",
   "vscode-neovim.neovimInitPath": "",
-  "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.vscodefiles/vscode-neovim.vim",
+  "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.nvimfiles/init.vim",
   "vscode-neovim.neovimInitVimPaths.linux": "",
   "vscode-neovim.neovimInitVimPaths.win32": "",
   "vscode-neovim.neovimPath": "",
