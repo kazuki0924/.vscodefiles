@@ -15,5 +15,9 @@
   // When enabled, insert a final new line at the end of the file when saving it.
   "files.insertFinalNewline": true,
   // Enables the simple file dialog. The simple file dialog replaces the system file dialog when enabled.
-  "files.simpleDialog.enable": true
+  "files.simpleDialog.enable": true,
+  // Configure file associations to languages (e.g. `"*.extension": "html"`). These have precedence over the default associations of the languages installed.
+  "files.associations": {
+    ".vscode-extensions": "shellscript"
+  }
 }

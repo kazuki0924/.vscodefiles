@@ -22,6 +22,9 @@
   "explorer.sortOrderLexicographicOptions": "lower",
   "extensions.closeExtensionDetailsOnViewChange": false,
   "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    ".vscode-extensions": "shellscript"
+  },
   "files.autoGuessEncoding": true,
   "files.defaultLanguage": "${activeEditorLanguage}",
   "files.exclude": {

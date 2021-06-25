@@ -1,6 +1,7 @@
 [
   {
     "key": "cmd+j q",
-    "command": "keyboard-quickfix.openQuickFix"
+    "command": "keyboard-quickfix.openQuickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
   }
 ]

@@ -2,6 +2,10 @@
 # https://github.com/codota/tabnine-vscode
 https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode
 
+# Visual Studio IntelliCode
+# https://github.com/MicrosoftDocs/intellicode
+https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode
+
 # Go To Method
 # https://github.com/trixnz/vscode-go-to-method
 https://marketplace.visualstudio.com/items?itemName=trixnz.go-to-method

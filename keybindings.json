@@ -1276,7 +1276,8 @@
   },
   {
     "command": "keyboard-quickfix.openQuickFix",
-    "key": "cmd+j q"
+    "key": "cmd+j q",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
   },
   {
     "args": "<C-P>",
