@@ -1,0 +1,6 @@
+[
+  {
+    "key": "cmd+j q",
+    "command": "keyboard-quickfix.openQuickFix"
+  }
+]

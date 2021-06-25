@@ -39,6 +39,19 @@
     "command": "editor.action.fixAll"
   },
   {
+    "key": "cmd+j cmd+a",
+    "command": "editor.action.autoFix",
+    "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
+  },
+  {
+    "key": "cmd+j cmd+q",
+    "command": "editor.action.quickFix"
+  },
+  {
+    "key": "cmd+j cmd+q",
+    "command": "problems.action.showQuickFixes"
+  },
+  {
     "key": "cmd+j o",
     "command": "editor.action.openLink"
   },

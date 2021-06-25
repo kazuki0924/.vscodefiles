@@ -39,6 +39,19 @@
     "key": "cmd+j a"
   },
   {
+    "command": "editor.action.autoFix",
+    "key": "cmd+j cmd+a",
+    "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
+  },
+  {
+    "command": "editor.action.quickFix",
+    "key": "cmd+j cmd+q"
+  },
+  {
+    "command": "problems.action.showQuickFixes",
+    "key": "cmd+j cmd+q"
+  },
+  {
     "command": "editor.action.openLink",
     "key": "cmd+j o"
   },
@@ -1260,6 +1273,10 @@
     "command": "go.toggle.test.file",
     "key": "cmd+k cmd+t",
     "when": "editorLangId == go"
+  },
+  {
+    "command": "keyboard-quickfix.openQuickFix",
+    "key": "cmd+j q"
   },
   {
     "args": "<C-P>",

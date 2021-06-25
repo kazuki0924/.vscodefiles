@@ -1,0 +1,4 @@
+{
+  // Show label on action
+  "keyboard-quickfix.showActionNotification": true
+}

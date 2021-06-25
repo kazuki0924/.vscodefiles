@@ -163,6 +163,7 @@
   "gruvboxConcoctis.useBoldFont": false,
   "gruvboxConcoctis.useItalicFont": true,
   "gruvboxConcoctis.usePalette": "material",
+  "keyboard-quickfix.showActionNotification": true,
   "material-icon-theme.activeIconPack": "nest",
   "material-icon-theme.files.associations": {},
   "material-icon-theme.folders.associations": {},
