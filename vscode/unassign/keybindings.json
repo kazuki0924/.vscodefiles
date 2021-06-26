@@ -164,5 +164,13 @@
     "key": "cmd+r",
     "command": "-workbench.action.reloadWindow",
     "when": "isDevelopment"
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "-workbench.action.tasks.build"
+  },
+  {
+    "key": "cmd+t",
+    "command": "-workbench.action.showAllSymbols"
   }
 ]

@@ -1,0 +1,9 @@
+[
+  // - TabNine.statusBar
+  // - TabNine::config
+  // - TabNine::validatorClearCache
+  // - TabNine::validatorSetThreshold
+  // - TabNine::validatorToggle
+  // - tabnine-completion-imports
+  // - tabnine-handle-import
+]

@@ -16,5 +16,9 @@
     "command": "editor.action.joinLines",
     "key": "ctrl+shift+j",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+cmd+t",
+    "command": "workbench.action.showAllSymbols"
   }
 ]

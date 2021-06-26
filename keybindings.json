@@ -1022,6 +1022,10 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
+    "command": "workbench.action.showAllSymbols",
+    "key": "ctrl+cmd+t"
+  },
+  {
     "command": "selectNextSuggestion",
     "key": "ctrl+j",
     "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
@@ -1100,6 +1104,10 @@
     "command": "showPrevParameterHint",
     "key": "ctrl+p",
     "when": "editorTextFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+  },
+  {
+    "command": "workbench.action.tasks.build",
+    "key": "cmd+t b"
   },
   {
     "command": "editor.action.showHover",
@@ -1311,6 +1319,14 @@
     "command": "-workbench.action.reloadWindow",
     "key": "cmd+r",
     "when": "isDevelopment"
+  },
+  {
+    "command": "-workbench.action.tasks.build",
+    "key": "shift+cmd+b"
+  },
+  {
+    "command": "-workbench.action.showAllSymbols",
+    "key": "cmd+t"
   },
   {
     "command": "go.toggle.test.file",

@@ -1,0 +1,20 @@
+[
+  // - workbench.action.tasks.configureDefaultBuildTask
+  // - workbench.action.tasks.configureDefaultTestTask
+  // - workbench.action.tasks.configureTaskRunner
+  // - workbench.action.tasks.manageAutomaticRunning
+  // - workbench.action.tasks.openUserTasks
+  // - workbench.action.tasks.openWorkspaceFileTasks
+  // - workbench.action.tasks.reRunTask
+  // - workbench.action.tasks.restartTask
+  // - workbench.action.tasks.runTask
+  // - workbench.action.tasks.showLog
+  // - workbench.action.tasks.showTasks
+  // - workbench.action.tasks.terminate
+  // - workbench.action.tasks.test
+  // - workbench.action.tasks.toggleProblem
+  {
+    "key": "cmd+t b",
+    "command": "workbench.action.tasks.build"
+  }
+]
