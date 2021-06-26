@@ -981,7 +981,7 @@
     "when": "isInDiffEditor"
   },
   {
-    "command": "git.git.openFile",
+    "command": "git.openFile",
     "key": "cmd+g o",
     "when": "isInDiffEditor"
   },

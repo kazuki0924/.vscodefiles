@@ -61,7 +61,7 @@
   },
   {
     "key": "cmd+g o",
-    "command": "git.git.openFile",
+    "command": "git.openFile",
     "when": "isInDiffEditor"
   },
   {

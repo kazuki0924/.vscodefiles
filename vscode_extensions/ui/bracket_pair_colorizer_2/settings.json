@@ -1,0 +1,46 @@
+{
+  // CSS for the active scope. Use {color} to match the bracket color. The string types listed at https://code.visualstudio.com/docs/extensionAPI/vscode-api#DecorationRenderOptions can be used
+  "bracket-pair-colorizer-2.activeScopeCSS": [
+    "borderStyle : solid",
+    "borderWidth : 1px",
+    "borderColor : {color}",
+    "opacity: 0.5"
+  ],
+  // Should different brackets share a color group (Consecutive), or use their own color group (Independent)
+  "bracket-pair-colorizer-2.colorMode": "Consecutive",
+  // Scope colors
+  "bracket-pair-colorizer-2.colors": [
+    "Gold",
+    "Orchid",
+    "LightSkyBlue"
+  ],
+  // Don't colorize files of these languages
+  "bracket-pair-colorizer-2.excludedLanguages": [],
+  // Should opening brackets iterate the color cycle even if they are not nested
+  "bracket-pair-colorizer-2.forceIterationColorCycle": false,
+  // Ensure that an opening brackets color does not match a previous brackets color
+  "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
+  // Should the active scope brackets always be highlighted? Recommended to disable editor.matchBrackets if using this feature.
+  "bracket-pair-colorizer-2.highlightActiveScope": false,
+  // Show active bracket scope in ruler?
+  "bracket-pair-colorizer-2.rulerPosition": "Center",
+  // CSS for the scope line. Use {color} to match the bracket color. The string types listed at https://code.visualstudio.com/docs/extensionAPI/vscode-api#DecorationRenderOptions can be used
+  "bracket-pair-colorizer-2.scopeLineCSS": [
+    "borderStyle : solid",
+    "borderWidth : 1px",
+    "borderColor : {color}",
+    "opacity: 0.5"
+  ],
+  // True: Scope Line will start from the ending bracket position. False: Scope Line will always be at column 0
+  "bracket-pair-colorizer-2.scopeLineRelativePosition": true,
+  // Show active bracket scope in gutter?
+  "bracket-pair-colorizer-2.showBracketsInGutter": true,
+  // Show active bracket scope in ruler?
+  "bracket-pair-colorizer-2.showBracketsInRuler": true,
+  // Show a horizontal line to create a block around the active bracket scope?
+  "bracket-pair-colorizer-2.showHorizontalScopeLine": true,
+  // Show a vertical line on the left side of the editor representing the active bracket scope?
+  "bracket-pair-colorizer-2.showVerticalScopeLine": true,
+  // Unmatched Scope Color
+  "bracket-pair-colorizer-2.unmatchedScopeColor": "Red"
+}
