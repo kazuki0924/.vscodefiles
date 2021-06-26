@@ -6,10 +6,6 @@ https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-color
 # https://github.com/oderwat/vscode-indent-rainbow
 https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow
 
-# SmoothType
-# https://github.com/spikespaz/vscode-smoothtype
-https://marketplace.visualstudio.com/items?itemName=spikespaz.vscode-smoothtype
-
 # Output Colorizer
 # https://github.com/IBM-Bluemix/vscode-log-output-colorizer
 https://marketplace.visualstudio.com/items?itemName=IBM.output-colorizer
@@ -25,3 +21,7 @@ https://marketplace.visualstudio.com/items?itemName=Wattenberger.footsteps
 # VSCode Dimmer Block
 # https://github.com/AndrewMorsillo/vscode-dimmer
 https://marketplace.visualstudio.com/items?itemName=imagio.vscode-dimmer-block
+
+# SmoothType (depricated)
+# https://github.com/spikespaz/vscode-smoothtype
+# https://marketplace.visualstudio.com/items?itemName=spikespaz.vscode-smoothtype
