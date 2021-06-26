@@ -17,7 +17,7 @@
     "command": "workbench.action.findInFiles"
   },
   {
-    "key": "cmd+j r",
+    "key": "cmd+j shift+r",
     "command": "workbench.action.replaceInFiles"
   },
   {
@@ -56,11 +56,54 @@
     "command": "editor.action.openLink"
   },
   {
-    "key": "cmd+j j",
+    "key": "cmd+j shift+s",
     "command": "editor.action.showSnippets"
   },
   {
-    "key": "cmd+j k",
+    "key": "cmd+j shift+i",
     "command": "editor.action.insertSnippet"
+  },
+  {
+    "key": "cmd+j j",
+    "command": "workbench.action.openRawDefaultSettings"
+  },
+  {
+    "key": "cmd+j k",
+    "command": "workbench.action.openDefaultKeybindingsFile"
+  },
+  {
+    "key": "cmd+j d",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "cmd+j cmd+d",
+    "command": "editor.action.revealDefinitionAside",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "cmd+j i",
+    "command": "editor.action.goToImplementation",
+    "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "cmd+j r",
+    "command": "editor.action.goToReferences",
+    "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "cmd+j cmd+r",
+    "command": "references-view.findReferences",
+    "when": "editorHasReferenceProvider"
+  },
+  {
+    "key": "cmd+j d",
+    "command": "goToNextReference",
+    "when": "inReferenceSearchEditor || referenceSearchVisible"
+  },
+  {
+    "key": "cmd+j shift+d",
+    "command": "goToPreviousReference",
+    "when": "inReferenceSearchEditor || referenceSearchVisible"
   }
 ]
