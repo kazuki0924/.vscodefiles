@@ -753,5 +753,5 @@
   // Specifies when to switch between displaying files as a `tree` or `list` based on the number of files in a nesting level in the _Tags_ view. Only applies when `gitlens.views.tags.files.layout` is set to `auto`
   "gitlens.views.tags.files.threshold": 5,
   // Specifies whether to reveal tags in the _Tags_ view, otherwise they revealed in the _Repositories_ view
-  "gitlens.views.tags.reveal": true,
+  "gitlens.views.tags.reveal": true
 }
