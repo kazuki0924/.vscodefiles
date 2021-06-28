@@ -1,8 +1,7 @@
 [
   {
-    "command": "workbench.view.explorer",
-    "key": "cmd+j e",
-    "when": "viewContainer.workbench.view.explorer.enabled"
+    "command": "workbench.action.switchWindow",
+    "key": "cmd+j e"
   },
   {
     "command": "workbench.action.gotoLine",
@@ -32,7 +31,7 @@
   },
   {
     "command": "notifications.clearAll",
-    "key": "cmd+j n"
+    "key": "cmd+j c"
   },
   {
     "command": "editor.action.fixAll",
@@ -105,6 +104,18 @@
     "command": "goToPreviousReference",
     "key": "cmd+j shift+d",
     "when": "inReferenceSearchEditor || referenceSearchVisible"
+  },
+  {
+    "command": "workbench.action.navigateBack",
+    "key": "cmd+j p"
+  },
+  {
+    "command": "workbench.action.navigateForward",
+    "key": "cmd+j n"
+  },
+  {
+    "command": "workbench.action.navigateToLastEditLocation",
+    "key": "cmd+j shift+p"
   },
   {
     "command": "-editor.action.addCommentLine",
@@ -570,18 +581,6 @@
     "key": "cmd+l tab"
   },
   {
-    "command": "workbench.action.navigateBack",
-    "key": "cmd+e -"
-  },
-  {
-    "command": "workbench.action.navigateForward",
-    "key": "cmd+e ="
-  },
-  {
-    "command": "workbench.action.navigateToLastEditLocation",
-    "key": "cmd+e \\"
-  },
-  {
     "command": "workbench.action.reloadWindow",
     "key": "cmd+e r"
   },
@@ -612,8 +611,9 @@
     "when": "emptyWorkspaceSupport"
   },
   {
-    "command": "workbench.action.switchWindow",
-    "key": "cmd+e e"
+    "command": "workbench.view.explorer",
+    "key": "cmd+e e",
+    "when": "viewContainer.workbench.view.explorer.enabled"
   },
   {
     "command": "workbench.action.pinEditor",

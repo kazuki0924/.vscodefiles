@@ -1,8 +1,7 @@
 [
   {
     "key": "cmd+j e",
-    "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
+    "command": "workbench.action.switchWindow"
   },
   {
     "key": "cmd+j g",
@@ -31,7 +30,7 @@
     "when": "!notebookEditorFocused"
   },
   {
-    "key": "cmd+j n",
+    "key": "cmd+j c",
     "command": "notifications.clearAll"
   },
   {
@@ -105,5 +104,17 @@
     "key": "cmd+j shift+d",
     "command": "goToPreviousReference",
     "when": "inReferenceSearchEditor || referenceSearchVisible"
+  },
+  {
+    "key": "cmd+j p",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "cmd+j n",
+    "command": "workbench.action.navigateForward"
+  },
+  {
+    "key": "cmd+j shift+p",
+    "command": "workbench.action.navigateToLastEditLocation"
   }
 ]

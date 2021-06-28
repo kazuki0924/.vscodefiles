@@ -1,17 +1,5 @@
 [
   {
-    "key": "cmd+e -",
-    "command": "workbench.action.navigateBack"
-  },
-  {
-    "key": "cmd+e =",
-    "command": "workbench.action.navigateForward"
-  },
-  {
-    "key": "cmd+e \\",
-    "command": "workbench.action.navigateToLastEditLocation"
-  },
-  {
     "key": "cmd+e r",
     "command": "workbench.action.reloadWindow"
   },
@@ -43,7 +31,8 @@
   },
   {
     "key": "cmd+e e",
-    "command": "workbench.action.switchWindow"
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
   },
   {
     "key": "cmd+e p",
