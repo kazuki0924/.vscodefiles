@@ -619,6 +619,9 @@
   "search.quickOpen.history.filterSortOrder": "recency",
   "search.searchEditor.reusePriorSearchConfiguration": true,
   "search.sortOrder": "type",
+  "shortcuts.buttons": [
+    "file-binary , workbench.action.tasks.build , Run build task"
+  ],
   "tabnine.disable_file_regex": [],
   "tabnine.disable_line_regex": [],
   "tabnine.experimentalAutoImports": true,

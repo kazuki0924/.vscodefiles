@@ -1,0 +1,10 @@
+{
+  // Setup shortcut buttons. Format: ICON,COMMAND,TOOLTIP
+  "shortcuts.buttons": [
+    "file-binary , workbench.action.tasks.build , Run build task"
+    // "beaker , workbench.action.tasks.test , Run test task",
+    // "terminal , workbench.action.terminal.toggleTerminal , Toggle terminal panel",
+    // "telescope , workbench.action.showCommands , Show command palette",
+    // "bug, workbench.action.debug.start, Launch debug"
+  ]
+}

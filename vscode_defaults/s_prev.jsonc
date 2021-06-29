@@ -797,6 +797,8 @@
   "workbench.tree.indent": 8,
   // Controls whether the tree should render indent guides.
   "workbench.tree.renderIndentGuides": "onHover",
+  // When enabled, trusted domain prompts will appear when opening links in trusted workspaces.
+  "workbench.trustedDomains.promptInTrustedWorkspace": false,
   // Controls the visibility of view header actions. View header actions may either be always visible, or only visible when that view is focused or hovered over.
   "workbench.view.alwaysShowHeaderActions": false,
   // When enabled, an extension's walkthrough will open upon install the extension. Walkthroughs are the items contributed the the 'Getting Started' section of the welcome page
@@ -1963,8 +1965,11 @@
   // - workbench.action.terminal.focusPreviousPane
   // - workbench.action.terminal.hideFind
   // - workbench.action.terminal.kill
+  // - workbench.action.terminal.killEditor
+  // - workbench.action.terminal.moveToEditor
   // - workbench.action.terminal.moveToLineEnd
   // - workbench.action.terminal.moveToLineStart
+  // - workbench.action.terminal.moveToTerminalPanel
   // - workbench.action.terminal.navigationModeExit
   // - workbench.action.terminal.navigationModeFocusNext
   // - workbench.action.terminal.navigationModeFocusPrevious
@@ -3771,6 +3776,38 @@
   "gitlens.views.tags.files.threshold": 5,
   // Specifies whether to reveal tags in the _Tags_ view, otherwise they revealed in the _Repositories_ view
   "gitlens.views.tags.reveal": true,
+  // If error color is disabled, indent colors will be rendered until the length of rendered characters (white spaces, tabs, and other ones) is divisible by tabsize. Turn on this option to render white spaces and tabs only.
+  "indentRainbow.colorOnWhiteSpaceOnly": false,
+  // An array with color (hex, rgba, rgb) strings which are used as colors, can be any length.
+  "indentRainbow.colors": [
+    "rgba(255,255,64,0.07)",
+    "rgba(127,255,127,0.07)",
+    "rgba(255,127,255,0.07)",
+    "rgba(79,236,236,0.07)"
+  ],
+  // Indent color for when there is an error in the indentation, for example if you have your tabs set to 2 spaces but the indent is 3 spaces. Can be any type of web based color format (hex, rgba, rgb).
+  "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
+  // For which languages indent-rainbow should be deactivated. When left empty will ignore.
+  "indentRainbow.excludedLanguages": [
+    "plaintext"
+  ],
+  // For which languages indent-rainbow should skip indent error detection (use '*' to deactivate errors for all languages).
+  "indentRainbow.ignoreErrorLanguages": [
+    "markdown"
+  ],
+  // Skip error highlighting for RegEx patterns. Defaults to c/cpp decorated block and full line comments.
+  "indentRainbow.ignoreLinePatterns": [
+    "/[ \t]* [*]/g",
+    "/[ \t]+[/]{2}/g"
+  ],
+  // For which languages indent-rainbow should be activated. When empty will use for all languages.
+  "indentRainbow.includedLanguages": [],
+  // Automatically change indent settings for languages (see README.md for details).
+  "indentRainbow.indentSetter": {},
+  // Indent color for when there is a mix between spaces and tabs in the indentation. Can be any type of web based color format (hex, rgba, rgb) or a empty string(to be disabled this coloring).
+  "indentRainbow.tabmixColor": "rgba(128,32,96,0.6)",
+  // The delay in ms until the editor gets updated.
+  "indentRainbow.updateDelay": 100,
   // Show label on action
   "keyboard-quickfix.showActionNotification": false,
   // Select an icon pack that enables specific icons.
@@ -3826,37 +3863,4 @@
   "gruvboxConcoctis.useItalicFont": true,
   // The color palette used in all variants.
   "gruvboxConcoctis.usePalette": "material",
-  // If error color is disabled, indent colors will be rendered until the length of rendered characters (white spaces, tabs, and other ones) is divisible by tabsize. Turn on this option to render white spaces and tabs only.
-  "indentRainbow.colorOnWhiteSpaceOnly": false,
-  // An array with color (hex, rgba, rgb) strings which are used as colors, can be any length.
-  "indentRainbow.colors": [
-    "rgba(255,255,64,0.07)",
-    "rgba(127,255,127,0.07)",
-    "rgba(255,127,255,0.07)",
-    "rgba(79,236,236,0.07)"
-  ],
-  // Indent color for when there is an error in the indentation, for example if you have your tabs set to 2 spaces but the indent is 3 spaces. Can be any type of web based color format (hex, rgba, rgb).
-  "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
-  // For which languages indent-rainbow should be deactivated. When left empty will ignore.
-  "indentRainbow.excludedLanguages": [
-    "plaintext"
-  ],
-  // For which languages indent-rainbow should skip indent error detection (use '*' to deactivate errors for all languages).
-  "indentRainbow.ignoreErrorLanguages": [
-    "markdown"
-  ],
-  // Skip error highlighting for RegEx patterns. Defaults to c/cpp decorated block and full line comments.
-  "indentRainbow.ignoreLinePatterns": [
-    "/[ \t]* [*]/g",
-    "/[ \t]+[/]{2}/g"
-  ],
-  // For which languages indent-rainbow should be activated. When empty will use for all languages.
-  "indentRainbow.includedLanguages": [],
-  // Automatically change indent settings for languages (see README.md for details).
-  "indentRainbow.indentSetter": {},
-  // Indent color for when there is a mix between spaces and tabs in the indentation. Can be any type of web based color format (hex, rgba, rgb) or a empty string(to be disabled this coloring).
-  "indentRainbow.tabmixColor": "rgba(128,32,96,0.6)",
-  // The delay in ms until the editor gets updated.
-  "indentRainbow.updateDelay": 100,
 }
-
