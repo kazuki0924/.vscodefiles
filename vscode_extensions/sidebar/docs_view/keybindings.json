@@ -1,0 +1,8 @@
+[
+  // - docsView.documentation.focus
+  // - docsView.documentation.removeView
+  // - docsView.documentation.resetViewLocation
+  // - docsView.documentation.toggleVisibility
+  // - docsView.documentationView.pin
+  // - docsView.documentationView.unpin
+]

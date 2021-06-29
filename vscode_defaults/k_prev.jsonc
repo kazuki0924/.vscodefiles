@@ -4884,6 +4884,12 @@
 // - deleteWordEndRight
 // - deleteWordStartLeft
 // - deleteWordStartRight
+// - docsView.documentation.focus
+// - docsView.documentation.removeView
+// - docsView.documentation.resetViewLocation
+// - docsView.documentation.toggleVisibility
+// - docsView.documentationView.pin
+// - docsView.documentationView.unpin
 // - editor.action.addCursorsToBottom
 // - editor.action.addCursorsToTop
 // - editor.action.addSelectionToPreviousFindMatch
@@ -5613,7 +5619,6 @@
 // - notifications.showList
 // - notifications.toggleList
 // - npm.debugScript
-// - npm.debugScriptFromHover
 // - npm.focus
 // - npm.openScript
 // - npm.packageManager
@@ -5622,7 +5627,6 @@
 // - npm.runInstall
 // - npm.runScript
 // - npm.runScriptFromFolder
-// - npm.runScriptFromHover
 // - npm.runSelectedScript
 // - openEditors.closeAll
 // - openEditors.newUntitledFile
@@ -5710,6 +5714,7 @@
 // - settings.filterUntrusted
 // - settings.switchToJSON
 // - showEditorScreenReaderNotification
+// - simpleBrowser.api.open
 // - simpleBrowser.show
 // - tabnine-completion-imports
 // - tabnine-handle-imports
@@ -5743,7 +5748,6 @@
 // - toggle.diff.ignoreTrimWhitespace
 // - toggle.diff.renderSideBySide
 // - toggleEscapeSequenceLogging
-// - type
 // - typescript.findAllFileReferences
 // - typescript.goToProjectConfig
 // - typescript.openTsServerLog
@@ -5944,6 +5948,12 @@
 // - workbench.action.resetFocusedViewLocation
 // - workbench.action.resetViewLocations
 // - workbench.action.restartExtensionHost
+// - workbench.action.revealPathInFinder1
+// - workbench.action.revealPathInFinder2
+// - workbench.action.revealPathInFinder3
+// - workbench.action.revealPathInFinder4
+// - workbench.action.revealPathInFinder5
+// - workbench.action.revealPathInFinder6
 // - workbench.action.revertAndCloseActiveEditor
 // - workbench.action.saveWorkspaceAs
 // - workbench.action.selectIconTheme

@@ -110,6 +110,7 @@
   //  - vscode.configuration-editing: Provides capabilities (advanced IntelliSense, auto-fixing) in configuration files like settings, launch, and extension recommendation files.
   //  - vscode.debug-auto-launch: Helper for auto-attach feature when node-debug extensions are not active.
   //  - vscode.debug-server-ready: Open URI in browser if server under debugging is ready.
+  //  - bierner.docs-view: Display documentation in the sidebar or panel.
   //  - vscode.emmet: Emmet support for VS Code
   //  - vscode.extension-editing: Provides linting capabilities for authoring extensions.
   //  - vscode.git: Git SCM Integration
@@ -3786,6 +3787,22 @@
     "telescope , workbench.action.showCommands , Show command palette",
     "bug, workbench.action.debug.start, Launch debug"
   ],
+  // Defines a list of terminals to be opened when vscode is started. Each terminal must have an id, which is treated as a terminal name and, optionally, a command that is executed at startup.
+  "extendedTerminalIntegration.startupTerminals": [],
+  // The names of the terminal that should be used for filtering.
+  "extendedTerminalIntegration.statusBar.filter.items": [],
+  // The type of filtering mode.
+  "extendedTerminalIntegration.statusBar.filter.mode": "blacklist",
+  // Maximum number of icons displayed.
+  "extendedTerminalIntegration.statusBar.maxTerminalIcons": 15,
+  // Prefer the latest terminals if the maximum number of displayed icons is exceeded.
+  "extendedTerminalIntegration.statusBar.preferLatestTerminals": false,
+  // Time in seconds until the terminal name is updated.
+  "extendedTerminalIntegration.statusBar.refreshTerminalNameInterval": 5,
+  // Shows the terminal index next to the icon in the status bar.
+  "extendedTerminalIntegration.statusBar.showTerminalIndex": true,
+  // Shows the terminal name next to the icon in the status bar.
+  "extendedTerminalIntegration.statusBar.showTerminalName": false,
   // If error color is disabled, indent colors will be rendered until the length of rendered characters (white spaces, tabs, and other ones) is divisible by tabsize. Turn on this option to render white spaces and tabs only.
   "indentRainbow.colorOnWhiteSpaceOnly": false,
   // An array with color (hex, rgba, rgb) strings which are used as colors, can be any length.
@@ -3873,20 +3890,8 @@
   "gruvboxConcoctis.useItalicFont": true,
   // The color palette used in all variants.
   "gruvboxConcoctis.usePalette": "material",
-  // Defines a list of terminals to be opened when vscode is started. Each terminal must have an id, which is treated as a terminal name and, optionally, a command that is executed at startup.
-  "extendedTerminalIntegration.startupTerminals": [],
-  // The names of the terminal that should be used for filtering.
-  "extendedTerminalIntegration.statusBar.filter.items": [],
-  // The type of filtering mode.
-  "extendedTerminalIntegration.statusBar.filter.mode": "blacklist",
-  // Maximum number of icons displayed.
-  "extendedTerminalIntegration.statusBar.maxTerminalIcons": 15,
-  // Prefer the latest terminals if the maximum number of displayed icons is exceeded.
-  "extendedTerminalIntegration.statusBar.preferLatestTerminals": false,
-  // Time in seconds until the terminal name is updated.
-  "extendedTerminalIntegration.statusBar.refreshTerminalNameInterval": 5,
-  // Shows the terminal index next to the icon in the status bar.
-  "extendedTerminalIntegration.statusBar.showTerminalIndex": true,
-  // Shows the terminal name next to the icon in the status bar.
-  "extendedTerminalIntegration.statusBar.showTerminalName": false,
+  // Controls how the documentation view is updated when the cursor moves.
+  //  - live: The documentation view tracks the current cursor position. Display empty content if no documentation is found at the current position.
+  //  - sticky: The documentation view tries to show the documentation at the current cursor position. If there is none, it continues showing the last available documentation.
+  "docsView.documentationView.updateMode": "live",
 }

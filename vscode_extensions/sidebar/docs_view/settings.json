@@ -1,0 +1,6 @@
+{
+  // Controls how the documentation view is updated when the cursor moves.
+  //  - live: The documentation view tracks the current cursor position. Display empty content if no documentation is found at the current position.
+  //  - sticky: The documentation view tries to show the documentation at the current cursor position. If there is none, it continues showing the last available documentation.
+  "docsView.documentationView.updateMode": "live"
+}
