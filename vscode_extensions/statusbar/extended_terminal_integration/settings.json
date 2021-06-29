@@ -1,0 +1,18 @@
+{
+  // Defines a list of terminals to be opened when vscode is started. Each terminal must have an id, which is treated as a terminal name and, optionally, a command that is executed at startup.
+  "extendedTerminalIntegration.startupTerminals": [],
+  // The names of the terminal that should be used for filtering.
+  "extendedTerminalIntegration.statusBar.filter.items": [],
+  // The type of filtering mode.
+  "extendedTerminalIntegration.statusBar.filter.mode": "blacklist",
+  // Maximum number of icons displayed.
+  "extendedTerminalIntegration.statusBar.maxTerminalIcons": 15,
+  // Prefer the latest terminals if the maximum number of displayed icons is exceeded.
+  "extendedTerminalIntegration.statusBar.preferLatestTerminals": false,
+  // Time in seconds until the terminal name is updated.
+  "extendedTerminalIntegration.statusBar.refreshTerminalNameInterval": 5,
+  // Shows the terminal index next to the icon in the status bar.
+  "extendedTerminalIntegration.statusBar.showTerminalIndex": true,
+  // Shows the terminal name next to the icon in the status bar.
+  "extendedTerminalIntegration.statusBar.showTerminalName": false
+}

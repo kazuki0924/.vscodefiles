@@ -132,7 +132,9 @@
   //  - ms-vscode.node-debug: Node.js debugging support (versions < 8.0)
   //  - ms-vscode.node-debug2: Node.js debugging support
   //  - vscode.npm: Extension to add task support for npm scripts.
+  //  - gizak.shortcuts: Add handy shortcuts to your status bar
   //  - vscode.simple-browser: A very basic built-in webview for displaying web content.
+  //  - Noctarya.terminals: Adds icons for each terminal process to the status bar.
   //  - vscode.testing-editor-contributions: Provides the in-editor experience for tests and test results.
   //  - ms-vscode.vscode-js-profile-table: Text visualizer for profiles taken from the JavaScript debugger
   //  - asvetliakov.vscode-neovim: VSCode Neovim Integration
@@ -3776,6 +3778,14 @@
   "gitlens.views.tags.files.threshold": 5,
   // Specifies whether to reveal tags in the _Tags_ view, otherwise they revealed in the _Repositories_ view
   "gitlens.views.tags.reveal": true,
+  // Setup shortcut buttons. Format: ICON,COMMAND,TOOLTIP
+  "shortcuts.buttons": [
+    "file-binary , workbench.action.tasks.build , Run build task",
+    "beaker , workbench.action.tasks.test , Run test task",
+    "terminal , workbench.action.terminal.toggleTerminal , Toggle terminal panel",
+    "telescope , workbench.action.showCommands , Show command palette",
+    "bug, workbench.action.debug.start, Launch debug"
+  ],
   // If error color is disabled, indent colors will be rendered until the length of rendered characters (white spaces, tabs, and other ones) is divisible by tabsize. Turn on this option to render white spaces and tabs only.
   "indentRainbow.colorOnWhiteSpaceOnly": false,
   // An array with color (hex, rgba, rgb) strings which are used as colors, can be any length.
@@ -3863,4 +3873,20 @@
   "gruvboxConcoctis.useItalicFont": true,
   // The color palette used in all variants.
   "gruvboxConcoctis.usePalette": "material",
+  // Defines a list of terminals to be opened when vscode is started. Each terminal must have an id, which is treated as a terminal name and, optionally, a command that is executed at startup.
+  "extendedTerminalIntegration.startupTerminals": [],
+  // The names of the terminal that should be used for filtering.
+  "extendedTerminalIntegration.statusBar.filter.items": [],
+  // The type of filtering mode.
+  "extendedTerminalIntegration.statusBar.filter.mode": "blacklist",
+  // Maximum number of icons displayed.
+  "extendedTerminalIntegration.statusBar.maxTerminalIcons": 15,
+  // Prefer the latest terminals if the maximum number of displayed icons is exceeded.
+  "extendedTerminalIntegration.statusBar.preferLatestTerminals": false,
+  // Time in seconds until the terminal name is updated.
+  "extendedTerminalIntegration.statusBar.refreshTerminalNameInterval": 5,
+  // Shows the terminal index next to the icon in the status bar.
+  "extendedTerminalIntegration.statusBar.showTerminalIndex": true,
+  // Shows the terminal name next to the icon in the status bar.
+  "extendedTerminalIntegration.statusBar.showTerminalName": false,
 }
