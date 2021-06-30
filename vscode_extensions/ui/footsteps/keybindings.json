@@ -1,0 +1,20 @@
+[
+  // - footsteps.clearChangesWithinFile
+  // - footsteps.skipBackDifferentFile
+  // - footsteps.skipBackSameFile
+  // - footsteps.skipForwardsDifferentFile
+  // - footsteps.skipForwardsSameFile
+  // - footsteps.toggleHighlightingLine
+  {
+    "key": "cmd+j l",
+    "command": "footsteps.skipForwards"
+  },
+  {
+    "key": "cmd+j h",
+    "command": "footsteps.skipBack"
+  },
+  {
+    "key": "cmd+j c",
+    "command": "footsteps.clearChangesWithinFile"
+  }
+]

@@ -3680,6 +3680,10 @@
     "when": "editorHasCallHierarchyProvider"
   },
   {
+    "key": "ctrl+alt+left",
+    "command": "footsteps.skipBack"
+  },
+  {
     "key": "left",
     "command": "gitlens.key.left",
     "when": "gitlens:key:left"
@@ -3689,6 +3693,10 @@
     "command": "vscode-neovim.send",
     "when": "editorTextFocus && neovim.mode == 'visual'",
     "args": "<C-P>"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "footsteps.skipForwards"
   },
   {
     "key": "alt+left",
@@ -4984,7 +4992,6 @@
 // - explorer.download
 // - explorer.openWith
 // - explorer.upload
-// - extendedTerminalIntegration.anonymous-command.0
 // - extendedTerminalIntegration.closeActiveTerminal
 // - extendedTerminalIntegration.closeAllTerminals
 // - extendedTerminalIntegration.createTerminal
@@ -5044,6 +5051,12 @@
 // - files.openTimeline
 // - files.participants.resetChoice
 // - filesExplorer.findInWorkspace
+// - footsteps.clearChangesWithinFile
+// - footsteps.skipBackDifferentFile
+// - footsteps.skipBackSameFile
+// - footsteps.skipForwardsDifferentFile
+// - footsteps.skipForwardsSameFile
+// - footsteps.toggleHighlightingLines
 // - getContextKeyInfo
 // - git._syncAll
 // - git.addRemote
@@ -5531,9 +5544,7 @@
 // - gitlens.views.updates.focus
 // - gitlens.views.updates.resetViewLocation
 // - gitlens.views.welcome.focus
-// - gitlens.views.welcome.removeView
 // - gitlens.views.welcome.resetViewLocation
-// - gitlens.views.welcome.toggleVisibility
 // - goToNextReferenceFromEmbeddedEditor
 // - goToPreviousReferenceFromEmbeddedEditor
 // - help.tweetFeedback
@@ -5644,7 +5655,6 @@
 // - outline.toggleVisibility
 // - paste
 // - perfview.show
-// - php.untrustValidationExecutable
 // - problems.action.clearFilterText
 // - problems.action.copyMessage
 // - problems.action.copyRelatedInformationMessage
@@ -5714,7 +5724,6 @@
 // - settings.filterUntrusted
 // - settings.switchToJSON
 // - showEditorScreenReaderNotification
-// - simpleBrowser.api.open
 // - simpleBrowser.show
 // - tabnine-completion-imports
 // - tabnine-handle-imports
@@ -5748,6 +5757,7 @@
 // - toggle.diff.ignoreTrimWhitespace
 // - toggle.diff.renderSideBySide
 // - toggleEscapeSequenceLogging
+// - type
 // - typescript.findAllFileReferences
 // - typescript.goToProjectConfig
 // - typescript.openTsServerLog
@@ -5948,12 +5958,6 @@
 // - workbench.action.resetFocusedViewLocation
 // - workbench.action.resetViewLocations
 // - workbench.action.restartExtensionHost
-// - workbench.action.revealPathInFinder1
-// - workbench.action.revealPathInFinder2
-// - workbench.action.revealPathInFinder3
-// - workbench.action.revealPathInFinder4
-// - workbench.action.revealPathInFinder5
-// - workbench.action.revealPathInFinder6
 // - workbench.action.revertAndCloseActiveEditor
 // - workbench.action.saveWorkspaceAs
 // - workbench.action.selectIconTheme

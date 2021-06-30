@@ -113,6 +113,7 @@
   //  - bierner.docs-view: Display documentation in the sidebar or panel.
   //  - vscode.emmet: Emmet support for VS Code
   //  - vscode.extension-editing: Provides linting capabilities for authoring extensions.
+  //  - Wattenberger.footsteps: Highlight and navigate between your most recently edited chunks of code
   //  - vscode.git: Git SCM Integration
   //  - vscode.github: GitHub
   //  - vscode.github-authentication: GitHub Authentication Provider
@@ -596,9 +597,9 @@
   "scm.repositories.visible": 10,
   // Controls when the restricted mode banner is shown.
   //  - always: Show the banner every time an untrusted workspace is open.
-  //  - once: Show the banner the first time an untrusted workspace is opened until dismissed.
+  //  - untilDismissed: Show the banner when an untrusted workspace is opened until dismissed.
   //  - never: Do not show the banner when an untrusted workspace is open.
-  "security.workspace.trust.banner": "once",
+  "security.workspace.trust.banner": "untilDismissed",
   // Controls whether or not the empty window is trusted by default within VS Code. When used with `security.workspace.trust.untrustedFiles`, you can enable the full functionality of VS Code without prompting in an empty window.
   "security.workspace.trust.emptyWindow": true,
   // Controls whether or not workspace trust is enabled within VS Code.
@@ -3024,6 +3025,10 @@
   "vscode-neovim.useCtrlKeysForNormalMode": true,
   // Use neovim installed in WSL. If you enable this setting, specify the path to the neovim executable installed in WSL `neovimExecutablePaths.linux` setting
   "vscode-neovim.useWSL": false,
+  // Controls how the documentation view is updated when the cursor moves.
+  //  - live: The documentation view tracks the current cursor position. Display empty content if no documentation is found at the current position.
+  //  - sticky: The documentation view tries to show the documentation at the current cursor position. If there is none, it continues showing the last available documentation.
+  "docsView.documentationView.updateMode": "live",
   // CSS for the active scope. Use {color} to match the bracket color. The string types listed at https://code.visualstudio.com/docs/extensionAPI/vscode-api#DecorationRenderOptions can be used
   "bracket-pair-colorizer-2.activeScopeCSS": [
     "borderStyle : solid",
@@ -3890,8 +3895,16 @@
   "gruvboxConcoctis.useItalicFont": true,
   // The color palette used in all variants.
   "gruvboxConcoctis.usePalette": "material",
-  // Controls how the documentation view is updated when the cursor moves.
-  //  - live: The documentation view tracks the current cursor position. Display empty content if no documentation is found at the current position.
-  //  - sticky: The documentation view tries to show the documentation at the current cursor position. If there is none, it continues showing the last available documentation.
-  "docsView.documentationView.updateMode": "live",
+  // Turn on to highlight changed lines (historical changes will still be saved, for navigation)
+  "footsteps.doHighlightChanges": true,
+  // Turn off to prevent highlighting the currently focused chunk of edited code.
+  "footsteps.doHighlightCurrentlyFocusedChunk": false,
+  // The color of the highlighted trail (in rgb format). I'd recommend keeping this subtle - black (`rgb(0, 0, 0)`) if you have a dark theme and white (`rgb(255, 255, 255)`) if you have a light theme.
+  "footsteps.highlightColor": "rgb(153, 128, 250)",
+  // The maximum opacity for highlighting recently changed lines (0 - 1)
+  "footsteps.highlightColorMaxOpacity": 0.4,
+  // The number of changes to highlight with the background color.
+  "footsteps.maxNumberOfChangesToHighlight": 6,
+  // The number of changes to save in history for using your keybindings to navigate between.
+  "footsteps.maxNumberOfChangesToRemember": 10,
 }

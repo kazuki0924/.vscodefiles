@@ -2340,5 +2340,17 @@
     "command": "-explorer.openToSide",
     "key": "v",
     "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  },
+  {
+    "command": "footsteps.skipForwards",
+    "key": "cmd+j l"
+  },
+  {
+    "command": "footsteps.skipBack",
+    "key": "cmd+j h"
+  },
+  {
+    "command": "footsteps.clearChangesWithinFile",
+    "key": "cmd+j c"
   }
 ]
