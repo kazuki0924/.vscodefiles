@@ -368,7 +368,7 @@
   "gitlens.views.commitFormat": null,
   "gitlens.views.commits.avatars": true,
   "gitlens.views.commits.files.compact": true,
-  "gitlens.views.commits.files.layout": "auto",
+  "gitlens.views.commits.files.layout": "tree",
   "gitlens.views.commits.files.threshold": 5,
   "gitlens.views.commits.pullRequests.enabled": true,
   "gitlens.views.commits.pullRequests.showForBranches": true,
