@@ -2,10 +2,10 @@
 # https://github.com/Noctarya/vscode-terminals
 https://marketplace.visualstudio.com/items?itemName=Noctarya.terminals
 
-# ColorTabs
-# https://github.com/oreporan/color-tabs-vscode
-https://marketplace.visualstudio.com/items?itemName=orepor.color-tabs-vscode-ext
-
 # Shortcuts
 # https://github.com/gizak/vscode-shortcuts
 https://marketplace.visualstudio.com/items?itemName=gizak.shortcuts
+
+# ColorTabs
+# https://github.com/oreporan/color-tabs-vscode
+# https://marketplace.visualstudio.com/items?itemName=orepor.color-tabs-vscode-ext
