@@ -1,0 +1,146 @@
+{
+  // Equivalent to setting the DOCKER_CERT_PATH environment variable.
+  "docker.certPath": "",
+  // Command templates for `docker attach` / `docker exec -it` commands.
+  "docker.commands.attach": "docker exec -it ${containerId} ${shellCommand}",
+  // Command template(s) for `docker build` commands.
+  "docker.commands.build": "docker build --pull --rm -f \"${dockerfile}\" -t ${tag} \"${context}\"",
+  // Command templates for `docker-compose down` commands.
+  "docker.commands.composeDown": [
+    {
+      "label": "Compose Down",
+      "template": "docker-compose ${configurationFile} down",
+      "contextTypes": [
+        "moby"
+      ]
+    },
+    {
+      "label": "Compose Down",
+      "template": "docker compose ${configurationFile} down"
+    }
+  ],
+  // Command templates for `docker-compose up` commands.
+  "docker.commands.composeUp": [
+    {
+      "label": "Compose Up",
+      "template": "docker-compose ${configurationFile} up ${detached} ${build}",
+      "contextTypes": [
+        "moby"
+      ]
+    },
+    {
+      "label": "Compose Up",
+      "template": "docker compose ${configurationFile} up ${detached}"
+    }
+  ],
+  // Command templates for `docker logs` commands.
+  "docker.commands.logs": "docker logs --tail 1000 -f ${containerId}",
+  // Command templates for `docker run` commands.
+  "docker.commands.run": "docker run --rm -d ${exposedPorts} ${tag}",
+  // Command templates for `docker run -it` (interactive) commands.
+  "docker.commands.runInteractive": "docker run --rm -it ${exposedPorts} ${tag}",
+  // Any secondary properties to display for a container (an array). Possible elements include: ContainerId, ContainerName, CreatedTime, FullTag, ImageId, Networks, Ports, Registry, Repository, RepositoryName, RepositoryNameAndTag, State, Status, and Tag
+  "docker.containers.description": [
+    "ContainerName",
+    "Status"
+  ],
+  // The property to use to group containers in Docker view: ContainerId, ContainerName, CreatedTime, FullTag, ImageId, Networks, Ports, Registry, Repository, RepositoryName, RepositoryNameAndTag, State, Status, Tag, or None
+  "docker.containers.groupBy": "Compose Project Name",
+  // The primary property to display for a container: ContainerId, ContainerName, CreatedTime, FullTag, ImageId, Networks, Ports, Registry, Repository, RepositoryName, RepositoryNameAndTag, State, Status, or Tag
+  "docker.containers.label": "FullTag",
+  // The property to use to sort containers in Docker view: CreatedTime or Label
+  "docker.containers.sortBy": "CreatedTime",
+  // Equivalent to setting the DOCKER_CONTEXT environment variable.
+  "docker.context": "",
+  // Any secondary properties to display for a Docker context (an array). Possible elements include: Name, Description and DockerEndpoint
+  "docker.contexts.description": [
+    "Description"
+  ],
+  // The primary property to display for a Docker context: Name, Description or DockerEndpoint
+  "docker.contexts.label": "Name",
+  // Set to true to include --build option when docker-compose command is invoked
+  "docker.dockerComposeBuild": true,
+  // Set to true to include --d (detached) option when docker-compose command is invoked
+  "docker.dockerComposeDetached": true,
+  // If specified, this object will be passed to the Dockerode constructor. Takes precedence over DOCKER_HOST, the Docker Host setting, and any existing Docker contexts.
+  "docker.dockerodeOptions": {},
+  // Absolute path to Docker client executable ('docker' command). If the path contains whitespace, it needs to be quoted appropriately.
+  "docker.dockerPath": "docker",
+  // Docker view refresh interval (milliseconds)
+  "docker.explorerRefreshInterval": 2000,
+  // Equivalent to setting the DOCKER_HOST environment variable, for example, ssh://myuser@mymachine or tcp://1.2.3.4.
+  "docker.host": "",
+  // Build context PATH to pass to Docker build command.
+  "docker.imageBuildContextPath": "",
+  // Check for outdated base images once per Visual Studio Code session
+  "docker.images.checkForOutdatedImages": true,
+  // Any secondary properties to display for a image (an array). Possible elements include: CreatedTime, FullTag, ImageId, Registry, Repository, RepositoryName, RepositoryNameAndTag, Tag, and Size
+  "docker.images.description": [
+    "CreatedTime"
+  ],
+  // The property to use to group images in Docker view: CreatedTime, FullTag, ImageId, None, Registry, Repository, RepositoryName, RepositoryNameAndTag, or Tag
+  "docker.images.groupBy": "Repository",
+  // The primary property to display for a image: CreatedTime, FullTag, ImageId, Registry, Repository, RepositoryName, RepositoryNameAndTag, Tag, or Size
+  "docker.images.label": "Tag",
+  // The property to use to sort images in Docker view: CreatedTime, Label, or Size
+  "docker.images.sortBy": "CreatedTime",
+  // Controls the diagnostic severity for the deprecated MAINTAINER instruction
+  "docker.languageserver.diagnostics.deprecatedMaintainer": "warning",
+  // Controls the diagnostic severity for parser directives that are not written in lowercase
+  "docker.languageserver.diagnostics.directiveCasing": "warning",
+  // Controls the diagnostic severity for flagging empty continuation lines found in instructions that span multiple lines
+  "docker.languageserver.diagnostics.emptyContinuationLine": "warning",
+  // Controls the diagnostic severity for instructions that are not written in uppercase
+  "docker.languageserver.diagnostics.instructionCasing": "warning",
+  // Controls the diagnostic severity for flagging a Dockerfile with multiple CMD instructions
+  "docker.languageserver.diagnostics.instructionCmdMultiple": "warning",
+  // Controls the diagnostic severity for flagging a Dockerfile with multiple ENTRYPOINT instructions
+  "docker.languageserver.diagnostics.instructionEntrypointMultiple": "warning",
+  // Controls the diagnostic severity for flagging a Dockerfile with multiple HEALTHCHECK instructions
+  "docker.languageserver.diagnostics.instructionHealthcheckMultiple": "warning",
+  // Controls the diagnostic severity for JSON instructions that are written incorrectly with single quotes
+  "docker.languageserver.diagnostics.instructionJSONInSingleQuotes": "warning",
+  // Controls the diagnostic severity for WORKDIR instructions that do not point to an absolute path
+  "docker.languageserver.diagnostics.instructionWorkdirRelative": "warning",
+  // Controls whether the Dockerfile formatter should ignore instructions that span multiple lines when formatting
+  "docker.languageserver.formatter.ignoreMultilineInstructions": false,
+  // Equivalent to setting the DOCKER_MACHINE_NAME environment variable.
+  "docker.machineName": "",
+  // Any secondary properties to display for a Docker network (an array). Possible elements include CreatedTime, NetworkDriver, NetworkId, and NetworkName
+  "docker.networks.description": [
+    "NetworkDriver",
+    "CreatedTime"
+  ],
+  // The property to use to group networks in Docker view: CreatedTime, NetworkDriver, NetworkId, NetworkName, or None
+  "docker.networks.groupBy": "None",
+  // The primary property to display for a Docker network: CreatedTime, NetworkDriver, NetworkId, or NetworkName
+  "docker.networks.label": "NetworkName",
+  // Show the built-in networks in the explorer.
+  "docker.networks.showBuiltInNetworks": true,
+  // The property to use to sort networks in Docker view: CreatedTime or Label
+  "docker.networks.sortBy": "CreatedTime",
+  // Prompt for registry selection if the image is not explicitly tagged.
+  "docker.promptForRegistryWhenPushingImages": true,
+  // The path to use for scaffolding templates.
+  "docker.scaffolding.templatePath": "",
+  // Set to true to prompt to switch from "UI" extension mode to "Workspace" extension mode if an operation is not supported in UI mode.
+  "docker.showRemoteWorkspaceWarning": true,
+  // Show the Docker extension Start Page when a new update is released.
+  "docker.showStartPage": true,
+  // Equivalent to setting the DOCKER_TLS_VERIFY environment variable.
+  "docker.tlsVerify": "",
+  // Set to true to truncate long image and container registry paths in Docker view
+  "docker.truncateLongRegistryPaths": false,
+  // Maximum length of a registry paths displayed in Docker view, including ellipsis. The truncateLongRegistryPaths setting must be set to true for truncateMaxLength setting to be effective.
+  "docker.truncateMaxLength": 10,
+  // Any secondary properties to display for a Docker volume (an array). Possible values include CreatedTime and VolumeName
+  "docker.volumes.description": [
+    "CreatedTime"
+  ],
+  // The property to use to group volumes in Docker view: CreatedTime, VolumeName, or None
+  "docker.volumes.groupBy": "None",
+  // The primary property to display for a Docker volume: CreatedTime or VolumeName
+  "docker.volumes.label": "VolumeName",
+  // The property to use to sort volumes in Docker view: CreatedTime or Label
+  "docker.volumes.sortBy": "CreatedTime"
+}

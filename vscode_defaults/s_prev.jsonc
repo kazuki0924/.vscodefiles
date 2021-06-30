@@ -106,6 +106,9 @@
   //  - vscode.search-result: Provides syntax highlighting and language features for tabbed search results.
   //  - TabNine.tabnine-vscode: 👩‍💻🤖 JavaScript, Python, Java, Typescript & all other languages - AI Code completion plugin. Tabnine makes developers more productive by auto-completing their code.
   //  - vscode.typescript-language-features: Provides rich language support for JavaScript and TypeScript.
+  //  - ms-azuretools.vscode-docker: Makes it easy to create, manage, and debug containerized applications.
+  //  - redhat.vscode-yaml: YAML Language Support by Red Hat, with built-in Kubernetes syntax support
+  //  - amazonwebservices.aws-toolkit-vscode: An extension for working with Amazon Web Services
   //  - CoenraadS.bracket-pair-colorizer-2: A customizable extension for colorizing matching brackets
   //  - vscode.configuration-editing: Provides capabilities (advanced IntelliSense, auto-fixing) in configuration files like settings, launch, and extension recommendation files.
   //  - vscode.debug-auto-launch: Helper for auto-attach feature when node-debug extensions are not active.
@@ -139,6 +142,7 @@
   //  - Noctarya.terminals: Adds icons for each terminal process to the status bar.
   //  - vscode.testing-editor-contributions: Provides the in-editor experience for tests and test results.
   //  - ms-vscode.vscode-js-profile-table: Text visualizer for profiles taken from the JavaScript debugger
+  //  - ms-kubernetes-tools.vscode-kubernetes-tools: Develop, deploy and debug Kubernetes applications
   //  - asvetliakov.vscode-neovim: VSCode Neovim Integration
   "editor.defaultFormatter": null,
   // Controls whether the Go to Definition mouse gesture always opens the peek widget.
@@ -253,7 +257,7 @@
   // Controls which mode to use for rendering inline suggestions.
   //  - prefix: Only render an inline suggestion if the replace text is a prefix of the insert text.
   //  - subwordDiff: Only render an inline suggestion if the replace text is a subword of the insert text.
-  "editor.inlineSuggest.mode": "prefix",
+  "editor.inlineSuggest.mode": "subwordDiff",
   // Insert spaces when pressing `Tab`. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
   "editor.insertSpaces": true,
   // Special handling for large files to disable certain memory intensive features.
@@ -422,7 +426,7 @@
   // Controls which mode to use for rendering the suggest preview.
   //  - prefix: Only render a preview if the replace text is a prefix of the insert text.
   //  - subwordDiff: Only render a preview if the replace text is a subword of the insert text.
-  "editor.suggest.previewMode": "subwordDiff",
+  "editor.suggest.previewMode": "prefix",
   // Controls whether remembered suggestion selections are shared between multiple workspaces and windows (needs `editor.suggestSelection`).
   "editor.suggest.shareSuggestSelections": false,
   // When enabled IntelliSense shows `class`-suggestions.
@@ -2447,6 +2451,14 @@
       "document"
     ]
   },
+  // Configure settings to be overridden for [dockercompose] language.
+  "[dockercompose]": {
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    }
+  },
   // Configure settings to be overridden for [dockerfile] language.
   "[dockerfile]": {
     "editor.quickSuggestions": {
@@ -2558,12 +2570,17 @@
   "[yaml]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
-    "editor.autoIndent": "advanced",
+    "editor.autoIndent": "keep",
     "gitlens.codeLens.scopes": [
       "document"
-    ]
+    ],
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    }
   },
-  // When enabled, new running processes are detected and ports that they listen on are automatically forwarded.
+  // When enabled, new running processes are detected and ports that they listen on are automatically forwarded. Disabling this setting will not prevent all ports from being forwarded. Even when disabled, extensions will still be able to cause ports to be forwarded, and opening some URLs will still cause ports to forwarded.
   "remote.autoForwardPorts": true,
   // Sets the source from which ports are automatically forwarded when `remote.autoForwardPorts` is true. On Windows and Mac remotes, the `process` option has no effect and `output` will be used. Requires a reload to take effect.
   //  - process: Ports will be automatically forwarded when discovered by watching for processes that are started and include a port.
@@ -3887,14 +3904,6 @@
   "tabnine.logFilePath": "",
   // Receive Tabnine VSCode extention beta updates
   "tabnine.receiveBetaChannelUpdates": false,
-  // The selection color used in editor.
-  "gruvboxConcoctis.selectionColor": "neutral",
-  // Use bold font.
-  "gruvboxConcoctis.useBoldFont": false,
-  // Use italic font.
-  "gruvboxConcoctis.useItalicFont": true,
-  // The color palette used in all variants.
-  "gruvboxConcoctis.usePalette": "material",
   // Turn on to highlight changed lines (historical changes will still be saved, for navigation)
   "footsteps.doHighlightChanges": true,
   // Turn off to prevent highlighting the currently focused chunk of edited code.
@@ -3907,4 +3916,267 @@
   "footsteps.maxNumberOfChangesToHighlight": 6,
   // The number of changes to save in history for using your keybindings to navigate between.
   "footsteps.maxNumberOfChangesToRemember": 10,
+  // The selection color used in editor.
+  "gruvboxConcoctis.selectionColor": "neutral",
+  // Use bold font.
+  "gruvboxConcoctis.useBoldFont": false,
+  // Use italic font.
+  "gruvboxConcoctis.useItalicFont": true,
+  // The color palette used in all variants.
+  "gruvboxConcoctis.usePalette": "material",
+  // Maximum amount of log entries pulled per request from CloudWatch Logs (max 10000)
+  "aws.cloudwatchLogs.limit": 10000,
+  // The AWS Toolkit's log level (changes reflected on restart)
+  //  - error: Errors Only
+  //  - warn: Errors and Warnings
+  //  - info: Errors, Warnings, and Info
+  //  - verbose: Errors, Warnings, Info, and Verbose
+  //  - debug: Errors, Warnings, Info, Verbose, and Debug
+  "aws.logLevel": "info",
+  // Buckets recently used for SAM deployments
+  "aws.manuallySelectedBuckets": [],
+  // Action to take when a Profile's default region is hidden in the Explorer. Possible values:
+  // * `add` - shows region in the explorer
+  // * `ignore` - does nothing with the region
+  // * `prompt` - (default) asks the user what they would like to do.
+  "aws.onDefaultRegionMissing": "prompt",
+  // The name of the credential profile to obtain credentials from.
+  "aws.profile": "",
+  // Controls how many S3 items are listed before showing a node to `Load More...`.
+  // This corresponds to the `MaxKeys` requested in a single call to S3. [Learn More](https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjectsV2.html#AmazonS3-ListObjectsV2-response-MaxKeys)
+  "aws.s3.maxItemsPerPage": 300,
+  // Enable SAM hints in source files
+  "aws.sam.enableCodeLenses": true,
+  // Maximum time (in milliseconds) to wait for SAM output while starting a Local Lambda session
+  "aws.samcli.debug.attach.timeout.millis": 30000,
+  // Location of SAM CLI. SAM CLI is used to create, build, package, and deploy Serverless Applications. [Learn More](https://aws.amazon.com/serverless/sam/)
+  "aws.samcli.location": "",
+  // Controls the maximum number of problems produced by the SSM Document language server.
+  "aws.ssmDocument.ssm.maxItemsComputed": 5000,
+  // Enables the default formatter used with Amazon States Language files
+  "aws.stepfunctions.asl.format.enable": true,
+  // The maximum number of outline symbols and folding regions computed (limited for performance reasons).
+  "aws.stepfunctions.asl.maxItemsComputed": 5000,
+  // Enable AWS Toolkit to send usage data to AWS.
+  "aws.telemetry": true,
+  // Equivalent to setting the DOCKER_CERT_PATH environment variable.
+  "docker.certPath": "",
+  // Command templates for `docker attach` / `docker exec -it` commands.
+  "docker.commands.attach": "docker exec -it ${containerId} ${shellCommand}",
+  // Command template(s) for `docker build` commands.
+  "docker.commands.build": "docker build --pull --rm -f \"${dockerfile}\" -t ${tag} \"${context}\"",
+  // Command templates for `docker-compose down` commands.
+  "docker.commands.composeDown": [
+    {
+      "label": "Compose Down",
+      "template": "docker-compose ${configurationFile} down",
+      "contextTypes": [
+        "moby"
+      ]
+    },
+    {
+      "label": "Compose Down",
+      "template": "docker compose ${configurationFile} down"
+    }
+  ],
+  // Command templates for `docker-compose up` commands.
+  "docker.commands.composeUp": [
+    {
+      "label": "Compose Up",
+      "template": "docker-compose ${configurationFile} up ${detached} ${build}",
+      "contextTypes": [
+        "moby"
+      ]
+    },
+    {
+      "label": "Compose Up",
+      "template": "docker compose ${configurationFile} up ${detached}"
+    }
+  ],
+  // Command templates for `docker logs` commands.
+  "docker.commands.logs": "docker logs --tail 1000 -f ${containerId}",
+  // Command templates for `docker run` commands.
+  "docker.commands.run": "docker run --rm -d ${exposedPorts} ${tag}",
+  // Command templates for `docker run -it` (interactive) commands.
+  "docker.commands.runInteractive": "docker run --rm -it ${exposedPorts} ${tag}",
+  // Any secondary properties to display for a container (an array). Possible elements include: ContainerId, ContainerName, CreatedTime, FullTag, ImageId, Networks, Ports, Registry, Repository, RepositoryName, RepositoryNameAndTag, State, Status, and Tag
+  "docker.containers.description": [
+    "ContainerName",
+    "Status"
+  ],
+  // The property to use to group containers in Docker view: ContainerId, ContainerName, CreatedTime, FullTag, ImageId, Networks, Ports, Registry, Repository, RepositoryName, RepositoryNameAndTag, State, Status, Tag, or None
+  "docker.containers.groupBy": "Compose Project Name",
+  // The primary property to display for a container: ContainerId, ContainerName, CreatedTime, FullTag, ImageId, Networks, Ports, Registry, Repository, RepositoryName, RepositoryNameAndTag, State, Status, or Tag
+  "docker.containers.label": "FullTag",
+  // The property to use to sort containers in Docker view: CreatedTime or Label
+  "docker.containers.sortBy": "CreatedTime",
+  // Equivalent to setting the DOCKER_CONTEXT environment variable.
+  "docker.context": "",
+  // Any secondary properties to display for a Docker context (an array). Possible elements include: Name, Description and DockerEndpoint
+  "docker.contexts.description": [
+    "Description"
+  ],
+  // The primary property to display for a Docker context: Name, Description or DockerEndpoint
+  "docker.contexts.label": "Name",
+  // Set to true to include --build option when docker-compose command is invoked
+  "docker.dockerComposeBuild": true,
+  // Set to true to include --d (detached) option when docker-compose command is invoked
+  "docker.dockerComposeDetached": true,
+  // If specified, this object will be passed to the Dockerode constructor. Takes precedence over DOCKER_HOST, the Docker Host setting, and any existing Docker contexts.
+  "docker.dockerodeOptions": {},
+  // Absolute path to Docker client executable ('docker' command). If the path contains whitespace, it needs to be quoted appropriately.
+  "docker.dockerPath": "docker",
+  // Docker view refresh interval (milliseconds)
+  "docker.explorerRefreshInterval": 2000,
+  // Equivalent to setting the DOCKER_HOST environment variable, for example, ssh://myuser@mymachine or tcp://1.2.3.4.
+  "docker.host": "",
+  // Build context PATH to pass to Docker build command.
+  "docker.imageBuildContextPath": "",
+  // Check for outdated base images once per Visual Studio Code session
+  "docker.images.checkForOutdatedImages": true,
+  // Any secondary properties to display for a image (an array). Possible elements include: CreatedTime, FullTag, ImageId, Registry, Repository, RepositoryName, RepositoryNameAndTag, Tag, and Size
+  "docker.images.description": [
+    "CreatedTime"
+  ],
+  // The property to use to group images in Docker view: CreatedTime, FullTag, ImageId, None, Registry, Repository, RepositoryName, RepositoryNameAndTag, or Tag
+  "docker.images.groupBy": "Repository",
+  // The primary property to display for a image: CreatedTime, FullTag, ImageId, Registry, Repository, RepositoryName, RepositoryNameAndTag, Tag, or Size
+  "docker.images.label": "Tag",
+  // The property to use to sort images in Docker view: CreatedTime, Label, or Size
+  "docker.images.sortBy": "CreatedTime",
+  // Controls the diagnostic severity for the deprecated MAINTAINER instruction
+  "docker.languageserver.diagnostics.deprecatedMaintainer": "warning",
+  // Controls the diagnostic severity for parser directives that are not written in lowercase
+  "docker.languageserver.diagnostics.directiveCasing": "warning",
+  // Controls the diagnostic severity for flagging empty continuation lines found in instructions that span multiple lines
+  "docker.languageserver.diagnostics.emptyContinuationLine": "warning",
+  // Controls the diagnostic severity for instructions that are not written in uppercase
+  "docker.languageserver.diagnostics.instructionCasing": "warning",
+  // Controls the diagnostic severity for flagging a Dockerfile with multiple CMD instructions
+  "docker.languageserver.diagnostics.instructionCmdMultiple": "warning",
+  // Controls the diagnostic severity for flagging a Dockerfile with multiple ENTRYPOINT instructions
+  "docker.languageserver.diagnostics.instructionEntrypointMultiple": "warning",
+  // Controls the diagnostic severity for flagging a Dockerfile with multiple HEALTHCHECK instructions
+  "docker.languageserver.diagnostics.instructionHealthcheckMultiple": "warning",
+  // Controls the diagnostic severity for JSON instructions that are written incorrectly with single quotes
+  "docker.languageserver.diagnostics.instructionJSONInSingleQuotes": "warning",
+  // Controls the diagnostic severity for WORKDIR instructions that do not point to an absolute path
+  "docker.languageserver.diagnostics.instructionWorkdirRelative": "warning",
+  // Controls whether the Dockerfile formatter should ignore instructions that span multiple lines when formatting
+  "docker.languageserver.formatter.ignoreMultilineInstructions": false,
+  // Equivalent to setting the DOCKER_MACHINE_NAME environment variable.
+  "docker.machineName": "",
+  // Any secondary properties to display for a Docker network (an array). Possible elements include CreatedTime, NetworkDriver, NetworkId, and NetworkName
+  "docker.networks.description": [
+    "NetworkDriver",
+    "CreatedTime"
+  ],
+  // The property to use to group networks in Docker view: CreatedTime, NetworkDriver, NetworkId, NetworkName, or None
+  "docker.networks.groupBy": "None",
+  // The primary property to display for a Docker network: CreatedTime, NetworkDriver, NetworkId, or NetworkName
+  "docker.networks.label": "NetworkName",
+  // Show the built-in networks in the explorer.
+  "docker.networks.showBuiltInNetworks": true,
+  // The property to use to sort networks in Docker view: CreatedTime or Label
+  "docker.networks.sortBy": "CreatedTime",
+  // Prompt for registry selection if the image is not explicitly tagged.
+  "docker.promptForRegistryWhenPushingImages": true,
+  // The path to use for scaffolding templates.
+  "docker.scaffolding.templatePath": "",
+  // Set to true to prompt to switch from "UI" extension mode to "Workspace" extension mode if an operation is not supported in UI mode.
+  "docker.showRemoteWorkspaceWarning": true,
+  // Show the Docker extension Start Page when a new update is released.
+  "docker.showStartPage": true,
+  // Equivalent to setting the DOCKER_TLS_VERIFY environment variable.
+  "docker.tlsVerify": "",
+  // Set to true to truncate long image and container registry paths in Docker view
+  "docker.truncateLongRegistryPaths": false,
+  // Maximum length of a registry paths displayed in Docker view, including ellipsis. The truncateLongRegistryPaths setting must be set to true for truncateMaxLength setting to be effective.
+  "docker.truncateMaxLength": 10,
+  // Any secondary properties to display for a Docker volume (an array). Possible values include CreatedTime and VolumeName
+  "docker.volumes.description": [
+    "CreatedTime"
+  ],
+  // The property to use to group volumes in Docker view: CreatedTime, VolumeName, or None
+  "docker.volumes.groupBy": "None",
+  // The primary property to display for a Docker volume: CreatedTime or VolumeName
+  "docker.volumes.label": "VolumeName",
+  // The property to use to sort volumes in Docker view: CreatedTime or Label
+  "docker.volumes.sortBy": "CreatedTime",
+  // Enable usage data and errors to be sent to Red Hat servers. Read our [privacy statement](https://developers.redhat.com/article/tool-data-collection).
+  "redhat.telemetry.enabled": null,
+  // Enable/disable completion feature
+  "yaml.completion": true,
+  // Custom tags for the parser to use
+  "yaml.customTags": [],
+  // Globally set additionalProperties to false for all objects. So if its true, no extra properties are allowed inside yaml.
+  "yaml.disableAdditionalProperties": false,
+  // Print spaces between brackets in objects
+  "yaml.format.bracketSpacing": true,
+  // Enable/disable default YAML formatter
+  "yaml.format.enable": true,
+  // Specify the line length that the printer will wrap on
+  "yaml.format.printWidth": 80,
+  // Always: wrap prose if it exeeds the print width, Never: never wrap the prose, Preserve: wrap prose as-is
+  "yaml.format.proseWrap": "preserve",
+  // Use single quotes instead of double quotes
+  "yaml.format.singleQuote": false,
+  // Enable/disable hover feature
+  "yaml.hover": true,
+  // The maximum number of outline symbols and folding regions computed (limited for performance reasons).
+  "yaml.maxItemsComputed": 5000,
+  // Associate schemas to YAML files in the current workspace
+  "yaml.schemas": {},
+  // Automatically pull available YAML schemas from JSON Schema Store
+  "yaml.schemaStore.enable": true,
+  // URL of schema store catalog to use
+  "yaml.schemaStore.url": "https://www.schemastore.org/api/json/catalog.json",
+  // Traces the communication between VSCode and the YAML language service.
+  "yaml.trace.server": "off",
+  // Enable/disable validation feature
+  "yaml.validate": true,
+  // Kubernetes configuration
+  "vs-kubernetes": {
+    "vs-kubernetes.namespace": "",
+    "vs-kubernetes.kubectl-path": "",
+    "vs-kubernetes.helm-path": "",
+    "vs-kubernetes.minikube-path": "",
+    "vs-kubernetes.kubectlVersioning": "user-provided",
+    "vs-kubernetes.outputFormat": "yaml",
+    "vs-kubernetes.kubeconfig": "",
+    "vs-kubernetes.knownKubeconfigs": [],
+    "vs-kubernetes.autoCleanupOnDebugTerminate": false,
+    "vs-kubernetes.nodejs-autodetect-remote-root": true,
+    "vs-kubernetes.nodejs-remote-root": "",
+    "vs-kubernetes.nodejs-debug-port": 9229,
+    "vs-kubernetes.local-tunnel-debug-provider": "",
+    "checkForMinikubeUpgrade": true,
+    "imageBuildTool": "Docker"
+  },
+  // File path to a helm binary. (You can override this on a per-OS basis if required).
+  "vscode-kubernetes.helm-path": "",
+  // File path to a helm binary.
+  "vscode-kubernetes.helm-path.linux": "",
+  // File path to a helm binary.
+  "vscode-kubernetes.helm-path.mac": "",
+  // File path to a helm binary.
+  "vscode-kubernetes.helm-path.windows": "",
+  // File path to a kubectl binary. (You can override this on a per-OS basis if required).
+  "vscode-kubernetes.kubectl-path": "",
+  // File path to a kubectl binary.
+  "vscode-kubernetes.kubectl-path.linux": "",
+  // File path to a kubectl binary.
+  "vscode-kubernetes.kubectl-path.mac": "",
+  // File path to a kubectl binary.
+  "vscode-kubernetes.kubectl-path.windows": "",
+  // File path to a minikube binary. (You can override this on a per-OS basis if required).
+  "vscode-kubernetes.minikube-path": "",
+  // File path to a minikube binary.
+  "vscode-kubernetes.minikube-path.linux": "",
+  // File path to a minikube binary.
+  "vscode-kubernetes.minikube-path.mac": "",
+  // File path to a minikube binary.
+  "vscode-kubernetes.minikube-path.windows": "",
+  // Image prefix for docker images ie 'docker.io/brendanburns'
+  "vsdocker.imageUser": null
 }

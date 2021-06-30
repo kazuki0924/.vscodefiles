@@ -1,4 +1,17 @@
 {
+  "aws.cloudwatchLogs.limit": 10000,
+  "aws.logLevel": "info",
+  "aws.manuallySelectedBuckets": [],
+  "aws.onDefaultRegionMissing": "prompt",
+  "aws.profile": "",
+  "aws.s3.maxItemsPerPage": 300,
+  "aws.sam.enableCodeLenses": true,
+  "aws.samcli.debug.attach.timeout.millis": 30000,
+  "aws.samcli.location": "",
+  "aws.ssmDocument.ssm.maxItemsComputed": 5000,
+  "aws.stepfunctions.asl.format.enable": true,
+  "aws.stepfunctions.asl.maxItemsComputed": 5000,
+  "aws.telemetry": true,
   "bracket-pair-colorizer-2.activeScopeCSS": [
     "borderStyle : solid",
     "borderWidth : 1px",
@@ -109,6 +122,96 @@
   "cSpell.userWords": [],
   "cSpell.words": [],
   "cSpell.workspaceRootPath": "",
+  "docker.certPath": "",
+  "docker.commands.attach": "docker exec -it ${containerId} ${shellCommand}",
+  "docker.commands.build": "docker build --pull --rm -f \"${dockerfile}\" -t ${tag} \"${context}\"",
+  "docker.commands.composeDown": [
+    {
+      "contextTypes": [
+        "moby"
+      ],
+      "label": "Compose Down",
+      "template": "docker-compose ${configurationFile} down"
+    },
+    {
+      "label": "Compose Down",
+      "template": "docker compose ${configurationFile} down"
+    }
+  ],
+  "docker.commands.composeUp": [
+    {
+      "contextTypes": [
+        "moby"
+      ],
+      "label": "Compose Up",
+      "template": "docker-compose ${configurationFile} up ${detached} ${build}"
+    },
+    {
+      "label": "Compose Up",
+      "template": "docker compose ${configurationFile} up ${detached}"
+    }
+  ],
+  "docker.commands.logs": "docker logs --tail 1000 -f ${containerId}",
+  "docker.commands.run": "docker run --rm -d ${exposedPorts} ${tag}",
+  "docker.commands.runInteractive": "docker run --rm -it ${exposedPorts} ${tag}",
+  "docker.containers.description": [
+    "ContainerName",
+    "Status"
+  ],
+  "docker.containers.groupBy": "Compose Project Name",
+  "docker.containers.label": "FullTag",
+  "docker.containers.sortBy": "CreatedTime",
+  "docker.context": "",
+  "docker.contexts.description": [
+    "Description"
+  ],
+  "docker.contexts.label": "Name",
+  "docker.dockerComposeBuild": true,
+  "docker.dockerComposeDetached": true,
+  "docker.dockerPath": "docker",
+  "docker.dockerodeOptions": {},
+  "docker.explorerRefreshInterval": 2000,
+  "docker.host": "",
+  "docker.imageBuildContextPath": "",
+  "docker.images.checkForOutdatedImages": true,
+  "docker.images.description": [
+    "CreatedTime"
+  ],
+  "docker.images.groupBy": "Repository",
+  "docker.images.label": "Tag",
+  "docker.images.sortBy": "CreatedTime",
+  "docker.languageserver.diagnostics.deprecatedMaintainer": "warning",
+  "docker.languageserver.diagnostics.directiveCasing": "warning",
+  "docker.languageserver.diagnostics.emptyContinuationLine": "warning",
+  "docker.languageserver.diagnostics.instructionCasing": "warning",
+  "docker.languageserver.diagnostics.instructionCmdMultiple": "warning",
+  "docker.languageserver.diagnostics.instructionEntrypointMultiple": "warning",
+  "docker.languageserver.diagnostics.instructionHealthcheckMultiple": "warning",
+  "docker.languageserver.diagnostics.instructionJSONInSingleQuotes": "warning",
+  "docker.languageserver.diagnostics.instructionWorkdirRelative": "warning",
+  "docker.languageserver.formatter.ignoreMultilineInstructions": false,
+  "docker.machineName": "",
+  "docker.networks.description": [
+    "NetworkDriver",
+    "CreatedTime"
+  ],
+  "docker.networks.groupBy": "None",
+  "docker.networks.label": "NetworkName",
+  "docker.networks.showBuiltInNetworks": true,
+  "docker.networks.sortBy": "CreatedTime",
+  "docker.promptForRegistryWhenPushingImages": true,
+  "docker.scaffolding.templatePath": "",
+  "docker.showRemoteWorkspaceWarning": true,
+  "docker.showStartPage": true,
+  "docker.tlsVerify": "",
+  "docker.truncateLongRegistryPaths": false,
+  "docker.truncateMaxLength": 10,
+  "docker.volumes.description": [
+    "CreatedTime"
+  ],
+  "docker.volumes.groupBy": "None",
+  "docker.volumes.label": "VolumeName",
+  "docker.volumes.sortBy": "CreatedTime",
   "docsView.documentationView.updateMode": "live",
   "editor.cursorSmoothCaretAnimation": true,
   "editor.cursorStyle": "block-outline",
@@ -629,6 +732,7 @@
   "material-icon-theme.showWelcomeMessage": false,
   "merge-conflict.autoNavigateNextConflict.enabled": true,
   "npm.enableRunFromFolder": true,
+  "redhat.telemetry.enabled": false,
   "scm.defaultViewMode": "tree",
   "search.maintainFileSearchCache": true,
   "search.quickOpen.history.filterSortOrder": "recency",
@@ -646,6 +750,35 @@
   "terminal.external.osxExec": "Alacritty.app",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontFamily": "MesloLGS NF",
+  "vs-kubernetes": {
+    "checkForMinikubeUpgrade": true,
+    "imageBuildTool": "Docker",
+    "vs-kubernetes.autoCleanupOnDebugTerminate": false,
+    "vs-kubernetes.helm-path": "",
+    "vs-kubernetes.knownKubeconfigs": [],
+    "vs-kubernetes.kubeconfig": "",
+    "vs-kubernetes.kubectl-path": "",
+    "vs-kubernetes.kubectlVersioning": "user-provided",
+    "vs-kubernetes.local-tunnel-debug-provider": "",
+    "vs-kubernetes.minikube-path": "",
+    "vs-kubernetes.namespace": "",
+    "vs-kubernetes.nodejs-autodetect-remote-root": true,
+    "vs-kubernetes.nodejs-debug-port": 9229,
+    "vs-kubernetes.nodejs-remote-root": "",
+    "vs-kubernetes.outputFormat": "yaml"
+  },
+  "vscode-kubernetes.helm-path": "",
+  "vscode-kubernetes.helm-path.linux": "",
+  "vscode-kubernetes.helm-path.mac": "",
+  "vscode-kubernetes.helm-path.windows": "",
+  "vscode-kubernetes.kubectl-path": "",
+  "vscode-kubernetes.kubectl-path.linux": "",
+  "vscode-kubernetes.kubectl-path.mac": "",
+  "vscode-kubernetes.kubectl-path.windows": "",
+  "vscode-kubernetes.minikube-path": "",
+  "vscode-kubernetes.minikube-path.linux": "",
+  "vscode-kubernetes.minikube-path.mac": "",
+  "vscode-kubernetes.minikube-path.windows": "",
   "vscode-neovim.highlightGroups.highlights": {
     "Conceal": "vim",
     "Directory": "vim",
@@ -758,6 +891,7 @@
   "vscode-neovim.useCtrlKeysForInsertMode": true,
   "vscode-neovim.useCtrlKeysForNormalMode": true,
   "vscode-neovim.useWSL": false,
+  "vsdocker.imageUser": null,
   "workbench.colorTheme": "gruvboxConcoctis dark hard",
   "workbench.editor.enablePreview": false,
   "workbench.editor.highlightModifiedTabs": true,
@@ -768,5 +902,20 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.list.automaticKeyboardNavigation": false,
   "workbench.list.keyboardNavigation": "filter",
-  "workbench.list.smoothScrolling": true
+  "workbench.list.smoothScrolling": true,
+  "yaml.completion": true,
+  "yaml.customTags": [],
+  "yaml.disableAdditionalProperties": false,
+  "yaml.format.bracketSpacing": true,
+  "yaml.format.enable": true,
+  "yaml.format.printWidth": 80,
+  "yaml.format.proseWrap": "preserve",
+  "yaml.format.singleQuote": false,
+  "yaml.hover": true,
+  "yaml.maxItemsComputed": 5000,
+  "yaml.schemaStore.enable": true,
+  "yaml.schemaStore.url": "https://www.schemastore.org/api/json/catalog.json",
+  "yaml.schemas": {},
+  "yaml.trace.server": "off",
+  "yaml.validate": true
 }

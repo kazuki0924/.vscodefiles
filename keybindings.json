@@ -1574,9 +1574,19 @@
     "key": "cmd+t"
   },
   {
+    "command": "aws.previewStateMachine",
+    "key": "shift+cmd+v",
+    "when": "editorTextFocus && (editorLangId == 'asl' || !isCloud9 && editorLangId == 'asl-yaml)'"
+  },
+  {
     "command": "go.toggle.test.file",
     "key": "cmd+k cmd+t",
     "when": "editorLangId == go"
+  },
+  {
+    "command": "extension.vsKubernetesDescribe.Refresh",
+    "key": "shift+cmd+r",
+    "when": "vscodeKubernetesDescribeContext"
   },
   {
     "command": "keyboard-quickfix.openQuickFix",

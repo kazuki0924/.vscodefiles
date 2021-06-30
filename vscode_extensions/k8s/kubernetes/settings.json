@@ -1,0 +1,46 @@
+{
+  // Kubernetes configuration
+  "vs-kubernetes": {
+    "vs-kubernetes.namespace": "",
+    "vs-kubernetes.kubectl-path": "",
+    "vs-kubernetes.helm-path": "",
+    "vs-kubernetes.minikube-path": "",
+    "vs-kubernetes.kubectlVersioning": "user-provided",
+    "vs-kubernetes.outputFormat": "yaml",
+    "vs-kubernetes.kubeconfig": "",
+    "vs-kubernetes.knownKubeconfigs": [],
+    "vs-kubernetes.autoCleanupOnDebugTerminate": false,
+    "vs-kubernetes.nodejs-autodetect-remote-root": true,
+    "vs-kubernetes.nodejs-remote-root": "",
+    "vs-kubernetes.nodejs-debug-port": 9229,
+    "vs-kubernetes.local-tunnel-debug-provider": "",
+    "checkForMinikubeUpgrade": true,
+    "imageBuildTool": "Docker"
+  },
+  // File path to a helm binary. (You can override this on a per-OS basis if required).
+  "vscode-kubernetes.helm-path": "",
+  // File path to a helm binary.
+  "vscode-kubernetes.helm-path.linux": "",
+  // File path to a helm binary.
+  "vscode-kubernetes.helm-path.mac": "",
+  // File path to a helm binary.
+  "vscode-kubernetes.helm-path.windows": "",
+  // File path to a kubectl binary. (You can override this on a per-OS basis if required).
+  "vscode-kubernetes.kubectl-path": "",
+  // File path to a kubectl binary.
+  "vscode-kubernetes.kubectl-path.linux": "",
+  // File path to a kubectl binary.
+  "vscode-kubernetes.kubectl-path.mac": "",
+  // File path to a kubectl binary.
+  "vscode-kubernetes.kubectl-path.windows": "",
+  // File path to a minikube binary. (You can override this on a per-OS basis if required).
+  "vscode-kubernetes.minikube-path": "",
+  // File path to a minikube binary.
+  "vscode-kubernetes.minikube-path.linux": "",
+  // File path to a minikube binary.
+  "vscode-kubernetes.minikube-path.mac": "",
+  // File path to a minikube binary.
+  "vscode-kubernetes.minikube-path.windows": "",
+  // Image prefix for docker images ie 'docker.io/brendanburns'
+  "vsdocker.imageUser": null
+}

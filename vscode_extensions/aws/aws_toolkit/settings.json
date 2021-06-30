@@ -1,0 +1,37 @@
+{
+  // Maximum amount of log entries pulled per request from CloudWatch Logs (max 10000)
+  "aws.cloudwatchLogs.limit": 10000,
+  // The AWS Toolkit's log level (changes reflected on restart)
+  //  - error: Errors Only
+  //  - warn: Errors and Warnings
+  //  - info: Errors, Warnings, and Info
+  //  - verbose: Errors, Warnings, Info, and Verbose
+  //  - debug: Errors, Warnings, Info, Verbose, and Debug
+  "aws.logLevel": "info",
+  // Buckets recently used for SAM deployments
+  "aws.manuallySelectedBuckets": [],
+  // Action to take when a Profile's default region is hidden in the Explorer. Possible values:
+  // * `add` - shows region in the explorer
+  // * `ignore` - does nothing with the region
+  // * `prompt` - (default) asks the user what they would like to do.
+  "aws.onDefaultRegionMissing": "prompt",
+  // The name of the credential profile to obtain credentials from.
+  "aws.profile": "",
+  // Controls how many S3 items are listed before showing a node to `Load More...`.
+  // This corresponds to the `MaxKeys` requested in a single call to S3. [Learn More](https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjectsV2.html#AmazonS3-ListObjectsV2-response-MaxKeys)
+  "aws.s3.maxItemsPerPage": 300,
+  // Enable SAM hints in source files
+  "aws.sam.enableCodeLenses": true,
+  // Maximum time (in milliseconds) to wait for SAM output while starting a Local Lambda session
+  "aws.samcli.debug.attach.timeout.millis": 30000,
+  // Location of SAM CLI. SAM CLI is used to create, build, package, and deploy Serverless Applications. [Learn More](https://aws.amazon.com/serverless/sam/)
+  "aws.samcli.location": "",
+  // Controls the maximum number of problems produced by the SSM Document language server.
+  "aws.ssmDocument.ssm.maxItemsComputed": 5000,
+  // Enables the default formatter used with Amazon States Language files
+  "aws.stepfunctions.asl.format.enable": true,
+  // The maximum number of outline symbols and folding regions computed (limited for performance reasons).
+  "aws.stepfunctions.asl.maxItemsComputed": 5000,
+  // Enable AWS Toolkit to send usage data to AWS.
+  "aws.telemetry": true
+}

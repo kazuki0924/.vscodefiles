@@ -1,0 +1,34 @@
+{
+  // Enable usage data and errors to be sent to Red Hat servers. Read our [privacy statement](https://developers.redhat.com/article/tool-data-collection).
+  "redhat.telemetry.enabled": false,
+  // Enable/disable completion feature
+  "yaml.completion": true,
+  // Custom tags for the parser to use
+  "yaml.customTags": [],
+  // Globally set additionalProperties to false for all objects. So if its true, no extra properties are allowed inside yaml.
+  "yaml.disableAdditionalProperties": false,
+  // Print spaces between brackets in objects
+  "yaml.format.bracketSpacing": true,
+  // Enable/disable default YAML formatter
+  "yaml.format.enable": true,
+  // Specify the line length that the printer will wrap on
+  "yaml.format.printWidth": 80,
+  // Always: wrap prose if it exeeds the print width, Never: never wrap the prose, Preserve: wrap prose as-is
+  "yaml.format.proseWrap": "preserve",
+  // Use single quotes instead of double quotes
+  "yaml.format.singleQuote": false,
+  // Enable/disable hover feature
+  "yaml.hover": true,
+  // The maximum number of outline symbols and folding regions computed (limited for performance reasons).
+  "yaml.maxItemsComputed": 5000,
+  // Associate schemas to YAML files in the current workspace
+  "yaml.schemas": {},
+  // Automatically pull available YAML schemas from JSON Schema Store
+  "yaml.schemaStore.enable": true,
+  // URL of schema store catalog to use
+  "yaml.schemaStore.url": "https://www.schemastore.org/api/json/catalog.json",
+  // Traces the communication between VSCode and the YAML language service.
+  "yaml.trace.server": "off",
+  // Enable/disable validation feature
+  "yaml.validate": true
+}
