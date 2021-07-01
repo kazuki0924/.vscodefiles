@@ -109,6 +109,7 @@
   //  - ms-azuretools.vscode-docker: Makes it easy to create, manage, and debug containerized applications.
   //  - redhat.vscode-yaml: YAML Language Support by Red Hat, with built-in Kubernetes syntax support
   //  - amazonwebservices.aws-toolkit-vscode: An extension for working with Amazon Web Services
+  //  - mads-hartmann.bash-ide-vscode: A language server for Bash
   //  - CoenraadS.bracket-pair-colorizer-2: A customizable extension for colorizing matching brackets
   //  - vscode.configuration-editing: Provides capabilities (advanced IntelliSense, auto-fixing) in configuration files like settings, launch, and extension recommendation files.
   //  - vscode.debug-auto-launch: Helper for auto-attach feature when node-debug extensions are not active.
@@ -2902,6 +2903,41 @@
   "npm.scriptExplorerAction": "open",
   // Enable/disable the floating indicator that shows when focused in the simple browser.
   "simpleBrowser.focusLockIndicator.enabled": true,
+  // Maximum amount of log entries pulled per request from CloudWatch Logs (max 10000)
+  "aws.cloudwatchLogs.limit": 10000,
+  // The AWS Toolkit's log level (changes reflected on restart)
+  //  - error: Errors Only
+  //  - warn: Errors and Warnings
+  //  - info: Errors, Warnings, and Info
+  //  - verbose: Errors, Warnings, Info, and Verbose
+  //  - debug: Errors, Warnings, Info, Verbose, and Debug
+  "aws.logLevel": "info",
+  // Buckets recently used for SAM deployments
+  "aws.manuallySelectedBuckets": [],
+  // Action to take when a Profile's default region is hidden in the Explorer. Possible values:
+  // * `add` - shows region in the explorer
+  // * `ignore` - does nothing with the region
+  // * `prompt` - (default) asks the user what they would like to do.
+  "aws.onDefaultRegionMissing": "prompt",
+  // The name of the credential profile to obtain credentials from.
+  "aws.profile": "",
+  // Controls how many S3 items are listed before showing a node to `Load More...`.
+  // This corresponds to the `MaxKeys` requested in a single call to S3. [Learn More](https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjectsV2.html#AmazonS3-ListObjectsV2-response-MaxKeys)
+  "aws.s3.maxItemsPerPage": 300,
+  // Enable SAM hints in source files
+  "aws.sam.enableCodeLenses": true,
+  // Maximum time (in milliseconds) to wait for SAM output while starting a Local Lambda session
+  "aws.samcli.debug.attach.timeout.millis": 30000,
+  // Location of SAM CLI. SAM CLI is used to create, build, package, and deploy Serverless Applications. [Learn More](https://aws.amazon.com/serverless/sam/)
+  "aws.samcli.location": "",
+  // Controls the maximum number of problems produced by the SSM Document language server.
+  "aws.ssmDocument.ssm.maxItemsComputed": 5000,
+  // Enables the default formatter used with Amazon States Language files
+  "aws.stepfunctions.asl.format.enable": true,
+  // The maximum number of outline symbols and folding regions computed (limited for performance reasons).
+  "aws.stepfunctions.asl.maxItemsComputed": 5000,
+  // Enable AWS Toolkit to send usage data to AWS.
+  "aws.telemetry": true,
   // Define colors for various VIM highlight groups. Values may be 'vim' to use colors from vim or text decoration properties object
   "vscode-neovim.highlightGroups.highlights": {
     "Directory": "vim",
@@ -3809,156 +3845,6 @@
     "telescope , workbench.action.showCommands , Show command palette",
     "bug, workbench.action.debug.start, Launch debug"
   ],
-  // Defines a list of terminals to be opened when vscode is started. Each terminal must have an id, which is treated as a terminal name and, optionally, a command that is executed at startup.
-  "extendedTerminalIntegration.startupTerminals": [],
-  // The names of the terminal that should be used for filtering.
-  "extendedTerminalIntegration.statusBar.filter.items": [],
-  // The type of filtering mode.
-  "extendedTerminalIntegration.statusBar.filter.mode": "blacklist",
-  // Maximum number of icons displayed.
-  "extendedTerminalIntegration.statusBar.maxTerminalIcons": 15,
-  // Prefer the latest terminals if the maximum number of displayed icons is exceeded.
-  "extendedTerminalIntegration.statusBar.preferLatestTerminals": false,
-  // Time in seconds until the terminal name is updated.
-  "extendedTerminalIntegration.statusBar.refreshTerminalNameInterval": 5,
-  // Shows the terminal index next to the icon in the status bar.
-  "extendedTerminalIntegration.statusBar.showTerminalIndex": true,
-  // Shows the terminal name next to the icon in the status bar.
-  "extendedTerminalIntegration.statusBar.showTerminalName": false,
-  // If error color is disabled, indent colors will be rendered until the length of rendered characters (white spaces, tabs, and other ones) is divisible by tabsize. Turn on this option to render white spaces and tabs only.
-  "indentRainbow.colorOnWhiteSpaceOnly": false,
-  // An array with color (hex, rgba, rgb) strings which are used as colors, can be any length.
-  "indentRainbow.colors": [
-    "rgba(255,255,64,0.07)",
-    "rgba(127,255,127,0.07)",
-    "rgba(255,127,255,0.07)",
-    "rgba(79,236,236,0.07)"
-  ],
-  // Indent color for when there is an error in the indentation, for example if you have your tabs set to 2 spaces but the indent is 3 spaces. Can be any type of web based color format (hex, rgba, rgb).
-  "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
-  // For which languages indent-rainbow should be deactivated. When left empty will ignore.
-  "indentRainbow.excludedLanguages": [
-    "plaintext"
-  ],
-  // For which languages indent-rainbow should skip indent error detection (use '*' to deactivate errors for all languages).
-  "indentRainbow.ignoreErrorLanguages": [
-    "markdown"
-  ],
-  // Skip error highlighting for RegEx patterns. Defaults to c/cpp decorated block and full line comments.
-  "indentRainbow.ignoreLinePatterns": [
-    "/[ \t]* [*]/g",
-    "/[ \t]+[/]{2}/g"
-  ],
-  // For which languages indent-rainbow should be activated. When empty will use for all languages.
-  "indentRainbow.includedLanguages": [],
-  // Automatically change indent settings for languages (see README.md for details).
-  "indentRainbow.indentSetter": {},
-  // Indent color for when there is a mix between spaces and tabs in the indentation. Can be any type of web based color format (hex, rgba, rgb) or a empty string(to be disabled this coloring).
-  "indentRainbow.tabmixColor": "rgba(128,32,96,0.6)",
-  // The delay in ms until the editor gets updated.
-  "indentRainbow.updateDelay": 100,
-  // Show label on action
-  "keyboard-quickfix.showActionNotification": false,
-  // Select an icon pack that enables specific icons.
-  //  - angular: Icons for Angular.
-  //  - angular_ngrx: Icons for Angular and ngrx.
-  //  - react: Icons for React.
-  //  - react_redux: Icons for React and Redux.
-  //  - vue: Icons for Vue.
-  //  - vue_vuex: Icons for Vue and Vuex.
-  //  - nest: Icons for NestJS.
-  //  - none: No icon pack enabled.
-  "material-icon-theme.activeIconPack": "angular",
-  // Set custom file icon associations.
-  "material-icon-theme.files.associations": {},
-  // Set custom folder icon associations.
-  "material-icon-theme.folders.associations": {},
-  // Change the color of the folder icons.
-  "material-icon-theme.folders.color": "#90a4ae",
-  // Set the type for the folder icons.
-  //  - specific: Select specific folder icons.
-  //  - classic: Select classic folder icons.
-  //  - none: No folder icons.
-  "material-icon-theme.folders.theme": "specific",
-  // Hide explorer arrows before folder.
-  "material-icon-theme.hidesExplorerArrows": false,
-  // Set custom language icon associations.
-  "material-icon-theme.languages.associations": {},
-  // Change the opacity of the icons.
-  "material-icon-theme.opacity": 1,
-  // Change the saturation of the icons.
-  "material-icon-theme.saturation": 1,
-  // Show restart notification.
-  "material-icon-theme.showReloadMessage": true,
-  // Show the update message after each update.
-  "material-icon-theme.showUpdateMessage": false,
-  // Show the welcome message after first installation.
-  "material-icon-theme.showWelcomeMessage": true,
-  // Disable Tabnine when the file path contains a match of any of the provided regexes. For example, add "[.]js$" to disable Tabnine in JavaScript files.
-  "tabnine.disable_file_regex": [],
-  // Disable Tabnine when the current line contains a match of any of the provided regexes. For example, add "require" to disable Tabnine when the current line contains the word 'require'.
-  "tabnine.disable_line_regex": [],
-  // Experimental: Enable modules auto-import following applying Tabnine suggestions
-  "tabnine.experimentalAutoImports": null,
-  // Tabnine's log file (Visual Studio Code must be restarted for this setting to take effect)
-  "tabnine.logFilePath": "",
-  // Receive Tabnine VSCode extention beta updates
-  "tabnine.receiveBetaChannelUpdates": false,
-  // Turn on to highlight changed lines (historical changes will still be saved, for navigation)
-  "footsteps.doHighlightChanges": true,
-  // Turn off to prevent highlighting the currently focused chunk of edited code.
-  "footsteps.doHighlightCurrentlyFocusedChunk": false,
-  // The color of the highlighted trail (in rgb format). I'd recommend keeping this subtle - black (`rgb(0, 0, 0)`) if you have a dark theme and white (`rgb(255, 255, 255)`) if you have a light theme.
-  "footsteps.highlightColor": "rgb(153, 128, 250)",
-  // The maximum opacity for highlighting recently changed lines (0 - 1)
-  "footsteps.highlightColorMaxOpacity": 0.4,
-  // The number of changes to highlight with the background color.
-  "footsteps.maxNumberOfChangesToHighlight": 6,
-  // The number of changes to save in history for using your keybindings to navigate between.
-  "footsteps.maxNumberOfChangesToRemember": 10,
-  // The selection color used in editor.
-  "gruvboxConcoctis.selectionColor": "neutral",
-  // Use bold font.
-  "gruvboxConcoctis.useBoldFont": false,
-  // Use italic font.
-  "gruvboxConcoctis.useItalicFont": true,
-  // The color palette used in all variants.
-  "gruvboxConcoctis.usePalette": "material",
-  // Maximum amount of log entries pulled per request from CloudWatch Logs (max 10000)
-  "aws.cloudwatchLogs.limit": 10000,
-  // The AWS Toolkit's log level (changes reflected on restart)
-  //  - error: Errors Only
-  //  - warn: Errors and Warnings
-  //  - info: Errors, Warnings, and Info
-  //  - verbose: Errors, Warnings, Info, and Verbose
-  //  - debug: Errors, Warnings, Info, Verbose, and Debug
-  "aws.logLevel": "info",
-  // Buckets recently used for SAM deployments
-  "aws.manuallySelectedBuckets": [],
-  // Action to take when a Profile's default region is hidden in the Explorer. Possible values:
-  // * `add` - shows region in the explorer
-  // * `ignore` - does nothing with the region
-  // * `prompt` - (default) asks the user what they would like to do.
-  "aws.onDefaultRegionMissing": "prompt",
-  // The name of the credential profile to obtain credentials from.
-  "aws.profile": "",
-  // Controls how many S3 items are listed before showing a node to `Load More...`.
-  // This corresponds to the `MaxKeys` requested in a single call to S3. [Learn More](https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjectsV2.html#AmazonS3-ListObjectsV2-response-MaxKeys)
-  "aws.s3.maxItemsPerPage": 300,
-  // Enable SAM hints in source files
-  "aws.sam.enableCodeLenses": true,
-  // Maximum time (in milliseconds) to wait for SAM output while starting a Local Lambda session
-  "aws.samcli.debug.attach.timeout.millis": 30000,
-  // Location of SAM CLI. SAM CLI is used to create, build, package, and deploy Serverless Applications. [Learn More](https://aws.amazon.com/serverless/sam/)
-  "aws.samcli.location": "",
-  // Controls the maximum number of problems produced by the SSM Document language server.
-  "aws.ssmDocument.ssm.maxItemsComputed": 5000,
-  // Enables the default formatter used with Amazon States Language files
-  "aws.stepfunctions.asl.format.enable": true,
-  // The maximum number of outline symbols and folding regions computed (limited for performance reasons).
-  "aws.stepfunctions.asl.maxItemsComputed": 5000,
-  // Enable AWS Toolkit to send usage data to AWS.
-  "aws.telemetry": true,
   // Equivalent to setting the DOCKER_CERT_PATH environment variable.
   "docker.certPath": "",
   // Command templates for `docker attach` / `docker exec -it` commands.
@@ -4103,38 +3989,6 @@
   "docker.volumes.label": "VolumeName",
   // The property to use to sort volumes in Docker view: CreatedTime or Label
   "docker.volumes.sortBy": "CreatedTime",
-  // Enable usage data and errors to be sent to Red Hat servers. Read our [privacy statement](https://developers.redhat.com/article/tool-data-collection).
-  "redhat.telemetry.enabled": null,
-  // Enable/disable completion feature
-  "yaml.completion": true,
-  // Custom tags for the parser to use
-  "yaml.customTags": [],
-  // Globally set additionalProperties to false for all objects. So if its true, no extra properties are allowed inside yaml.
-  "yaml.disableAdditionalProperties": false,
-  // Print spaces between brackets in objects
-  "yaml.format.bracketSpacing": true,
-  // Enable/disable default YAML formatter
-  "yaml.format.enable": true,
-  // Specify the line length that the printer will wrap on
-  "yaml.format.printWidth": 80,
-  // Always: wrap prose if it exeeds the print width, Never: never wrap the prose, Preserve: wrap prose as-is
-  "yaml.format.proseWrap": "preserve",
-  // Use single quotes instead of double quotes
-  "yaml.format.singleQuote": false,
-  // Enable/disable hover feature
-  "yaml.hover": true,
-  // The maximum number of outline symbols and folding regions computed (limited for performance reasons).
-  "yaml.maxItemsComputed": 5000,
-  // Associate schemas to YAML files in the current workspace
-  "yaml.schemas": {},
-  // Automatically pull available YAML schemas from JSON Schema Store
-  "yaml.schemaStore.enable": true,
-  // URL of schema store catalog to use
-  "yaml.schemaStore.url": "https://www.schemastore.org/api/json/catalog.json",
-  // Traces the communication between VSCode and the YAML language service.
-  "yaml.trace.server": "off",
-  // Enable/disable validation feature
-  "yaml.validate": true,
   // Kubernetes configuration
   "vs-kubernetes": {
     "vs-kubernetes.namespace": "",
@@ -4178,5 +4032,158 @@
   // File path to a minikube binary.
   "vscode-kubernetes.minikube-path.windows": "",
   // Image prefix for docker images ie 'docker.io/brendanburns'
-  "vsdocker.imageUser": null
+  "vsdocker.imageUser": null,
+  // Defines a list of terminals to be opened when vscode is started. Each terminal must have an id, which is treated as a terminal name and, optionally, a command that is executed at startup.
+  "extendedTerminalIntegration.startupTerminals": [],
+  // The names of the terminal that should be used for filtering.
+  "extendedTerminalIntegration.statusBar.filter.items": [],
+  // The type of filtering mode.
+  "extendedTerminalIntegration.statusBar.filter.mode": "blacklist",
+  // Maximum number of icons displayed.
+  "extendedTerminalIntegration.statusBar.maxTerminalIcons": 15,
+  // Prefer the latest terminals if the maximum number of displayed icons is exceeded.
+  "extendedTerminalIntegration.statusBar.preferLatestTerminals": false,
+  // Time in seconds until the terminal name is updated.
+  "extendedTerminalIntegration.statusBar.refreshTerminalNameInterval": 5,
+  // Shows the terminal index next to the icon in the status bar.
+  "extendedTerminalIntegration.statusBar.showTerminalIndex": true,
+  // Shows the terminal name next to the icon in the status bar.
+  "extendedTerminalIntegration.statusBar.showTerminalName": false,
+  // If error color is disabled, indent colors will be rendered until the length of rendered characters (white spaces, tabs, and other ones) is divisible by tabsize. Turn on this option to render white spaces and tabs only.
+  "indentRainbow.colorOnWhiteSpaceOnly": false,
+  // An array with color (hex, rgba, rgb) strings which are used as colors, can be any length.
+  "indentRainbow.colors": [
+    "rgba(255,255,64,0.07)",
+    "rgba(127,255,127,0.07)",
+    "rgba(255,127,255,0.07)",
+    "rgba(79,236,236,0.07)"
+  ],
+  // Indent color for when there is an error in the indentation, for example if you have your tabs set to 2 spaces but the indent is 3 spaces. Can be any type of web based color format (hex, rgba, rgb).
+  "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
+  // For which languages indent-rainbow should be deactivated. When left empty will ignore.
+  "indentRainbow.excludedLanguages": [
+    "plaintext"
+  ],
+  // For which languages indent-rainbow should skip indent error detection (use '*' to deactivate errors for all languages).
+  "indentRainbow.ignoreErrorLanguages": [
+    "markdown"
+  ],
+  // Skip error highlighting for RegEx patterns. Defaults to c/cpp decorated block and full line comments.
+  "indentRainbow.ignoreLinePatterns": [
+    "/[ \t]* [*]/g",
+    "/[ \t]+[/]{2}/g"
+  ],
+  // For which languages indent-rainbow should be activated. When empty will use for all languages.
+  "indentRainbow.includedLanguages": [],
+  // Automatically change indent settings for languages (see README.md for details).
+  "indentRainbow.indentSetter": {},
+  // Indent color for when there is a mix between spaces and tabs in the indentation. Can be any type of web based color format (hex, rgba, rgb) or a empty string(to be disabled this coloring).
+  "indentRainbow.tabmixColor": "rgba(128,32,96,0.6)",
+  // The delay in ms until the editor gets updated.
+  "indentRainbow.updateDelay": 100,
+  // Show label on action
+  "keyboard-quickfix.showActionNotification": false,
+  // Select an icon pack that enables specific icons.
+  //  - angular: Icons for Angular.
+  //  - angular_ngrx: Icons for Angular and ngrx.
+  //  - react: Icons for React.
+  //  - react_redux: Icons for React and Redux.
+  //  - vue: Icons for Vue.
+  //  - vue_vuex: Icons for Vue and Vuex.
+  //  - nest: Icons for NestJS.
+  //  - none: No icon pack enabled.
+  "material-icon-theme.activeIconPack": "angular",
+  // Set custom file icon associations.
+  "material-icon-theme.files.associations": {},
+  // Set custom folder icon associations.
+  "material-icon-theme.folders.associations": {},
+  // Change the color of the folder icons.
+  "material-icon-theme.folders.color": "#90a4ae",
+  // Set the type for the folder icons.
+  //  - specific: Select specific folder icons.
+  //  - classic: Select classic folder icons.
+  //  - none: No folder icons.
+  "material-icon-theme.folders.theme": "specific",
+  // Hide explorer arrows before folder.
+  "material-icon-theme.hidesExplorerArrows": false,
+  // Set custom language icon associations.
+  "material-icon-theme.languages.associations": {},
+  // Change the opacity of the icons.
+  "material-icon-theme.opacity": 1,
+  // Change the saturation of the icons.
+  "material-icon-theme.saturation": 1,
+  // Show restart notification.
+  "material-icon-theme.showReloadMessage": true,
+  // Show the update message after each update.
+  "material-icon-theme.showUpdateMessage": false,
+  // Show the welcome message after first installation.
+  "material-icon-theme.showWelcomeMessage": true,
+  // Enable usage data and errors to be sent to Red Hat servers. Read our [privacy statement](https://developers.redhat.com/article/tool-data-collection).
+  "redhat.telemetry.enabled": null,
+  // Enable/disable completion feature
+  "yaml.completion": true,
+  // Custom tags for the parser to use
+  "yaml.customTags": [],
+  // Globally set additionalProperties to false for all objects. So if its true, no extra properties are allowed inside yaml.
+  "yaml.disableAdditionalProperties": false,
+  // Print spaces between brackets in objects
+  "yaml.format.bracketSpacing": true,
+  // Enable/disable default YAML formatter
+  "yaml.format.enable": true,
+  // Specify the line length that the printer will wrap on
+  "yaml.format.printWidth": 80,
+  // Always: wrap prose if it exeeds the print width, Never: never wrap the prose, Preserve: wrap prose as-is
+  "yaml.format.proseWrap": "preserve",
+  // Use single quotes instead of double quotes
+  "yaml.format.singleQuote": false,
+  // Enable/disable hover feature
+  "yaml.hover": true,
+  // The maximum number of outline symbols and folding regions computed (limited for performance reasons).
+  "yaml.maxItemsComputed": 5000,
+  // Associate schemas to YAML files in the current workspace
+  "yaml.schemas": {},
+  // Automatically pull available YAML schemas from JSON Schema Store
+  "yaml.schemaStore.enable": true,
+  // URL of schema store catalog to use
+  "yaml.schemaStore.url": "https://www.schemastore.org/api/json/catalog.json",
+  // Traces the communication between VSCode and the YAML language service.
+  "yaml.trace.server": "off",
+  // Enable/disable validation feature
+  "yaml.validate": true,
+  // Disable Tabnine when the file path contains a match of any of the provided regexes. For example, add "[.]js$" to disable Tabnine in JavaScript files.
+  "tabnine.disable_file_regex": [],
+  // Disable Tabnine when the current line contains a match of any of the provided regexes. For example, add "require" to disable Tabnine when the current line contains the word 'require'.
+  "tabnine.disable_line_regex": [],
+  // Experimental: Enable modules auto-import following applying Tabnine suggestions
+  "tabnine.experimentalAutoImports": null,
+  // Tabnine's log file (Visual Studio Code must be restarted for this setting to take effect)
+  "tabnine.logFilePath": "",
+  // Receive Tabnine VSCode extention beta updates
+  "tabnine.receiveBetaChannelUpdates": false,
+  // Turn on to highlight changed lines (historical changes will still be saved, for navigation)
+  "footsteps.doHighlightChanges": true,
+  // Turn off to prevent highlighting the currently focused chunk of edited code.
+  "footsteps.doHighlightCurrentlyFocusedChunk": false,
+  // The color of the highlighted trail (in rgb format). I'd recommend keeping this subtle - black (`rgb(0, 0, 0)`) if you have a dark theme and white (`rgb(255, 255, 255)`) if you have a light theme.
+  "footsteps.highlightColor": "rgb(153, 128, 250)",
+  // The maximum opacity for highlighting recently changed lines (0 - 1)
+  "footsteps.highlightColorMaxOpacity": 0.4,
+  // The number of changes to highlight with the background color.
+  "footsteps.maxNumberOfChangesToHighlight": 6,
+  // The number of changes to save in history for using your keybindings to navigate between.
+  "footsteps.maxNumberOfChangesToRemember": 10,
+  // The selection color used in editor.
+  "gruvboxConcoctis.selectionColor": "neutral",
+  // Use bold font.
+  "gruvboxConcoctis.useBoldFont": false,
+  // Use italic font.
+  "gruvboxConcoctis.useItalicFont": true,
+  // The color palette used in all variants.
+  "gruvboxConcoctis.usePalette": "material",
+  // Configure explainshell server in order to get hover documentation on flags and options.
+  "bashIde.explainshellEndpoint": "",
+  // Glob pattern for finding and parsing shell script files.
+  "bashIde.globPattern": "**/*@(.sh|.inc|.bash|.command)",
+  // Controls if parsing errors will be highlighted as problems.
+  "bashIde.highlightParsingErrors": false,
 }

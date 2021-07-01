@@ -1,0 +1,8 @@
+{
+  // Configure explainshell server in order to get hover documentation on flags and options.
+  "bashIde.explainshellEndpoint": "",
+  // Glob pattern for finding and parsing shell script files.
+  "bashIde.globPattern": "**/*@(.sh|.inc|.bash|.command)",
+  // Controls if parsing errors will be highlighted as problems.
+  "bashIde.highlightParsingErrors": false
+}

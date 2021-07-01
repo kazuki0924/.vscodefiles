@@ -5099,6 +5099,7 @@
 // - explorer.download
 // - explorer.openWith
 // - explorer.upload
+// - extendedTerminalIntegration.anonymous-command.0
 // - extendedTerminalIntegration.closeActiveTerminal
 // - extendedTerminalIntegration.closeAllTerminals
 // - extendedTerminalIntegration.createTerminal
@@ -5820,7 +5821,6 @@
 // - notifications.showList
 // - notifications.toggleList
 // - npm.debugScript
-// - npm.debugScriptFromHover
 // - npm.focus
 // - npm.openScript
 // - npm.packageManager
@@ -5829,7 +5829,6 @@
 // - npm.runInstall
 // - npm.runScript
 // - npm.runScriptFromFolder
-// - npm.runScriptFromHover
 // - npm.runSelectedScript
 // - openEditors.closeAll
 // - openEditors.newUntitledFile

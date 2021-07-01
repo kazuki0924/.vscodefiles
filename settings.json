@@ -892,14 +892,14 @@
   "vscode-neovim.useCtrlKeysForNormalMode": true,
   "vscode-neovim.useWSL": false,
   "vsdocker.imageUser": null,
-  "workbench.colorTheme": "gruvboxConcoctis dark hard",
+  "workbench.colorTheme": "XD Theme",
   "workbench.editor.enablePreview": false,
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.editor.pinnedTabSizing": "shrink",
   "workbench.editor.tabSizing": "shrink",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "gruvbox-material-icon-theme",
   "workbench.list.automaticKeyboardNavigation": false,
   "workbench.list.keyboardNavigation": "filter",
   "workbench.list.smoothScrolling": true,
@@ -917,5 +917,6 @@
   "yaml.schemaStore.url": "https://www.schemastore.org/api/json/catalog.json",
   "yaml.schemas": {},
   "yaml.trace.server": "off",
-  "yaml.validate": true
+  "yaml.validate": true,
+  "workbench.productIconTheme": "material-product-icons"
 }
