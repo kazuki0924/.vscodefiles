@@ -124,6 +124,7 @@
   //  - eamodio.gitlens: Supercharge the Git capabilities built into Visual Studio Code — Visualize code authorship at a glance via Git blame annotations and code lens, seamlessly navigate and explore Git repositories, gain valuable insights via powerful comparison commands, and so much more
   //  - vscode.grunt: Extension to add Grunt capabilities to VS Code.
   //  - wheredoesyourmindgo.gruvbox-concoctis: Concoction of Gruvbox themes
+  //  - JonathanHarty.gruvbox-material-icon-theme: Gruvbox Material Icons
   //  - vscode.gulp: Extension to add Gulp capabilities to VSCode.
   //  - vscode.image-preview: Provides VS Code's built-in image preview
   //  - oderwat.indent-rainbow: Makes indentation easier to read
@@ -142,9 +143,12 @@
   //  - vscode.simple-browser: A very basic built-in webview for displaying web content.
   //  - Noctarya.terminals: Adds icons for each terminal process to the status bar.
   //  - vscode.testing-editor-contributions: Provides the in-editor experience for tests and test results.
+  //  - Equinusocio.vsc-material-theme: The most epic theme now for Visual Studio Code
+  //  - equinusocio.vsc-material-theme-icons: Material Theme Icons, the most epic icons theme for Visual Studio Code and Material Theme.
   //  - ms-vscode.vscode-js-profile-table: Text visualizer for profiles taken from the JavaScript debugger
   //  - ms-kubernetes-tools.vscode-kubernetes-tools: Develop, deploy and debug Kubernetes applications
   //  - asvetliakov.vscode-neovim: VSCode Neovim Integration
+  //  - jeff-hykin.xd-theme: A theme because my settings file was too large
   "editor.defaultFormatter": null,
   // Controls whether the Go to Definition mouse gesture always opens the peek widget.
   "editor.definitionLinkOpensInPeek": false,
@@ -728,6 +732,13 @@
   //  - null: No file icons
   //  - vs-minimal
   //  - vs-seti
+  //  - eq-material-theme-icons
+  //  - eq-material-theme-icons-darker
+  //  - eq-material-theme-icons-palenight
+  //  - eq-material-theme-icons-ocean
+  //  - eq-material-theme-icons-light
+  //  - gruvbox-material-icon-theme
+  //  - keen-neutral-icon-theme
   //  - material-icon-theme
   "workbench.iconTheme": "vs-seti",
   // Controls whether keyboard navigation in lists and trees is automatically triggered simply by typing. If set to `false`, keyboard navigation is only triggered when executing the `list.toggleKeyboardNavigation` command, for which you can assign a keyboard shortcut.
@@ -762,6 +773,10 @@
   "workbench.preferredLightColorTheme": "Default Light+",
   // Specifies the product icon theme used.
   //  - Default: Default
+  //  - icons-carbon
+  //  - el-vsc-v1-icons
+  //  - material-product-icons
+  //  - bootstrap-product-icons
   "workbench.productIconTheme": "Default",
   // Controls whether Quick Open should close automatically once it loses focus.
   "workbench.quickOpen.closeOnFocusLost": true,
@@ -3837,6 +3852,8 @@
   "gitlens.views.tags.files.threshold": 5,
   // Specifies whether to reveal tags in the _Tags_ view, otherwise they revealed in the _Repositories_ view
   "gitlens.views.tags.reveal": true,
+  // Current accent color selected
+  "materialTheme.accent": "Blue",
   // Setup shortcut buttons. Format: ICON,COMMAND,TOOLTIP
   "shortcuts.buttons": [
     "file-binary , workbench.action.tasks.build , Run build task",
@@ -3845,6 +3862,47 @@
     "telescope , workbench.action.showCommands , Show command palette",
     "bug, workbench.action.debug.start, Launch debug"
   ],
+  // Select an icon pack that enables specific icons.
+  //  - angular: Icons for Angular.
+  //  - angular_ngrx: Icons for Angular and ngrx.
+  //  - react: Icons for React.
+  //  - react_redux: Icons for React and Redux.
+  //  - vue: Icons for Vue.
+  //  - vue_vuex: Icons for Vue and Vuex.
+  //  - nest: Icons for NestJS.
+  //  - none: No icon pack enabled.
+  "material-icon-theme.activeIconPack": "angular",
+  // Set custom file icon associations.
+  "material-icon-theme.files.associations": {},
+  // Set custom folder icon associations.
+  "material-icon-theme.folders.associations": {},
+  // Change the color of the folder icons.
+  "material-icon-theme.folders.color": "#45403d",
+  // Set the type for the folder icons.
+  //  - specific: Select specific folder icons.
+  //  - classic: Select classic folder icons.
+  //  - none: No folder icons.
+  "material-icon-theme.folders.theme": "specific",
+  // Hide explorer arrows before folder.
+  "material-icon-theme.hidesExplorerArrows": false,
+  // Set custom language icon associations.
+  "material-icon-theme.languages.associations": {},
+  // Change the opacity of the icons.
+  "material-icon-theme.opacity": 1,
+  // Change the saturation of the icons.
+  "material-icon-theme.saturation": 1,
+  // Show restart notification.
+  "material-icon-theme.showReloadMessage": true,
+  // Show the update message after each update.
+  "material-icon-theme.showUpdateMessage": false,
+  // Show the welcome message after first installation.
+  "material-icon-theme.showWelcomeMessage": true,
+  // Configure explainshell server in order to get hover documentation on flags and options.
+  "bashIde.explainshellEndpoint": "",
+  // Glob pattern for finding and parsing shell script files.
+  "bashIde.globPattern": "**/*@(.sh|.inc|.bash|.command)",
+  // Controls if parsing errors will be highlighted as problems.
+  "bashIde.highlightParsingErrors": false,
   // Equivalent to setting the DOCKER_CERT_PATH environment variable.
   "docker.certPath": "",
   // Command templates for `docker attach` / `docker exec -it` commands.
@@ -4083,41 +4141,6 @@
   "indentRainbow.updateDelay": 100,
   // Show label on action
   "keyboard-quickfix.showActionNotification": false,
-  // Select an icon pack that enables specific icons.
-  //  - angular: Icons for Angular.
-  //  - angular_ngrx: Icons for Angular and ngrx.
-  //  - react: Icons for React.
-  //  - react_redux: Icons for React and Redux.
-  //  - vue: Icons for Vue.
-  //  - vue_vuex: Icons for Vue and Vuex.
-  //  - nest: Icons for NestJS.
-  //  - none: No icon pack enabled.
-  "material-icon-theme.activeIconPack": "angular",
-  // Set custom file icon associations.
-  "material-icon-theme.files.associations": {},
-  // Set custom folder icon associations.
-  "material-icon-theme.folders.associations": {},
-  // Change the color of the folder icons.
-  "material-icon-theme.folders.color": "#90a4ae",
-  // Set the type for the folder icons.
-  //  - specific: Select specific folder icons.
-  //  - classic: Select classic folder icons.
-  //  - none: No folder icons.
-  "material-icon-theme.folders.theme": "specific",
-  // Hide explorer arrows before folder.
-  "material-icon-theme.hidesExplorerArrows": false,
-  // Set custom language icon associations.
-  "material-icon-theme.languages.associations": {},
-  // Change the opacity of the icons.
-  "material-icon-theme.opacity": 1,
-  // Change the saturation of the icons.
-  "material-icon-theme.saturation": 1,
-  // Show restart notification.
-  "material-icon-theme.showReloadMessage": true,
-  // Show the update message after each update.
-  "material-icon-theme.showUpdateMessage": false,
-  // Show the welcome message after first installation.
-  "material-icon-theme.showWelcomeMessage": true,
   // Enable usage data and errors to be sent to Red Hat servers. Read our [privacy statement](https://developers.redhat.com/article/tool-data-collection).
   "redhat.telemetry.enabled": null,
   // Enable/disable completion feature
@@ -4180,10 +4203,5 @@
   "gruvboxConcoctis.useItalicFont": true,
   // The color palette used in all variants.
   "gruvboxConcoctis.usePalette": "material",
-  // Configure explainshell server in order to get hover documentation on flags and options.
-  "bashIde.explainshellEndpoint": "",
-  // Glob pattern for finding and parsing shell script files.
-  "bashIde.globPattern": "**/*@(.sh|.inc|.bash|.command)",
-  // Controls if parsing errors will be highlighted as problems.
-  "bashIde.highlightParsingErrors": false,
 }
+

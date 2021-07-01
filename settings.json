@@ -892,7 +892,7 @@
   "vscode-neovim.useCtrlKeysForNormalMode": true,
   "vscode-neovim.useWSL": false,
   "vsdocker.imageUser": null,
-  "workbench.colorTheme": "XD Theme",
+  "workbench.colorTheme": "Noctis Minimus",
   "workbench.editor.enablePreview": false,
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.limit.enabled": true,

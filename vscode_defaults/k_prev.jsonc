@@ -5096,6 +5096,7 @@
 // - editor.emmet.action.updateTag
 // - editor.emmet.action.wrapWithAbbreviation
 // - emmet.expandAbbreviation
+// - eqMaterialThemeIcons.fixIcons
 // - explorer.download
 // - explorer.openWith
 // - explorer.upload
@@ -5226,7 +5227,9 @@
 // - extensions.actions.searchByCategory.Visualization
 // - extensions.filter.featured
 // - extensions.recommendedList.focus
+// - extensions.recommendedList.removeView
 // - extensions.recommendedList.resetViewLocation
+// - extensions.recommendedList.toggleVisibility
 // - extensions.sort.installs
 // - extensions.sort.name
 // - extensions.sort.publishedDate
@@ -5775,6 +5778,8 @@
 // - material-icon-theme.toggleExplorerArrows
 // - material-icon-theme.toggleGrayscale
 // - material-icon-theme.toggleIconPacks
+// - materialTheme.setAccent
+// - materialTheme.showReleaseNotes
 // - merge-conflict.accept.all-both
 // - merge-conflict.accept.all-current
 // - merge-conflict.accept.all-incoming
@@ -5915,7 +5920,6 @@
 // - settings.filterUntrusted
 // - settings.switchToJSON
 // - showEditorScreenReaderNotification
-// - simpleBrowser.api.open
 // - simpleBrowser.show
 // - tabnine-completion-imports
 // - tabnine-handle-imports
@@ -6542,7 +6546,6 @@
 // - workbench.scm.action.setSortKey.path
 // - workbench.scm.action.setSortKey.status
 // - workbench.scm.action.setTreeViewMode
-// - workbench.scm.action.toggleRepositoryVisibility.scm0
 // - workbench.scm.focus
 // - workbench.scm.removeView
 // - workbench.scm.repositories.focus
@@ -6601,17 +6604,21 @@
 // - workbench.views.extensions.builtinThemeExtensions.focus
 // - workbench.views.extensions.builtinThemeExtensions.resetViewLocation
 // - workbench.views.extensions.disabled.focus
+// - workbench.views.extensions.disabled.removeView
 // - workbench.views.extensions.disabled.resetViewLocation
+// - workbench.views.extensions.disabled.toggleVisibility
 // - workbench.views.extensions.enabled.focus
+// - workbench.views.extensions.enabled.removeView
 // - workbench.views.extensions.enabled.resetViewLocation
+// - workbench.views.extensions.enabled.toggleVisibility
 // - workbench.views.extensions.installed.empty.focus
 // - workbench.views.extensions.installed.empty.resetViewLocation
 // - workbench.views.extensions.installed.focus
+// - workbench.views.extensions.installed.removeView
 // - workbench.views.extensions.installed.resetViewLocation
+// - workbench.views.extensions.installed.toggleVisibility
 // - workbench.views.extensions.marketplace.focus
-// - workbench.views.extensions.marketplace.removeView
 // - workbench.views.extensions.marketplace.resetViewLocation
-// - workbench.views.extensions.marketplace.toggleVisibility
 // - workbench.views.extensions.otherRecommendations.focus
 // - workbench.views.extensions.otherRecommendations.resetViewLocation
 // - workbench.views.extensions.popular.focus
