@@ -111,6 +111,7 @@
   //  - ms-azuretools.vscode-docker: Makes it easy to create, manage, and debug containerized applications.
   //  - redhat.vscode-yaml: YAML Language Support by Red Hat, with built-in Kubernetes syntax support
   //  - amazonwebservices.aws-toolkit-vscode: Amazon Web Services toolkit for browsing and updating cloud resources
+  //  - rogalmic.bash-debug: A debugger extension for bash scripts (using bashdb).
   //  - mads-hartmann.bash-ide-vscode: A language server for Bash
   //  - CoenraadS.bracket-pair-colorizer-2: A customizable extension for colorizing matching brackets
   //  - vscode.configuration-editing: Provides capabilities (advanced IntelliSense, auto-fixing) in configuration files like settings, launch, and extension recommendation files.
@@ -3872,7 +3873,7 @@
   // shfmt -h  to see detail usage , example: -p -bn -ci
   "shellformat.flag": null,
   // the shfmt fullpath  example[ mac,linux ] /usr/local/bin/shfmt  [windows] C:/bin/shfmt.exe   download fron https://github.com/mvdan/sh/releases
-  "shellformat.path": "/usr/local/bin/shfmt",
+  "shellformat.path": null,
   // Use EditorConfig for shfmt configuration
   "shellformat.useEditorConfig": false,
   // Setup shortcut buttons. Format: ICON,COMMAND,TOOLTIP
@@ -4261,3 +4262,4 @@
   // The color palette used in all variants.
   "gruvboxConcoctis.usePalette": "material",
 }
+

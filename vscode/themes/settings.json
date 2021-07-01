@@ -3,8 +3,8 @@
   "workbench.colorTheme": "gruvboxConcoctis dark hard",
   // Specifies the file icon theme used in the workbench or 'null' to not show any file icons.
   //  - null: No file icons
-  //  - vs-minimal
-  //  - vs-seti
-  //  - material-icon-theme
-  "workbench.iconTheme": "material-icon-theme"
+  "workbench.iconTheme": "material-icon-theme",
+  // Specifies the product icon theme used.
+  //  - Default: Default
+  "workbench.productIconTheme": "material-product-icons"
 }

@@ -946,5 +946,6 @@
   "yaml.schemaStore.url": "https://www.schemastore.org/api/json/catalog.json",
   "yaml.schemas": {},
   "yaml.trace.server": "off",
-  "yaml.validate": true
+  "yaml.validate": true,
+  "workbench.productIconTheme": "material-product-icons"
 }

@@ -12,16 +12,12 @@ https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck
 
 # shell-format
 # https://github.com/foxundermoon/vs-shell-format
-# https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format
+https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format
 
 # Bash Debug
 # https://marketplace.visualstudio.com/items?itemName=rogalmic.bash-debug
-# https://github.com/rogalmic/vscode-bash-debug
+https://github.com/rogalmic/vscode-bash-debug
 
 # shellman
 # https://github.com/yousefvand/shellman
-# https://marketplace.visualstudio.com/items?itemName=Remisa.shellman
-
-# AutoComplate shell
-# https://github.com/trumandu/autocomplate-shell
-# https://marketplace.visualstudio.com/items?itemName=truman.autocomplate-shell
+https://marketplace.visualstudio.com/items?itemName=Remisa.shellman
