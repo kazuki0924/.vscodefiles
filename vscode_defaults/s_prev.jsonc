@@ -104,11 +104,13 @@
   //  - vscode.php-language-features: Provides rich language support for PHP files.
   //  - ms-vscode.references-view: Reference Search results as separate, stable view in the sidebar
   //  - vscode.search-result: Provides syntax highlighting and language features for tabbed search results.
+  //  - foxundermoon.shell-format: shellscript、Dockerfile、properties、gitignore、dotenv、hosts、jvmoptions... DocumentFormat
+  //  - timonwong.shellcheck: Integrates ShellCheck into VS Code, a linter for Shell scripts.
   //  - TabNine.tabnine-vscode: 👩‍💻🤖 JavaScript, Python, Java, Typescript & all other languages - AI Code completion plugin. Tabnine makes developers more productive by auto-completing their code.
   //  - vscode.typescript-language-features: Provides rich language support for JavaScript and TypeScript.
   //  - ms-azuretools.vscode-docker: Makes it easy to create, manage, and debug containerized applications.
   //  - redhat.vscode-yaml: YAML Language Support by Red Hat, with built-in Kubernetes syntax support
-  //  - amazonwebservices.aws-toolkit-vscode: An extension for working with Amazon Web Services
+  //  - amazonwebservices.aws-toolkit-vscode: Amazon Web Services toolkit for browsing and updating cloud resources
   //  - mads-hartmann.bash-ide-vscode: A language server for Bash
   //  - CoenraadS.bracket-pair-colorizer-2: A customizable extension for colorizing matching brackets
   //  - vscode.configuration-editing: Provides capabilities (advanced IntelliSense, auto-fixing) in configuration files like settings, launch, and extension recommendation files.
@@ -2919,7 +2921,7 @@
   // Enable/disable the floating indicator that shows when focused in the simple browser.
   "simpleBrowser.focusLockIndicator.enabled": true,
   // Maximum amount of log entries pulled per request from CloudWatch Logs (max 10000)
-  "aws.cloudwatchLogs.limit": 10000,
+  "aws.cloudWatchLogs.limit": 10000,
   // The AWS Toolkit's log level (changes reflected on restart)
   //  - error: Errors Only
   //  - warn: Errors and Warnings
@@ -2942,7 +2944,7 @@
   // Enable SAM hints in source files
   "aws.sam.enableCodeLenses": true,
   // Maximum time (in milliseconds) to wait for SAM output while starting a Local Lambda session
-  "aws.samcli.debug.attach.timeout.millis": 30000,
+  "aws.samcli.lambda.timeout": 90000,
   // Location of SAM CLI. SAM CLI is used to create, build, package, and deploy Serverless Applications. [Learn More](https://aws.amazon.com/serverless/sam/)
   "aws.samcli.location": "",
   // Controls the maximum number of problems produced by the SSM Document language server.
@@ -3854,6 +3856,25 @@
   "gitlens.views.tags.reveal": true,
   // Current accent color selected
   "materialTheme.accent": "Blue",
+  // the trigger effect  on the language
+  "shellformat.effectLanguages": [
+    "shellscript",
+    "dockerfile",
+    "dotenv",
+    "hosts",
+    "jvmoptions",
+    "ignore",
+    "gitignore",
+    "properties",
+    "spring-boot-properties",
+    "azcli"
+  ],
+  // shfmt -h  to see detail usage , example: -p -bn -ci
+  "shellformat.flag": null,
+  // the shfmt fullpath  example[ mac,linux ] /usr/local/bin/shfmt  [windows] C:/bin/shfmt.exe   download fron https://github.com/mvdan/sh/releases
+  "shellformat.path": "/usr/local/bin/shfmt",
+  // Use EditorConfig for shfmt configuration
+  "shellformat.useEditorConfig": false,
   // Setup shortcut buttons. Format: ICON,COMMAND,TOOLTIP
   "shortcuts.buttons": [
     "file-binary , workbench.action.tasks.build , Run build task",
@@ -4183,6 +4204,42 @@
   "tabnine.logFilePath": "",
   // Receive Tabnine VSCode extention beta updates
   "tabnine.receiveBetaChannelUpdates": false,
+  // Custom arguments to shellcheck.
+  "shellcheck.customArgs": [],
+  // Whether to disable shellcheck binary version check, which prompt for updating when outdated version found.
+  "shellcheck.disableVersionCheck": false,
+  // Whether shellcheck is enabled or not.
+  "shellcheck.enable": true,
+  // Whether to enable the "Quick Fix" feature.
+  "shellcheck.enableQuickFix": true,
+  // Exclude types of warnings, for example ["1017"].
+  "shellcheck.exclude": [],
+  // Path to the shellcheck executable (builtin binaries will be used if empty).
+  "shellcheck.executablePath": "",
+  // Matching file schemes are being ignored by shellcheck.
+  "shellcheck.ignoreFileSchemes": [
+    "git",
+    "gitfs"
+  ],
+  // Configure glob patterns for excluding files and folders by shellcheck. Glob patterns are interpreted relative to the workspace's root folder. Read more about glob patterns [here](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options).
+  "shellcheck.ignorePatterns": {
+    "**/*.zsh": true,
+    "**/*.zshrc": true,
+    "**/zshrc": true,
+    "**/*.zprofile": true,
+    "**/zprofile": true,
+    "**/*.zlogin": true,
+    "**/zlogin": true,
+    "**/*.zlogout": true,
+    "**/zlogout": true,
+    "**/*.zshenv": true,
+    "**/zshenv": true,
+    "**/*.zsh-theme": true
+  },
+  // Whether shellcheck is run on save or on type.
+  "shellcheck.run": "onType",
+  // Whether to use the workspace root directory as the current working directory when launching ShellCheck.
+  "shellcheck.useWorkspaceRootAsCwd": false,
   // Turn on to highlight changed lines (historical changes will still be saved, for navigation)
   "footsteps.doHighlightChanges": true,
   // Turn off to prevent highlighting the currently focused chunk of edited code.
@@ -4204,4 +4261,3 @@
   // The color palette used in all variants.
   "gruvboxConcoctis.usePalette": "material",
 }
-

@@ -4856,6 +4856,7 @@
 // - aws.deleteLambda
 // - aws.deploySamApplication
 // - aws.doNothingCommand
+// - aws.downloadLambda
 // - aws.downloadSchemaItemCode
 // - aws.downloadStateMachineDefinition
 // - aws.ecr.copyRepositoryUri
@@ -4871,7 +4872,6 @@
 // - aws.github
 // - aws.help
 // - aws.hideRegion
-// - aws.importLambda
 // - aws.invokeLambda
 // - aws.lambda.createNewSamApp
 // - aws.launchConfigForm
@@ -4895,7 +4895,6 @@
 // - aws.saveCurrentLogStreamContent
 // - aws.searchSchema
 // - aws.searchSchemaPerRegistry
-// - aws.showErrorDetails
 // - aws.showRegion
 // - aws.ssmDocument.createLocalDocument
 // - aws.ssmDocument.deleteDocument
@@ -5919,6 +5918,7 @@
 // - settings.filterByOnline
 // - settings.filterUntrusted
 // - settings.switchToJSON
+// - shellcheck.runLint
 // - showEditorScreenReaderNotification
 // - simpleBrowser.show
 // - tabnine-completion-imports
@@ -5944,11 +5944,8 @@
 // - testing.viewAsList
 // - testing.viewAsTree
 // - timeline.focus
-// - timeline.refresh
 // - timeline.removeView
 // - timeline.resetViewLocation
-// - timeline.toggleExcludeSource:git-history
-// - timeline.toggleFollowActiveEditor
 // - timeline.toggleVisibility
 // - toggle.diff.ignoreTrimWhitespace
 // - toggle.diff.renderSideBySide

@@ -1244,6 +1244,26 @@
     "key": "cmd+g p"
   },
   {
+    "key": "cmd+g n",
+    "command": "workbench.action.compareEditor.nextChange"
+    // "when": "textCompareEditorVisible"
+  },
+  {
+    "key": "cmd+g p",
+    "command": "workbench.action.compareEditor.previousChange"
+    // "when": "textCompareEditorVisible"
+  },
+  // {
+  //   "command": "workbench.action.editor.nextChange",
+  //   "key": "cmd+g n",
+  //   "when": "editorTextFocus"
+  // },
+  // {
+  //   "command": s"workbench.action.editor.previousChange",
+  //   "key": "cmd+g p",
+  //   "when": "editorTextFocus"
+  // },
+  {
     "command": "markdown.showPreview",
     "key": "shift+cmd+m",
     "when": "!notebookEditorFocused && editorLangId == 'markdown'"

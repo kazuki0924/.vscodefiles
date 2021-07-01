@@ -1,6 +1,6 @@
 {
   // Maximum amount of log entries pulled per request from CloudWatch Logs (max 10000)
-  "aws.cloudwatchLogs.limit": 10000,
+  "aws.cloudWatchLogs.limit": 10000,
   // The AWS Toolkit's log level (changes reflected on restart)
   //  - error: Errors Only
   //  - warn: Errors and Warnings
@@ -23,7 +23,7 @@
   // Enable SAM hints in source files
   "aws.sam.enableCodeLenses": true,
   // Maximum time (in milliseconds) to wait for SAM output while starting a Local Lambda session
-  "aws.samcli.debug.attach.timeout.millis": 30000,
+  "aws.samcli.lambda.timeout": 90000,
   // Location of SAM CLI. SAM CLI is used to create, build, package, and deploy Serverless Applications. [Learn More](https://aws.amazon.com/serverless/sam/)
   "aws.samcli.location": "",
   // Controls the maximum number of problems produced by the SSM Document language server.

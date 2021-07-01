@@ -1,0 +1,21 @@
+{
+  // the trigger effect  on the language
+  "shellformat.effectLanguages": [
+    "shellscript",
+    "dockerfile",
+    "dotenv",
+    "hosts",
+    "jvmoptions",
+    "ignore",
+    "gitignore",
+    "properties",
+    "spring-boot-properties",
+    "azcli"
+  ],
+  // shfmt -h  to see detail usage , example: -p -bn -ci
+  "shellformat.flag": null,
+  // the shfmt fullpath  example[ mac,linux ] /usr/local/bin/shfmt  [windows] C:/bin/shfmt.exe   download fron https://github.com/mvdan/sh/releases
+  "shellformat.path": "/usr/local/bin/shfmt",
+  // Use EditorConfig for shfmt configuration
+  "shellformat.useEditorConfig": true
+}

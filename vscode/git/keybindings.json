@@ -76,5 +76,21 @@
   {
     "key": "cmd+g p",
     "command": "merge-conflict.previous"
+  },
+  {
+    "key": "cmd+g n",
+    "command": "workbench.action.editor.nextChange"
+  },
+  {
+    "key": "cmd+g p",
+    "command": "workbench.action.editor.previousChange"
+  },
+  {
+    "key": "cmd+g n",
+    "command": "workbench.action.compareEditor.nextChange"
+  },
+  {
+    "key": "cmd+g p",
+    "command": "workbench.action.compareEditor.previousChange"
   }
 ]

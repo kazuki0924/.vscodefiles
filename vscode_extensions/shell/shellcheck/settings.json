@@ -1,0 +1,38 @@
+{
+  // Custom arguments to shellcheck.
+  "shellcheck.customArgs": [],
+  // Whether to disable shellcheck binary version check, which prompt for updating when outdated version found.
+  "shellcheck.disableVersionCheck": false,
+  // Whether shellcheck is enabled or not.
+  "shellcheck.enable": true,
+  // Whether to enable the "Quick Fix" feature.
+  "shellcheck.enableQuickFix": true,
+  // Exclude types of warnings, for example ["1017"].
+  "shellcheck.exclude": [],
+  // Path to the shellcheck executable (builtin binaries will be used if empty).
+  "shellcheck.executablePath": "",
+  // Matching file schemes are being ignored by shellcheck.
+  "shellcheck.ignoreFileSchemes": [
+    "git",
+    "gitfs"
+  ],
+  // Configure glob patterns for excluding files and folders by shellcheck. Glob patterns are interpreted relative to the workspace's root folder. Read more about glob patterns [here](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options).
+  "shellcheck.ignorePatterns": {
+    "**/*.zsh": true,
+    "**/*.zshrc": true,
+    "**/zshrc": true,
+    "**/*.zprofile": true,
+    "**/zprofile": true,
+    "**/*.zlogin": true,
+    "**/zlogin": true,
+    "**/*.zlogout": true,
+    "**/zlogout": true,
+    "**/*.zshenv": true,
+    "**/zshenv": true,
+    "**/*.zsh-theme": true
+  },
+  // Whether shellcheck is run on save or on type.
+  "shellcheck.run": "onType",
+  // Whether to use the workspace root directory as the current working directory when launching ShellCheck.
+  "shellcheck.useWorkspaceRootAsCwd": false
+}

@@ -25,6 +25,7 @@
   // - aws.deleteLambda
   // - aws.deploySamApplication
   // - aws.doNothingCommand
+  // - aws.downloadLambda
   // - aws.downloadSchemaItemCode
   // - aws.downloadStateMachineDefinition
   // - aws.ecr.copyRepositoryUri
@@ -40,7 +41,6 @@
   // - aws.github
   // - aws.help
   // - aws.hideRegion
-  // - aws.importLambda
   // - aws.invokeLambda
   // - aws.lambda.createNewSamApp
   // - aws.launchConfigForm
@@ -64,7 +64,6 @@
   // - aws.saveCurrentLogStreamContent
   // - aws.searchSchema
   // - aws.searchSchemaPerRegistry
-  // - aws.showErrorDetails
   // - aws.showRegion
   // - aws.ssmDocument.createLocalDocument
   // - aws.ssmDocument.deleteDocument
@@ -81,8 +80,4 @@
   // - aws.viewLogs
   // - aws.viewLogsAtMessage
   // - aws.viewSchemaItem
-  // - extendedTerminalIntegration.anonymous-command.0
-  // - extendedTerminalIntegration.closeActiveTerminal
-  // - extendedTerminalIntegration.closeAllTerminals
-  // - extendedTerminalIntegration.createTerminal
 ]
