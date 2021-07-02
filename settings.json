@@ -286,18 +286,7 @@
   "gitlens.advanced.maxListItems": 200,
   "gitlens.advanced.maxSearchItems": 200,
   "gitlens.advanced.messages": {
-    "suppressCommitHasNoPreviousCommitWarning": false,
-    "suppressCommitNotFoundWarning": false,
-    "suppressCreatePullRequestPrompt": false,
-    "suppressDebugLoggingWarning": false,
-    "suppressFileNotUnderSourceControlWarning": false,
-    "suppressGitDisabledWarning": false,
-    "suppressGitMissingWarning": false,
-    "suppressGitVersionWarning": false,
-    "suppressImproperWorkspaceCasingWarning": false,
-    "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false,
-    "suppressRebaseSwitchToTextWarning": false
+    "suppressGitDisabledWarning": true
   },
   "gitlens.advanced.quickPick.closeOnFocusOut": true,
   "gitlens.advanced.repositorySearchDepth": 1,

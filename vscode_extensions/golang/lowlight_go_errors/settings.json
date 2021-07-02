@@ -1,0 +1,16 @@
+{
+  // Enable/Disable Change Color Option
+  "lowlightgoerrors.ChangeColor": false,
+  // Color
+  "lowlightgoerrors.Color": "#D4D4D4",
+  // Default Opacity
+  "lowlightgoerrors.DefaultOpacity": "Medium",
+  // Enable/Disable Pulign
+  "lowlightgoerrors.Enabled": true,
+  // between 0.0 to 1.0
+  "lowlightgoerrors.HighOpacity": "1",
+  // between 0.0 to 1.0
+  "lowlightgoerrors.LowOpacity": "0.1",
+  // between 0.0 to 1.0
+  "lowlightgoerrors.MediumOpacity": "0.5"
+}

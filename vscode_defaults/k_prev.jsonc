@@ -1732,12 +1732,12 @@
   {
     "key": "down",
     "command": "interactive.history.next",
-    "when": "resourceScheme == 'vscode-interactive' && interactiveInputCursorAtBoundary != 'none' && interactiveInputCursorAtBoundary != 'top'"
+    "when": "!suggestWidgetVisible && resourceScheme == 'vscode-interactive' && interactiveInputCursorAtBoundary != 'none' && interactiveInputCursorAtBoundary != 'top'"
   },
   {
     "key": "up",
     "command": "interactive.history.previous",
-    "when": "resourceScheme == 'vscode-interactive' && interactiveInputCursorAtBoundary != 'bottom' && interactiveInputCursorAtBoundary != 'none'"
+    "when": "!suggestWidgetVisible && resourceScheme == 'vscode-interactive' && interactiveInputCursorAtBoundary != 'bottom' && interactiveInputCursorAtBoundary != 'none'"
   },
   {
     "key": "cmd+k cmd+a",
@@ -3694,11 +3694,6 @@
     "command": "footsteps.skipBack"
   },
   {
-    "key": "left",
-    "command": "gitlens.key.left",
-    "when": "gitlens:key:left"
-  },
-  {
     "key": "ctrl+shift+p",
     "command": "vscode-neovim.send",
     "when": "editorTextFocus && neovim.mode == 'visual'",
@@ -3709,20 +3704,10 @@
     "command": "footsteps.skipForwards"
   },
   {
-    "key": "alt+left",
-    "command": "gitlens.key.alt+left",
-    "when": "gitlens:key:alt+left"
-  },
-  {
     "key": "shift+cmd+p",
     "command": "vscode-neovim.send",
     "when": "editorTextFocus && neovim.mode == 'visual'",
     "args": "<C-P>"
-  },
-  {
-    "key": "cmd+left",
-    "command": "gitlens.key.ctrl+left",
-    "when": "gitlens:key:ctrl+left"
   },
   {
     "key": "f1",
@@ -3731,19 +3716,9 @@
     "args": "<C-P>"
   },
   {
-    "key": "right",
-    "command": "gitlens.key.right",
-    "when": "gitlens:key:right"
-  },
-  {
     "key": "ctrl+n",
     "command": "list.focusDown",
     "when": "listFocus && !inputFocus"
-  },
-  {
-    "key": "alt+right",
-    "command": "gitlens.key.alt+right",
-    "when": "gitlens:key:alt+right"
   },
   {
     "key": "ctrl+p",
@@ -3751,19 +3726,9 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "cmd+right",
-    "command": "gitlens.key.ctrl+right",
-    "when": "gitlens:key:ctrl+right"
-  },
-  {
     "key": "j",
     "command": "list.focusDown",
     "when": "listFocus && !inputFocus"
-  },
-  {
-    "key": "alt+,",
-    "command": "gitlens.key.alt+,",
-    "when": "gitlens:key:,"
   },
   {
     "key": "k",
@@ -3771,19 +3736,9 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "alt+.",
-    "command": "gitlens.key.alt+.",
-    "when": "gitlens:key:."
-  },
-  {
     "key": "h",
     "command": "list.collapse",
     "when": "listFocus && !inputFocus"
-  },
-  {
-    "key": "escape",
-    "command": "gitlens.key.escape",
-    "when": "editorTextFocus && gitlens:key:escape && !findWidgetVisible && !isInEmbeddedEditor && !renameInputVisible && !suggestWidgetVisible"
   },
   {
     "key": "l",
@@ -3791,19 +3746,9 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "alt+/",
-    "command": "gitlens.gitCommands",
-    "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
-  },
-  {
     "key": "enter",
     "command": "list.select",
     "when": "listFocus && !inputFocus"
-  },
-  {
-    "key": "alt+cmd+g /",
-    "command": "gitlens.gitCommands",
-    "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
   },
   {
     "key": "g g",
@@ -3811,19 +3756,9 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "alt+b",
-    "command": "gitlens.toggleFileBlame",
-    "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /blameable/"
-  },
-  {
     "key": "shift+g",
     "command": "list.focusLast",
     "when": "listFocus && !inputFocus"
-  },
-  {
-    "key": "alt+cmd+g b",
-    "command": "gitlens.toggleFileBlame",
-    "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /blameable/"
   },
   {
     "key": "o",
@@ -3831,19 +3766,9 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "shift+alt+b",
-    "command": "gitlens.toggleCodeLens",
-    "when": "editorTextFocus && !gitlens:disabled && !gitlens:disabledToggleCodeLens && config.gitlens.keymap == 'alternate'"
-  },
-  {
     "key": "ctrl+u",
     "command": "list.focusPageUp",
     "when": "listFocus && !inputFocus"
-  },
-  {
-    "key": "alt+cmd+g shift+b",
-    "command": "gitlens.toggleCodeLens",
-    "when": "editorTextFocus && !gitlens:disabled && !gitlens:disabledToggleCodeLens && config.gitlens.keymap == 'chorded'"
   },
   {
     "key": "ctrl+d",
@@ -3851,29 +3776,14 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "alt+h",
-    "command": "gitlens.showQuickFileHistory",
-    "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
-  },
-  {
     "key": "/",
     "command": "list.toggleKeyboardNavigation",
     "when": "listFocus && listSupportsKeyboardNavigation && !inputFocus"
   },
   {
-    "key": "alt+cmd+g h",
-    "command": "gitlens.showQuickFileHistory",
-    "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
-  },
-  {
     "key": "escape",
     "command": "list.toggleKeyboardNavigation",
     "when": "inputFocus && listFocus && listSupportsKeyboardNavigation"
-  },
-  {
-    "key": "shift+alt+h",
-    "command": "gitlens.showQuickRepoHistory",
-    "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
   },
   {
     "key": "r",
@@ -3886,19 +3796,9 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "key": "alt+cmd+g shift+h",
-    "command": "gitlens.showQuickRepoHistory",
-    "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
-  },
-  {
     "key": "y",
     "command": "filesExplorer.copy",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
-  },
-  {
-    "key": "alt+s",
-    "command": "gitlens.showQuickRepoStatus",
-    "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
   },
   {
     "key": "x",
@@ -3906,19 +3806,9 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
   },
   {
-    "key": "alt+cmd+g s",
-    "command": "gitlens.showQuickRepoStatus",
-    "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
-  },
-  {
     "key": "p",
     "command": "filesExplorer.paste",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "alt+c",
-    "command": "gitlens.showQuickCommitFileDetails",
-    "when": "editorTextFocus && !gitlens:disabled && config.gitlens.keymap == 'alternate'"
   },
   {
     "key": "v",
@@ -3926,19 +3816,9 @@
     "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
   },
   {
-    "key": "alt+cmd+g c",
-    "command": "gitlens.showQuickCommitFileDetails",
-    "when": "editorTextFocus && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
-  },
-  {
     "key": "a",
     "command": "explorer.newFile",
     "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "alt+,",
-    "command": "gitlens.diffWithPrevious",
-    "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /tracked/"
   },
   {
     "key": "shift+a",
@@ -3946,24 +3826,9 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
-    "key": "alt+cmd+g ,",
-    "command": "gitlens.diffWithPrevious",
-    "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
-  },
-  {
-    "key": "alt+,",
-    "command": "gitlens.diffWithPreviousInDiffLeft",
-    "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /tracked/"
-  },
-  {
     "key": "ctrl+n",
     "command": "showNextParameterHint",
     "when": "editorTextFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
-  },
-  {
-    "key": "alt+cmd+g ,",
-    "command": "gitlens.diffWithPreviousInDiffLeft",
-    "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
   },
   {
     "key": "ctrl+p",
@@ -3971,19 +3836,9 @@
     "when": "editorTextFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
   },
   {
-    "key": "alt+,",
-    "command": "gitlens.diffWithPreviousInDiffRight",
-    "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /tracked/"
-  },
-  {
     "key": "ctrl+n",
     "command": "selectNextSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "key": "alt+cmd+g ,",
-    "command": "gitlens.diffWithPreviousInDiffRight",
-    "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
   },
   {
     "key": "ctrl+p",
@@ -3991,19 +3846,9 @@
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "alt+.",
-    "command": "gitlens.diffWithNext",
-    "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /revision/ && gitlens:activeFileStatus =~ /revision/"
-  },
-  {
     "key": "ctrl+n",
     "command": "workbench.action.quickOpenSelectNext",
     "when": "inQuickOpen"
-  },
-  {
-    "key": "alt+cmd+g .",
-    "command": "gitlens.diffWithNext",
-    "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/ && gitlens:activeFileStatus =~ /revision/"
   },
   {
     "key": "ctrl+p",
@@ -4011,19 +3856,9 @@
     "when": "inQuickOpen"
   },
   {
-    "key": "alt+.",
-    "command": "gitlens.diffWithNextInDiffLeft",
-    "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /revision/ && gitlens:activeFileStatus =~ /revision/"
-  },
-  {
     "key": "ctrl+c",
     "command": "vscode-neovim.escape",
     "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
-  },
-  {
-    "key": "alt+cmd+g .",
-    "command": "gitlens.diffWithNextInDiffLeft",
-    "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/ && gitlens:activeFileStatus =~ /revision/"
   },
   {
     "key": "ctrl+c",
@@ -4031,29 +3866,14 @@
     "when": "editorTextFocus && neovim.ctrlKeysInsert && neovim.init && neovim.mode == 'insert'"
   },
   {
-    "key": "alt+.",
-    "command": "gitlens.diffWithNextInDiffRight",
-    "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /revision/ && gitlens:activeFileStatus =~ /revision/"
-  },
-  {
     "key": "escape",
     "command": "vscode-neovim.escape",
     "when": "editorTextFocus && neovim.init && !markersNavigationVisible && !parameterHintsVisible && !referenceSearchVisible"
   },
   {
-    "key": "alt+cmd+g .",
-    "command": "gitlens.diffWithNextInDiffRight",
-    "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/ && gitlens:activeFileStatus =~ /revision/"
-  },
-  {
     "key": "ctrl+[",
     "command": "vscode-neovim.escape",
     "when": "editorTextFocus && neovim.init"
-  },
-  {
-    "key": "shift+alt+.",
-    "command": "gitlens.diffWithWorking",
-    "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /revision/"
   },
   {
     "key": "tab",
@@ -4066,24 +3886,9 @@
     "when": "inReferenceSearchEditor && !config.editor.stablePeek && neovim.mode == 'normal'"
   },
   {
-    "key": "alt+cmd+g shift+.",
-    "command": "gitlens.diffWithWorking",
-    "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/"
-  },
-  {
-    "key": "shift+alt+,",
-    "command": "gitlens.diffLineWithPrevious",
-    "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /tracked/"
-  },
-  {
     "key": "ctrl+p",
     "command": "list.focusUp",
     "when": "inReferenceSearchEditor && neovim.mode == 'normal'"
-  },
-  {
-    "key": "alt+cmd+g shift+,",
-    "command": "gitlens.diffLineWithPrevious",
-    "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
   },
   {
     "key": "ctrl+n",
@@ -4097,25 +3902,10 @@
     "args": "<C-g>"
   },
   {
-    "key": "ctrl+shift+g",
-    "command": "workbench.view.scm",
-    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
-  },
-  {
-    "key": "cmd+c",
-    "command": "gitlens.views.branches.copy",
-    "when": "gitlens:enabled && focusedView =~ /^gitlens\\.views\\.branches/"
-  },
-  {
     "key": "ctrl+t",
     "command": "vscode-neovim.send",
     "when": "neovim.mode == 'cmdline_insert' || neovim.mode == 'cmdline_normal' || neovim.mode == 'cmdline_replace'",
     "args": "<C-t>"
-  },
-  {
-    "key": "cmd+c",
-    "command": "gitlens.views.commits.copy",
-    "when": "gitlens:enabled && focusedView =~ /^gitlens\\.views\\.commits/"
   },
   {
     "key": "ctrl+r",
@@ -4124,20 +3914,10 @@
     "args": "<C-r>"
   },
   {
-    "key": "cmd+c",
-    "command": "gitlens.views.contributors.copy",
-    "when": "gitlens:enabled && focusedView =~ /^gitlens\\.views\\.contributors/"
-  },
-  {
     "key": "ctrl+l",
     "command": "vscode-neovim.send",
     "when": "neovim.mode == 'cmdline_insert' || neovim.mode == 'cmdline_normal' || neovim.mode == 'cmdline_replace'",
     "args": "<C-l>"
-  },
-  {
-    "key": "cmd+c",
-    "command": "gitlens.views.fileHistory.copy",
-    "when": "gitlens:enabled && focusedView =~ /^gitlens\\.views\\.fileHistory/"
   },
   {
     "key": "ctrl+e",
@@ -4146,19 +3926,9 @@
     "args": "<C-e>"
   },
   {
-    "key": "cmd+c",
-    "command": "gitlens.views.lineHistory.copy",
-    "when": "gitlens:enabled && focusedView =~ /^gitlens\\.views\\.lineHistory/"
-  },
-  {
     "key": "up",
     "command": "vscode-neovim.history-up-cmdline",
     "when": "neovim.mode == 'cmdline_normal'"
-  },
-  {
-    "key": "cmd+c",
-    "command": "gitlens.views.remotes.copy",
-    "when": "gitlens:enabled && focusedView =~ /^gitlens\\.views\\.remotes/"
   },
   {
     "key": "ctrl+p",
@@ -4166,19 +3936,9 @@
     "when": "neovim.mode == 'cmdline_normal'"
   },
   {
-    "key": "cmd+c",
-    "command": "gitlens.views.repositories.copy",
-    "when": "gitlens:enabled && focusedView =~ /^gitlens\\.views\\.repositories/"
-  },
-  {
     "key": "down",
     "command": "vscode-neovim.history-down-cmdline",
     "when": "neovim.mode == 'cmdline_normal'"
-  },
-  {
-    "key": "cmd+c",
-    "command": "gitlens.views.stashes.copy",
-    "when": "gitlens:enabled && focusedView =~ /^gitlens\\.views\\.stashes/"
   },
   {
     "key": "ctrl+n",
@@ -4186,19 +3946,9 @@
     "when": "neovim.mode == 'cmdline_normal'"
   },
   {
-    "key": "cmd+c",
-    "command": "gitlens.views.searchAndCompare.copy",
-    "when": "gitlens:enabled && focusedView =~ /^gitlens\\.views\\.searchAndCompare\\b/"
-  },
-  {
     "key": "ctrl+w",
     "command": "vscode-neovim.delete-word-left-cmdline",
     "when": "neovim.mode == 'cmdline_normal'"
-  },
-  {
-    "key": "cmd+c",
-    "command": "gitlens.views.tags.copy",
-    "when": "gitlens:enabled && focusedView =~ /^gitlens\\.views\\.tags/"
   },
   {
     "key": "ctrl+u",
@@ -5099,7 +4849,6 @@
 // - explorer.download
 // - explorer.openWith
 // - explorer.upload
-// - extendedTerminalIntegration.anonymous-command.0
 // - extendedTerminalIntegration.closeActiveTerminal
 // - extendedTerminalIntegration.closeAllTerminals
 // - extendedTerminalIntegration.createTerminal
@@ -5340,396 +5089,58 @@
 // - github-enterprise.provide-token
 // - github.provide-token
 // - github.publish
-// - gitlens.action.createPullRequest
-// - gitlens.action.hover.commands
-// - gitlens.action.openPullRequest
-// - gitlens.addAuthors
-// - gitlens.browseRepoAtRevision
-// - gitlens.browseRepoAtRevisionInNewWindow
-// - gitlens.browseRepoBeforeRevision
-// - gitlens.browseRepoBeforeRevisionInNewWindow
-// - gitlens.clearFileAnnotations
-// - gitlens.closeUnchangedFiles
-// - gitlens.closeUpdatesView
-// - gitlens.closeWelcomeView
-// - gitlens.compareHeadWith
-// - gitlens.compareWith
-// - gitlens.compareWorkingWith
-// - gitlens.computingFileAnnotations
-// - gitlens.connectRemoteProvider
-// - gitlens.copyCurrentBranch
-// - gitlens.copyMessageToClipboard
-// - gitlens.copyRemoteBranchUrl
-// - gitlens.copyRemoteBranchesUrl
-// - gitlens.copyRemoteCommitUrl
-// - gitlens.copyRemoteComparisonUrl
-// - gitlens.copyRemoteFileUrlFrom
-// - gitlens.copyRemoteFileUrlToClipboard
-// - gitlens.copyRemoteFileUrlWithoutRange
-// - gitlens.copyRemotePullRequestUrl
-// - gitlens.copyRemoteRepositoryUrl
-// - gitlens.copyShaToClipboard
-// - gitlens.createPullRequestOnRemote
-// - gitlens.diffDirectory
-// - gitlens.diffDirectoryWithHead
-// - gitlens.diffHeadWith
-// - gitlens.diffLineWithWorking
-// - gitlens.diffWith
-// - gitlens.diffWithRevision
-// - gitlens.diffWithRevisionFrom
-// - gitlens.diffWithWorkingInDiffLeft
-// - gitlens.diffWithWorkingInDiffRight
-// - gitlens.diffWorkingWith
-// - gitlens.disableDebugLogging
-// - gitlens.disableRebaseEditor
-// - gitlens.disconnectRemoteProvider
-// - gitlens.enableDebugLogging
-// - gitlens.enableRebaseEditor
-// - gitlens.externalDiff
-// - gitlens.externalDiffAll
-// - gitlens.fetchRepositories
-// - gitlens.gitCommands.branch
-// - gitlens.gitCommands.cherryPick
-// - gitlens.gitCommands.merge
-// - gitlens.gitCommands.rebase
-// - gitlens.gitCommands.reset
-// - gitlens.gitCommands.revert
-// - gitlens.gitCommands.switch
-// - gitlens.gitCommands.tag
-// - gitlens.inviteToLiveShare
-// - gitlens.openAssociatedPullRequestOnRemote
-// - gitlens.openBlamePriorToChange
-// - gitlens.openBranchInRemote
-// - gitlens.openBranchOnRemote
-// - gitlens.openBranchesInRemote
-// - gitlens.openBranchesOnRemote
-// - gitlens.openChangedFiles
-// - gitlens.openCommitInRemote
-// - gitlens.openCommitOnRemote
-// - gitlens.openComparisonOnRemote
-// - gitlens.openFileFromRemote
-// - gitlens.openFileHistory
-// - gitlens.openFileInRemote
-// - gitlens.openFileOnRemote
-// - gitlens.openFileOnRemoteFrom
-// - gitlens.openFileRevision
-// - gitlens.openFileRevisionFrom
-// - gitlens.openFolderHistory
-// - gitlens.openInRemote
-// - gitlens.openOnRemote
-// - gitlens.openPullRequestOnRemote
-// - gitlens.openRepoInRemote
-// - gitlens.openRepoOnRemote
-// - gitlens.openRevisionFile
-// - gitlens.openRevisionFileInDiffLeft
-// - gitlens.openRevisionFileInDiffRight
-// - gitlens.openWorkingFile
-// - gitlens.openWorkingFileInDiffLeft
-// - gitlens.openWorkingFileInDiffRight
-// - gitlens.pullRepositories
-// - gitlens.pushRepositories
-// - gitlens.quickOpenFileHistory
-// - gitlens.refreshHover
-// - gitlens.resetAvatarCache
-// - gitlens.resetSuppressedWarnings
-// - gitlens.revealCommitInView
-// - gitlens.setViewsLayout
-// - gitlens.showBranchesView
-// - gitlens.showCommitInView
-// - gitlens.showCommitSearch
-// - gitlens.showCommitsInView
-// - gitlens.showCommitsView
-// - gitlens.showContributorsView
-// - gitlens.showFileHistoryInView
-// - gitlens.showFileHistoryView
-// - gitlens.showLastQuickPick
-// - gitlens.showLineHistoryView
-// - gitlens.showQuickBranchHistory
-// - gitlens.showQuickCommitDetails
-// - gitlens.showQuickRevisionDetails
-// - gitlens.showQuickRevisionDetailsInDiffLeft
-// - gitlens.showQuickRevisionDetailsInDiffRight
-// - gitlens.showQuickStashList
-// - gitlens.showRemotesView
-// - gitlens.showRepositoriesView
-// - gitlens.showSearchAndCompareView
-// - gitlens.showSettingsPage
-// - gitlens.showSettingsPage#branches-view
-// - gitlens.showSettingsPage#commits-view
-// - gitlens.showSettingsPage#contributors-view
-// - gitlens.showSettingsPage#file-history-view
-// - gitlens.showSettingsPage#line-history-view
-// - gitlens.showSettingsPage#remotes-view
-// - gitlens.showSettingsPage#repositories-view
-// - gitlens.showSettingsPage#search-compare-view
-// - gitlens.showSettingsPage#stashes-view
-// - gitlens.showSettingsPage#tags-view
-// - gitlens.showSettingsPage#views
-// - gitlens.showStashesView
-// - gitlens.showTagsView
-// - gitlens.showWelcomePage
-// - gitlens.showWelcomeView
-// - gitlens.stashApply
-// - gitlens.stashSave
-// - gitlens.stashSaveFiles
-// - gitlens.supportGitLens
-// - gitlens.switchMode
-// - gitlens.toggleFileBlameInDiffLeft
-// - gitlens.toggleFileBlameInDiffRight
-// - gitlens.toggleFileChanges
-// - gitlens.toggleFileChangesOnly
-// - gitlens.toggleFileHeatmap
-// - gitlens.toggleFileHeatmapInDiffLeft
-// - gitlens.toggleFileHeatmapInDiffRight
-// - gitlens.toggleLineBlame
-// - gitlens.toggleReviewMode
-// - gitlens.toggleZenMode
-// - gitlens.views.addAuthor
-// - gitlens.views.addAuthors
-// - gitlens.views.addRemote
-// - gitlens.views.applyChanges
-// - gitlens.views.branches.focus
-// - gitlens.views.branches.refresh
-// - gitlens.views.branches.removeView
-// - gitlens.views.branches.resetViewLocation
-// - gitlens.views.branches.setFilesLayoutToAuto
-// - gitlens.views.branches.setFilesLayoutToList
-// - gitlens.views.branches.setFilesLayoutToTree
-// - gitlens.views.branches.setLayoutToList
-// - gitlens.views.branches.setLayoutToTree
-// - gitlens.views.branches.setShowAvatarsOff
-// - gitlens.views.branches.setShowAvatarsOn
-// - gitlens.views.branches.setShowBranchComparisonOff
-// - gitlens.views.branches.setShowBranchComparisonOn
-// - gitlens.views.branches.setShowBranchPullRequestOff
-// - gitlens.views.branches.setShowBranchPullRequestOn
-// - gitlens.views.branches.toggleVisibility
-// - gitlens.views.browseRepoAtRevision
-// - gitlens.views.browseRepoAtRevisionInNewWindow
-// - gitlens.views.browseRepoBeforeRevision
-// - gitlens.views.browseRepoBeforeRevisionInNewWindow
-// - gitlens.views.cherryPick
-// - gitlens.views.clearNode
-// - gitlens.views.closeRepository
-// - gitlens.views.commits.focus
-// - gitlens.views.commits.refresh
-// - gitlens.views.commits.removeView
-// - gitlens.views.commits.resetViewLocation
-// - gitlens.views.commits.setFilesLayoutToAuto
-// - gitlens.views.commits.setFilesLayoutToList
-// - gitlens.views.commits.setFilesLayoutToTree
-// - gitlens.views.commits.setMyCommitsOnlyOff
-// - gitlens.views.commits.setMyCommitsOnlyOn
-// - gitlens.views.commits.setShowAvatarsOff
-// - gitlens.views.commits.setShowAvatarsOn
-// - gitlens.views.commits.setShowBranchComparisonOff
-// - gitlens.views.commits.setShowBranchComparisonOn
-// - gitlens.views.commits.setShowBranchPullRequestOff
-// - gitlens.views.commits.setShowBranchPullRequestOn
-// - gitlens.views.commits.toggleVisibility
-// - gitlens.views.compareAncestryWithWorking
-// - gitlens.views.compareFileWithSelected
-// - gitlens.views.compareWithHead
-// - gitlens.views.compareWithSelected
-// - gitlens.views.compareWithUpstream
-// - gitlens.views.compareWithWorking
-// - gitlens.views.contributors.focus
-// - gitlens.views.contributors.refresh
-// - gitlens.views.contributors.removeView
-// - gitlens.views.contributors.resetViewLocation
-// - gitlens.views.contributors.setFilesLayoutToAuto
-// - gitlens.views.contributors.setFilesLayoutToList
-// - gitlens.views.contributors.setFilesLayoutToTree
-// - gitlens.views.contributors.setShowAllBranchesOff
-// - gitlens.views.contributors.setShowAllBranchesOn
-// - gitlens.views.contributors.setShowAvatarsOff
-// - gitlens.views.contributors.setShowAvatarsOn
-// - gitlens.views.contributors.setShowStatisticsOff
-// - gitlens.views.contributors.setShowStatisticsOn
-// - gitlens.views.contributors.toggleVisibility
-// - gitlens.views.copy
-// - gitlens.views.createBranch
-// - gitlens.views.createPullRequest
-// - gitlens.views.createTag
-// - gitlens.views.deleteBranch
-// - gitlens.views.deleteStash
-// - gitlens.views.deleteTag
-// - gitlens.views.dismissNode
-// - gitlens.views.editNode
-// - gitlens.views.expandNode
-// - gitlens.views.fetch
-// - gitlens.views.fileHistory.changeBase
-// - gitlens.views.fileHistory.focus
-// - gitlens.views.fileHistory.refresh
-// - gitlens.views.fileHistory.removeView
-// - gitlens.views.fileHistory.resetViewLocation
-// - gitlens.views.fileHistory.setCursorFollowingOff
-// - gitlens.views.fileHistory.setCursorFollowingOn
-// - gitlens.views.fileHistory.setEditorFollowingOff
-// - gitlens.views.fileHistory.setEditorFollowingOn
-// - gitlens.views.fileHistory.setRenameFollowingOff
-// - gitlens.views.fileHistory.setRenameFollowingOn
-// - gitlens.views.fileHistory.setShowAllBranchesOff
-// - gitlens.views.fileHistory.setShowAllBranchesOn
-// - gitlens.views.fileHistory.setShowAvatarsOff
-// - gitlens.views.fileHistory.setShowAvatarsOn
-// - gitlens.views.fileHistory.toggleVisibility
-// - gitlens.views.highlightChanges
-// - gitlens.views.highlightRevisionChanges
-// - gitlens.views.lineHistory.changeBase
-// - gitlens.views.lineHistory.focus
-// - gitlens.views.lineHistory.refresh
-// - gitlens.views.lineHistory.removeView
-// - gitlens.views.lineHistory.resetViewLocation
-// - gitlens.views.lineHistory.setEditorFollowingOff
-// - gitlens.views.lineHistory.setEditorFollowingOn
-// - gitlens.views.lineHistory.setShowAvatarsOff
-// - gitlens.views.lineHistory.setShowAvatarsOn
-// - gitlens.views.lineHistory.toggleVisibility
-// - gitlens.views.loadAllChildren
-// - gitlens.views.loadMoreChildren
-// - gitlens.views.mergeBranchInto
-// - gitlens.views.openChangedFileDiffs
-// - gitlens.views.openChangedFileDiffsWithWorking
-// - gitlens.views.openChangedFileRevisions
-// - gitlens.views.openChangedFiles
-// - gitlens.views.openChanges
-// - gitlens.views.openChangesWithWorking
-// - gitlens.views.openDirectoryDiff
-// - gitlens.views.openDirectoryDiffWithWorking
-// - gitlens.views.openFile
-// - gitlens.views.openFileRevision
-// - gitlens.views.openInTerminal
-// - gitlens.views.openPullRequest
-// - gitlens.views.pruneRemote
-// - gitlens.views.publishBranch
-// - gitlens.views.publishRepository
-// - gitlens.views.pull
-// - gitlens.views.push
-// - gitlens.views.pushToCommit
-// - gitlens.views.pushWithForce
-// - gitlens.views.rebaseOntoBranch
-// - gitlens.views.rebaseOntoCommit
-// - gitlens.views.rebaseOntoUpstream
-// - gitlens.views.refreshNode
-// - gitlens.views.remotes.focus
-// - gitlens.views.remotes.refresh
-// - gitlens.views.remotes.removeView
-// - gitlens.views.remotes.resetViewLocation
-// - gitlens.views.remotes.setFilesLayoutToAuto
-// - gitlens.views.remotes.setFilesLayoutToList
-// - gitlens.views.remotes.setFilesLayoutToTree
-// - gitlens.views.remotes.setLayoutToList
-// - gitlens.views.remotes.setLayoutToTree
-// - gitlens.views.remotes.setShowAvatarsOff
-// - gitlens.views.remotes.setShowAvatarsOn
-// - gitlens.views.remotes.setShowBranchPullRequestOff
-// - gitlens.views.remotes.setShowBranchPullRequestOn
-// - gitlens.views.remotes.toggleVisibility
-// - gitlens.views.renameBranch
-// - gitlens.views.repositories.focus
-// - gitlens.views.repositories.refresh
-// - gitlens.views.repositories.removeView
-// - gitlens.views.repositories.resetViewLocation
-// - gitlens.views.repositories.setAutoRefreshToOff
-// - gitlens.views.repositories.setAutoRefreshToOn
-// - gitlens.views.repositories.setBranchesLayoutToList
-// - gitlens.views.repositories.setBranchesLayoutToTree
-// - gitlens.views.repositories.setBranchesShowBranchComparisonOff
-// - gitlens.views.repositories.setBranchesShowBranchComparisonOn
-// - gitlens.views.repositories.setFilesLayoutToAuto
-// - gitlens.views.repositories.setFilesLayoutToList
-// - gitlens.views.repositories.setFilesLayoutToTree
-// - gitlens.views.repositories.setShowAvatarsOff
-// - gitlens.views.repositories.setShowAvatarsOn
-// - gitlens.views.repositories.setShowBranchComparisonOff
-// - gitlens.views.repositories.setShowBranchComparisonOn
-// - gitlens.views.repositories.setShowBranchesOff
-// - gitlens.views.repositories.setShowBranchesOn
-// - gitlens.views.repositories.setShowCommitsOff
-// - gitlens.views.repositories.setShowCommitsOn
-// - gitlens.views.repositories.setShowContributorsOff
-// - gitlens.views.repositories.setShowContributorsOn
-// - gitlens.views.repositories.setShowRemotesOff
-// - gitlens.views.repositories.setShowRemotesOn
-// - gitlens.views.repositories.setShowSectionOff
-// - gitlens.views.repositories.setShowStashesOff
-// - gitlens.views.repositories.setShowStashesOn
-// - gitlens.views.repositories.setShowTagsOff
-// - gitlens.views.repositories.setShowTagsOn
-// - gitlens.views.repositories.setShowUpstreamStatusOff
-// - gitlens.views.repositories.setShowUpstreamStatusOn
-// - gitlens.views.repositories.toggleVisibility
-// - gitlens.views.resetCommit
-// - gitlens.views.resetToCommit
-// - gitlens.views.restore
-// - gitlens.views.revert
-// - gitlens.views.searchAndCompare.clear
-// - gitlens.views.searchAndCompare.compareWithSelected
-// - gitlens.views.searchAndCompare.focus
-// - gitlens.views.searchAndCompare.pin
-// - gitlens.views.searchAndCompare.refresh
-// - gitlens.views.searchAndCompare.removeView
-// - gitlens.views.searchAndCompare.resetViewLocation
-// - gitlens.views.searchAndCompare.searchCommits
-// - gitlens.views.searchAndCompare.selectForCompare
-// - gitlens.views.searchAndCompare.setFilesFilterOff
-// - gitlens.views.searchAndCompare.setFilesFilterOnLeft
-// - gitlens.views.searchAndCompare.setFilesFilterOnRight
-// - gitlens.views.searchAndCompare.setFilesLayoutToAuto
-// - gitlens.views.searchAndCompare.setFilesLayoutToList
-// - gitlens.views.searchAndCompare.setFilesLayoutToTree
-// - gitlens.views.searchAndCompare.setKeepResultsToOff
-// - gitlens.views.searchAndCompare.setKeepResultsToOn
-// - gitlens.views.searchAndCompare.setShowAvatarsOff
-// - gitlens.views.searchAndCompare.setShowAvatarsOn
-// - gitlens.views.searchAndCompare.swapComparison
-// - gitlens.views.searchAndCompare.toggleVisibility
-// - gitlens.views.searchAndCompare.unpin
-// - gitlens.views.selectFileForCompare
-// - gitlens.views.selectForCompare
-// - gitlens.views.setAsDefault
-// - gitlens.views.setBranchComparisonToBranch
-// - gitlens.views.setBranchComparisonToWorking
-// - gitlens.views.setShowRelativeDateMarkersOff
-// - gitlens.views.setShowRelativeDateMarkersOn
-// - gitlens.views.stageDirectory
-// - gitlens.views.stageFile
-// - gitlens.views.star
-// - gitlens.views.stashes.focus
-// - gitlens.views.stashes.refresh
-// - gitlens.views.stashes.removeView
-// - gitlens.views.stashes.resetViewLocation
-// - gitlens.views.stashes.setFilesLayoutToAuto
-// - gitlens.views.stashes.setFilesLayoutToList
-// - gitlens.views.stashes.setFilesLayoutToTree
-// - gitlens.views.stashes.toggleVisibility
-// - gitlens.views.switchToAnotherBranch
-// - gitlens.views.switchToBranch
-// - gitlens.views.switchToCommit
-// - gitlens.views.switchToTag
-// - gitlens.views.tags.focus
-// - gitlens.views.tags.refresh
-// - gitlens.views.tags.removeView
-// - gitlens.views.tags.resetViewLocation
-// - gitlens.views.tags.setFilesLayoutToAuto
-// - gitlens.views.tags.setFilesLayoutToList
-// - gitlens.views.tags.setFilesLayoutToTree
-// - gitlens.views.tags.setLayoutToList
-// - gitlens.views.tags.setLayoutToTree
-// - gitlens.views.tags.setShowAvatarsOff
-// - gitlens.views.tags.setShowAvatarsOn
-// - gitlens.views.tags.toggleVisibility
-// - gitlens.views.terminalRemoveRemote
-// - gitlens.views.undoCommit
-// - gitlens.views.unsetAsDefault
-// - gitlens.views.unstageDirectory
-// - gitlens.views.unstageFile
-// - gitlens.views.unstar
-// - gitlens.views.updates.focus
-// - gitlens.views.updates.resetViewLocation
-// - gitlens.views.welcome.focus
-// - gitlens.views.welcome.resetViewLocation
+// - go.add.package.workspace
+// - go.add.tags
+// - go.apply.coverprofile
+// - go.benchmark.cursor
+// - go.benchmark.file
+// - go.benchmark.package
+// - go.browse.packages
+// - go.build.package
+// - go.build.workspace
+// - go.debug.cursor
+// - go.debug.previous
+// - go.environment.choose
+// - go.extractServerChannel
+// - go.fill.struct
+// - go.get.package
+// - go.global.resetState
+// - go.godoctor.extract
+// - go.godoctor.var
+// - go.gopath
+// - go.impl.cursor
+// - go.import.add
+// - go.install.package
+// - go.languageserver.restart
+// - go.lint.package
+// - go.lint.workspace
+// - go.locate.tools
+// - go.playground
+// - go.remove.tags
+// - go.run.modinit
+// - go.show.commands
+// - go.subtest.cursor
+// - go.survey.resetConfig
+// - go.survey.showConfig
+// - go.test.cancel
+// - go.test.coverage
+// - go.test.cursor
+// - go.test.cursorOrPrevious
+// - go.test.file
+// - go.test.generate.file
+// - go.test.generate.function
+// - go.test.generate.package
+// - go.test.package
+// - go.test.previous
+// - go.test.workspace
+// - go.toggle.gc_details
+// - go.toggle.test.file
+// - go.tools.install
+// - go.vet.package
+// - go.vet.workspace
+// - go.welcome
+// - go.workspace.isTrusted.toggle
+// - go.workspace.resetState
 // - goToNextReferenceFromEmbeddedEditor
 // - goToPreviousReferenceFromEmbeddedEditor
 // - help.tweetFeedback
@@ -5763,6 +5174,10 @@
 // - list.scrollRight
 // - list.selectAndPreserveFocus
 // - list.toggleFilterOnType
+// - lowlightgoerrors.HighOpacity
+// - lowlightgoerrors.LowOpacity
+// - lowlightgoerrors.MediumOpacity
+// - lowlightgoerrors.Toggle
 // - markdown.preview.refresh
 // - markdown.preview.toggleLock
 // - markdown.showLockedPreviewToSide
@@ -5918,6 +5333,7 @@
 // - settings.filterByOnline
 // - settings.filterUntrusted
 // - settings.switchToJSON
+// - shellcheck.openRuleDoc
 // - shellcheck.runLint
 // - showEditorScreenReaderNotification
 // - simpleBrowser.show
@@ -5944,13 +5360,15 @@
 // - testing.viewAsList
 // - testing.viewAsTree
 // - timeline.focus
+// - timeline.refresh
 // - timeline.removeView
 // - timeline.resetViewLocation
+// - timeline.toggleExcludeSource:git-history
+// - timeline.toggleFollowActiveEditor
 // - timeline.toggleVisibility
 // - toggle.diff.ignoreTrimWhitespace
 // - toggle.diff.renderSideBySide
 // - toggleEscapeSequenceLogging
-// - type
 // - typescript.findAllFileReferences
 // - typescript.goToProjectConfig
 // - typescript.openTsServerLog
@@ -6251,6 +5669,8 @@
 // - workbench.action.revealPathInFinder4
 // - workbench.action.revealPathInFinder5
 // - workbench.action.revealPathInFinder6
+// - workbench.action.revealPathInFinder7
+// - workbench.action.revealPathInFinder8
 // - workbench.action.revertAndCloseActiveEditor
 // - workbench.action.saveWorkspaceAs
 // - workbench.action.selectIconTheme
@@ -6368,30 +5788,6 @@
 // - workbench.actions.treeView.extension.vsKubernetesExplorer.refresh
 // - workbench.actions.treeView.extension.vsKubernetesHelmRepoExplorer.collapseAll
 // - workbench.actions.treeView.extension.vsKubernetesHelmRepoExplorer.refresh
-// - workbench.actions.treeView.gitlens.views.branches.collapseAll
-// - workbench.actions.treeView.gitlens.views.branches.refresh
-// - workbench.actions.treeView.gitlens.views.commits.collapseAll
-// - workbench.actions.treeView.gitlens.views.commits.refresh
-// - workbench.actions.treeView.gitlens.views.contributors.collapseAll
-// - workbench.actions.treeView.gitlens.views.contributors.refresh
-// - workbench.actions.treeView.gitlens.views.fileHistory.collapseAll
-// - workbench.actions.treeView.gitlens.views.fileHistory.refresh
-// - workbench.actions.treeView.gitlens.views.lineHistory.collapseAll
-// - workbench.actions.treeView.gitlens.views.lineHistory.refresh
-// - workbench.actions.treeView.gitlens.views.remotes.collapseAll
-// - workbench.actions.treeView.gitlens.views.remotes.refresh
-// - workbench.actions.treeView.gitlens.views.repositories.collapseAll
-// - workbench.actions.treeView.gitlens.views.repositories.refresh
-// - workbench.actions.treeView.gitlens.views.searchAndCompare.collapseAll
-// - workbench.actions.treeView.gitlens.views.searchAndCompare.refresh
-// - workbench.actions.treeView.gitlens.views.stashes.collapseAll
-// - workbench.actions.treeView.gitlens.views.stashes.refresh
-// - workbench.actions.treeView.gitlens.views.tags.collapseAll
-// - workbench.actions.treeView.gitlens.views.tags.refresh
-// - workbench.actions.treeView.gitlens.views.updates.collapseAll
-// - workbench.actions.treeView.gitlens.views.updates.refresh
-// - workbench.actions.treeView.gitlens.views.welcome.collapseAll
-// - workbench.actions.treeView.gitlens.views.welcome.refresh
 // - workbench.actions.treeView.jsBrowserBreakpoints.collapseAll
 // - workbench.actions.treeView.jsBrowserBreakpoints.refresh
 // - workbench.actions.treeView.kubernetes.cloudExplorer.collapseAll
@@ -6543,6 +5939,7 @@
 // - workbench.scm.action.setSortKey.path
 // - workbench.scm.action.setSortKey.status
 // - workbench.scm.action.setTreeViewMode
+// - workbench.scm.action.toggleRepositoryVisibility.scm0
 // - workbench.scm.focus
 // - workbench.scm.removeView
 // - workbench.scm.repositories.focus
@@ -6573,8 +5970,6 @@
 // - workbench.view.extension.aws-explorer.resetViewContainerLocation
 // - workbench.view.extension.dockerView
 // - workbench.view.extension.dockerView.resetViewContainerLocation
-// - workbench.view.extension.gitlens
-// - workbench.view.extension.gitlens.resetViewContainerLocation
 // - workbench.view.extension.kubernetesView
 // - workbench.view.extension.kubernetesView.resetViewContainerLocation
 // - workbench.view.extension.references-view
