@@ -248,7 +248,11 @@
   "extensions.closeExtensionDetailsOnViewChange": false,
   "extensions.ignoreRecommendations": true,
   "files.associations": {
-    ".vscode-extensions": "shellscript"
+    ".vscode-extensions": "shellscript",
+    ".Brewfile": "ruby",
+    ".Brewfile_archive": "ruby",
+    "config": "ini",
+    ".simplebarrc": "json"
   },
   "files.autoGuessEncoding": true,
   "files.defaultLanguage": "${activeEditorLanguage}",

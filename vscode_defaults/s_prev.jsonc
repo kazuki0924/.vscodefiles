@@ -126,6 +126,7 @@
   //  - vscode.git: Git SCM Integration
   //  - vscode.github: GitHub
   //  - vscode.github-authentication: GitHub Authentication Provider
+  //  - trixnz.go-to-method: Adds the ability to go to only method symbols declared in the active document
   //  - vscode.grunt: Extension to add Grunt capabilities to VS Code.
   //  - wheredoesyourmindgo.gruvbox-concoctis: Concoction of Gruvbox themes
   //  - JonathanHarty.gruvbox-material-icon-theme: Gruvbox Material Icons
@@ -3704,4 +3705,3 @@
   // The color palette used in all variants.
   "gruvboxConcoctis.usePalette": "material",
 }
-

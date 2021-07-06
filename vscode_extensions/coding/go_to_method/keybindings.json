@@ -1,0 +1,7 @@
+[
+  {
+    "key": "cmd+j m",
+    "command": "workbench.action.gotoMethod",
+    "when": "!notebookEditorFocused"
+  }
+]
