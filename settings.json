@@ -229,7 +229,7 @@
   "editor.renderWhitespace": "all",
   "editor.scrollBeyondLastLine": false,
   "editor.smoothScrolling": true,
-  "editor.snippetSuggestions": "top",
+  "editor.snippetSuggestions": "inline",
   "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.tabSize": 2,
   "editor.wordBasedSuggestionsMode": "allDocuments",
@@ -252,7 +252,12 @@
     ".Brewfile": "ruby",
     ".Brewfile_archive": "ruby",
     "config": "ini",
-    ".simplebarrc": "json"
+    ".simplebarrc": "json",
+    ".lua-format": "yaml",
+    ".ripgreprc": "shellscript",
+    ".skhdrc": "shellscript",
+    ".yabairc": "shellscript",
+    ".sqlfluff": "ini"
   },
   "files.autoGuessEncoding": true,
   "files.defaultLanguage": "${activeEditorLanguage}",
@@ -903,7 +908,7 @@
   "vscode-neovim.neovimExecutablePaths.linux": "",
   "vscode-neovim.neovimExecutablePaths.win32": "",
   "vscode-neovim.neovimInitPath": "",
-  "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.nvimfiles/init.vim",
+  "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.nvimfiles/vscode.vim",
   "vscode-neovim.neovimInitVimPaths.linux": "",
   "vscode-neovim.neovimInitVimPaths.win32": "",
   "vscode-neovim.neovimPath": "",
@@ -940,5 +945,36 @@
   "yaml.schemas": {},
   "yaml.trace.server": "off",
   "yaml.validate": true,
-  "workbench.productIconTheme": "material-product-icons"
+  "workbench.productIconTheme": "material-product-icons",
+  "Lua.telemetry.enable": true,
+  "editor.semanticHighlighting.enabled": true,
+  "[lua]": {
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    },
+    "editor.tabCompletion": "on",
+    "editor.quickSuggestionsDelay": 1
+  },
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "keep",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    }
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "python.insidersChannel": "daily",
+  "vscode-lua-format.configPath": ".lua-format",
+  "vscode-lua-format.binaryPath": "/usr/local/bin/lua-format"
 }

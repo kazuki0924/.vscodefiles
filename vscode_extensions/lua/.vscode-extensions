@@ -1,3 +1,11 @@
 # Lua
 # https://github.com/sumneko/lua-language-server
-# https://marketplace.visualstudio.com/items?itemName=sumneko.lua
+https://marketplace.visualstudio.com/items?itemName=sumneko.lua
+
+# vscode-lua-format
+# https://github.com/Koihik/vscode-lua-format
+https://marketplace.visualstudio.com/items?itemName=Koihik.vscode-lua-format
+
+# vscode-luacheck
+# https://bitbucket.org/dwenegar/vscode-luacheck
+https://marketplace.visualstudio.com/items?itemName=dwenegar.vscode-luacheck

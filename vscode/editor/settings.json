@@ -31,7 +31,7 @@
   //  - bottom: Show snippet suggestions below other suggestions.
   //  - inline: Show snippets suggestions with other suggestions.
   //  - none: Do not show snippet suggestions.
-  "editor.snippetSuggestions": "top",
+  "editor.snippetSuggestions": "inline",
   // Controls how suggestions are pre-selected when showing the suggest list.
   //  - first: Always select the first suggestion.
   //  - recentlyUsed: Select recent suggestions unless further typing selects one, e.g. `console.| -> console.log` because `log` has been completed recently.
