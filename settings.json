@@ -942,7 +942,12 @@
   "yaml.maxItemsComputed": 5000,
   "yaml.schemaStore.enable": true,
   "yaml.schemaStore.url": "https://www.schemastore.org/api/json/catalog.json",
-  "yaml.schemas": {},
+  "yaml.schemas": {
+    "file:/Users/kazuki/Library/Application Support/Code - Insiders/User/globalStorage/amazonwebservices.aws-toolkit-vscode/sam.schema.json": [
+      "Documents/GitHub/aws-appsync-chat-starter-react/backend/deploy.yaml",
+      "Documents/GitHub/aws-appsync-calorie-tracker-workshop/0_NEPTUNE/templates/main.yaml"
+    ]
+  },
   "yaml.trace.server": "off",
   "yaml.validate": true,
   "workbench.productIconTheme": "material-product-icons",
