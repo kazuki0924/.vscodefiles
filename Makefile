@@ -12,25 +12,26 @@ endif
 
 all: setup
 
-gitpull:
-> @ echo git pull .vscodefiles:
-> @ [[ ! -d ~/.vscodefiles ]] && git clone https://github.com/kazuki0924/.vscodefiles ~/.vscodefiles
-> @ cd ~/.vscodefiles && git pull
-
 symlink:
 > @ ./scripts/vscode_bundle_config_json.sh
 > @ ./scripts/vscode_symlink_config_json.sh
 
+.PHONY: symlink
+
 uninstall/extension:
 > @ ./scripts/vscode_symlink_config_json.sh
+
+.PHONY: uninstall/extension
 
 bundle/extension:
 > @ ./scripts/vscode_bundle_extensions_file.sh
 
-setup: gitpull symlink
-> @ ./scripts/vscode_uninstall_extensions.sh
-
 chmod:
-> @ bash ~/.dotscripts/tasks/chmod_dotscripts.sh ~/.vscodefiles
+> @ ~/.dotscripts/tasks/chmod_dotscripts.sh ~/.vscodefiles
 
-.PHONY: gitpull symlink setup uninstall/extension
+.PHONY: chmod
+
+setup: symlink uninstall/extension bundle/extension
+
+.PHONY: setup
+
