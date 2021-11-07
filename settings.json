@@ -248,16 +248,7 @@
   "extensions.closeExtensionDetailsOnViewChange": false,
   "extensions.ignoreRecommendations": true,
   "files.associations": {
-    ".vscode-extensions": "shellscript",
-    ".Brewfile": "ruby",
-    ".Brewfile_archive": "ruby",
-    "config": "ini",
-    ".simplebarrc": "json",
-    ".lua-format": "yaml",
-    ".ripgreprc": "shellscript",
-    ".skhdrc": "shellscript",
-    ".yabairc": "shellscript",
-    ".sqlfluff": "ini"
+    ".vscode-extensions": "shellscript"
   },
   "files.autoGuessEncoding": true,
   "files.defaultLanguage": "${activeEditorLanguage}",
@@ -295,7 +286,18 @@
   "gitlens.advanced.maxListItems": 200,
   "gitlens.advanced.maxSearchItems": 200,
   "gitlens.advanced.messages": {
-    "suppressGitDisabledWarning": true
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressCreatePullRequestPrompt": false,
+    "suppressDebugLoggingWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitDisabledWarning": false,
+    "suppressGitMissingWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressImproperWorkspaceCasingWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressRebaseSwitchToTextWarning": false
   },
   "gitlens.advanced.quickPick.closeOnFocusOut": true,
   "gitlens.advanced.repositorySearchDepth": 1,
@@ -719,6 +721,13 @@
   "indentRainbow.tabmixColor": "rgba(128,32,96,0.6)",
   "indentRainbow.updateDelay": 100,
   "keyboard-quickfix.showActionNotification": true,
+  "lowlightgoerrors.ChangeColor": false,
+  "lowlightgoerrors.Color": "#D4D4D4",
+  "lowlightgoerrors.DefaultOpacity": "Medium",
+  "lowlightgoerrors.Enabled": true,
+  "lowlightgoerrors.HighOpacity": "1",
+  "lowlightgoerrors.LowOpacity": "0.1",
+  "lowlightgoerrors.MediumOpacity": "0.5",
   "material-icon-theme.activeIconPack": "nest",
   "material-icon-theme.files.associations": {},
   "material-icon-theme.folders.associations": {},
@@ -765,6 +774,21 @@
   },
   "shellcheck.run": "onType",
   "shellcheck.useWorkspaceRootAsCwd": false,
+  "shellformat.effectLanguages": [
+    "shellscript",
+    "dockerfile",
+    "dotenv",
+    "hosts",
+    "jvmoptions",
+    "ignore",
+    "gitignore",
+    "properties",
+    "spring-boot-properties",
+    "azcli"
+  ],
+  "shellformat.flag": null,
+  "shellformat.path": "/usr/local/bin/shfmt",
+  "shellformat.useEditorConfig": true,
   "shortcuts.buttons": [
     "file-binary , workbench.action.tasks.build , Run build task"
   ],
@@ -930,36 +954,9 @@
   "workbench.list.automaticKeyboardNavigation": false,
   "workbench.list.keyboardNavigation": "filter",
   "workbench.list.smoothScrolling": true,
+  "workbench.productIconTheme": "material-product-icons",
   "yaml.completion": true,
-  "yaml.customTags": [
-    "!And",
-    "!And sequence",
-    "!If",
-    "!If sequence",
-    "!Not",
-    "!Not sequence",
-    "!Equals",
-    "!Equals sequence",
-    "!Or",
-    "!Or sequence",
-    "!FindInMap",
-    "!FindInMap sequence",
-    "!Base64",
-    "!Join",
-    "!Join sequence",
-    "!Cidr",
-    "!Ref",
-    "!Sub",
-    "!Sub sequence",
-    "!GetAtt",
-    "!GetAZs",
-    "!ImportValue",
-    "!ImportValue sequence",
-    "!Select",
-    "!Select sequence",
-    "!Split",
-    "!Split sequence"
-  ],
+  "yaml.customTags": [],
   "yaml.disableAdditionalProperties": false,
   "yaml.format.bracketSpacing": true,
   "yaml.format.enable": true,
@@ -970,44 +967,7 @@
   "yaml.maxItemsComputed": 5000,
   "yaml.schemaStore.enable": true,
   "yaml.schemaStore.url": "https://www.schemastore.org/api/json/catalog.json",
-  "yaml.schemas": {
-    "file:/Users/kazuki/Library/Application Support/Code - Insiders/User/globalStorage/amazonwebservices.aws-toolkit-vscode/sam.schema.json": [
-      "Documents/GitHub/aws-appsync-chat-starter-react/backend/deploy.yaml",
-      "Documents/GitHub/aws-appsync-calorie-tracker-workshop/0_NEPTUNE/templates/main.yaml"
-    ]
-  },
+  "yaml.schemas": {},
   "yaml.trace.server": "off",
-  "yaml.validate": true,
-  "workbench.productIconTheme": "material-product-icons",
-  "Lua.telemetry.enable": true,
-  "editor.semanticHighlighting.enabled": true,
-  "[lua]": {
-    "editor.quickSuggestions": {
-      "other": true,
-      "comments": true,
-      "strings": true
-    },
-    "editor.tabCompletion": "on",
-    "editor.quickSuggestionsDelay": 1
-  },
-  "[yaml]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.autoIndent": "keep",
-    "editor.quickSuggestions": {
-      "other": true,
-      "comments": false,
-      "strings": true
-    }
-  },
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
-  },
-  "notebook.cellToolbarLocation": {
-    "default": "right",
-    "jupyter-notebook": "left"
-  },
-  "python.insidersChannel": "daily",
-  "vscode-lua-format.configPath": ".lua-format",
-  "vscode-lua-format.binaryPath": "/usr/local/bin/lua-format"
+  "yaml.validate": true
 }
