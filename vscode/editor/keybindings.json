@@ -83,7 +83,7 @@
   },
   {
     "key": "cmd+e m",
-    "command": "workbench.action.mergeAllWindowTabs"
+    "command": "workbench.action.joinAllGroups"
   },
   {
     "key": "cmd+e v",
