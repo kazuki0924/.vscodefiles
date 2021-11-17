@@ -969,5 +969,15 @@
   "yaml.schemaStore.url": "https://www.schemastore.org/api/json/catalog.json",
   "yaml.schemas": {},
   "yaml.trace.server": "off",
-  "yaml.validate": true
+  "yaml.validate": true,
+  "json.schemas": [
+    {
+      "name": "vscode-expo-manifest",
+      "url": "file:///Users/kazuki/Library/Application%20Support/Code%20-%20Insiders/User/globalStorage/bycedric.vscode-expo/manifest-43.0.0.json",
+      "fileMatch": [
+        "app.json",
+        "app.config.json"
+      ]
+    }
+  ]
 }
