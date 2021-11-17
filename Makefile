@@ -12,6 +12,10 @@ endif
 
 all: setup
 
+setup: symlink
+
+.PHONY: setup
+
 symlink:
 > @ ./scripts/vscode_bundle_config_json.sh
 > @ ./scripts/vscode_symlink_config_json.sh
@@ -25,13 +29,3 @@ uninstall/extension:
 
 bundle/extension:
 > @ ./scripts/vscode_bundle_extensions_file.sh
-
-chmod:
-> @ ~/.dotscripts/tasks/chmod_dotscripts.sh ~/.vscodefiles
-
-.PHONY: chmod
-
-setup: symlink uninstall/extension bundle/extension
-
-.PHONY: setup
-
